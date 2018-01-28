@@ -129,8 +129,16 @@ Evaluation Kits}}\\[0.5cm]
 \fontsize{12pt}{12}\selectfont{Group Members: R.V.C.N Abeyrathne, D.L Dampahalage, H.A.S.P Gunasekara, W.M.D.K Weerakoon}\\[0.25cm]
 Supervisors: Dr. Ranga Rodrigo, Dr. Ajith Pasqual, Dr. Peshala G. Jayasekara
 \end{center}
-\textit{Keywords}: FPGA,ZYNQ-7000, people counting, multi-camera, multiple people tracking\\[0.5cm]
-Abstract comes here
+\textit{Keywords}: FPGA,ZYNQ-7000, people counting, multi-camera, multiple people tracking, particle filters, gaussian mixture models\\[0.5cm]
+In the contemporary society making correct decisions is vital for any business organization to stay on par with competitors. For that intent identifying and understanding the
+customers is a must. Tapping into the customers$'$ subconscious is the preeminent way of making correct business decisions and for that an organization should track and analyze customer behavior.\\
+As a solution to this problem, we propose a scalable multi-camera people tracking system for a large department store like environment. The main focus of this project is to implement an end to end system for multi-camera people tracking with business intelligence.
+Novelty of this system from contemporary multi-camera people tracking systems is the introduction of leaf node processing, where part of the processing is done in a hardware system close to the camera. By this way we could achieve the scalability required for a large department store like environment and reduce bandwidth usage in such systems.\\
+This proposed system comprises of leaf nodes, central server and the web server. Leaf nodes are integrated close each camera. We use Zynq SoCs for leaf nodes and these devices read video frames from the cameras, detects people for each frame using GMM based background subtraction, calculate color histogram features for each detected person and sends the bounding boxes and features to the server using UDP.\\
+A central server will receive this information from each leaf node and do people tracking by using particle filters and hungarian algorithm for data association. Multi-camera tracking is also achieved by means of homography based method and a graph algorithm. Real time tracking and heatmaps are generated in the server GUI.\\
+Finally business intelligence software hosted in a web server, where real time people tracking for the whole store, heatmaps for desired time period, people count graphs for desired time period and real time people count graphs are implemented.\\
+Therefore by the introduction of leaf node processing we achieve a scalable system since the processing power required at the central server is reduced. We achieve a low power system for leaf nodes by using Zynq SoCs and we reduce the bandwidth usage since we only send the bounding boxes and features for tracking to the server.
+
 
 \newpage
 \addcontentsline{toc}{section}{\textbf{Acknowledgments}}
@@ -165,6 +173,8 @@ We would like to acknowledge with much appreciation the non-academic staff of th
 \centering
 \begin{tabular}{ll}
 FPGA & Field Programmable Gate Array \\
+GMM & Gaussian Mixture Models\\
+PCA & Principal Component Analysis \\
 YOLO                     & You Only Look Once                                \\
 IP                       & Intellectual Property                             \\
 SoC                      & System on Chip                                    \\
