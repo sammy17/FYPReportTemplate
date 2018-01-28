@@ -1,28 +1,15 @@
 \select@language {english}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Block diagram of the system}}{3}
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Overall architecture of the system}}{3}
-\contentsline {figure}{\numberline {1.3}{\ignorespaces Xilinx ZC702 Development Board}}{4}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces FPGA implementation of backgroung subtraction algorithm}}{7}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Flow diagram of HoG algorithm}}{7}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Example of a CNN architecture}}{8}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces YOLO\cite {4} CNN Architecture}}{8}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Block design of the designed feature calculation IP core}}{10}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Overall hardware architecture of the current designed system}}{10}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Dataflow of the designed system on top of ZYNQ SoC}}{11}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Multiple people tracking using kalman filter}}{12}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Example frames from dicrete-continuous energy minimization approach \cite {5}}}{14}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Estimating global coordinates through calibrated cameras}}{14}
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Multi-camera correspondence estimation}}{15}
-\contentsline {figure}{\numberline {2.12}{\ignorespaces Data flow of the system}}{15}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Utilization table for YOLO CNN IP core on ZC702 board}}{17}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Single camera people tracking results from camera 1}}{18}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Single camera people tracking results from camera 2}}{18}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces People tracking using multiple cameras and results mapped to a 2D plane}}{19}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces People tracking using multiple cameras and results mapped to a 2D plane (another two perspectives were used)}}{20}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces JSON object structure}}{20}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Packet format which the AJAX call returns}}{21}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Store Density graph}}{22}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces People coordinates graph}}{22}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Overall block diagram of the end-to-end system\relax }}{5}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Xilinx ZC702 Development Board\relax }}{7}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Internal architecture of ZYNQ-7000 SoC\relax }}{7}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Design flow block diagram for ZYNQ-7000 based embedded system\relax }}{8}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Block diagram of the morphological operation flow to detect people from background subtracted binary mask\relax }}{10}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Results of morphological operations for a test image\relax }}{11}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Scatter plot matrix for the 6 features collected from running our object detection on a sample video\relax }}{13}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces First Vs. second pricipal component\relax }}{14}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Density of the first principal component\relax }}{14}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Results of PCA based false positive elimination algorithm\relax }}{15}
+\addvspace {10\p@ }

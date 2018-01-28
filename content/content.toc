@@ -3,42 +3,31 @@
 \contentsline {section}{\textbf {Declaration}}{ii}
 \contentsline {section}{\textbf {Abstract}}{iv}
 \contentsline {section}{\textbf {Acknowledgments}}{v}
-\contentsline {section}{\textbf {List of Figures}}{viii}
-\contentsline {section}{\textbf {List of Tables}}{ix}
-\contentsline {section}{\textbf {Acronyms and Abbreviations}}{x}
+\contentsline {section}{\textbf {List of Figures}}{vii}
+\contentsline {section}{\textbf {List of Tables}}{viii}
+\contentsline {section}{\textbf {Acronyms and Abbreviations}}{ix}
 \contentsline {chapter}{\numberline {1}\textbf {Introduction}}{1}
-\contentsline {section}{\numberline {1.1}Overview}{1}
-\contentsline {section}{\numberline {1.2}Primary Objectives of the Project}{1}
-\contentsline {section}{\numberline {1.3}Scope}{2}
-\contentsline {section}{\numberline {1.4}Overall Architecture}{3}
-\contentsline {section}{\numberline {1.5}Devices and Components Used}{4}
-\contentsline {subsection}{\numberline {1.5.1}Xilinx ZC702 Evaluation Kit}{4}
-\contentsline {section}{\numberline {1.6}Literature Review}{4}
-\contentsline {chapter}{\numberline {2}Methodology}{6}
-\contentsline {section}{\numberline {2.1}People Detection}{6}
-\contentsline {subsection}{\numberline {2.1.1}Background Subtraction}{6}
-\contentsline {subsection}{\numberline {2.1.2}Histogram of Gradients (HoG)}{7}
-\contentsline {subsection}{\numberline {2.1.3}Convolutional Neural Networks }{7}
-\contentsline {section}{\numberline {2.2}FPGA Hardware Design and Implementation}{8}
-\contentsline {subsection}{\numberline {2.2.1}Design flow used for FPGA based System}{8}
-\contentsline {subsection}{\numberline {2.2.2}IP Core Hardware Design}{9}
-\contentsline {subsection}{\numberline {2.2.3}Overall Hardware Design}{10}
-\contentsline {subsection}{\numberline {2.2.4}Linux Userspace Driver Development}{10}
-\contentsline {section}{\numberline {2.3}Multi Camera People Tracking}{11}
-\contentsline {subsection}{\numberline {2.3.1}Single Camera People Tracking}{11}
-\contentsline {subsubsection}{\relax \fontsize {14.4}{18}\selectfont Kalman Filter Based Tracking}{12}
-\contentsline {subsubsection}{\relax \fontsize {14.4}{18}\selectfont Improvements for Kalman FIlter based Tracking}{13}
-\contentsline {subsubsection}{\relax \fontsize {14.4}{18}\selectfont Discrete-Continuous Optimization for Multiple Target Tracking}{14}
-\contentsline {subsection}{\numberline {2.3.2}Global Tracking}{14}
-\contentsline {section}{\numberline {2.4}Communication among FPGA nodes and server}{15}
-\contentsline {section}{\numberline {2.5}Business Intelligence Software}{16}
-\contentsline {chapter}{\numberline {3}Results}{17}
-\contentsline {section}{\numberline {3.1}CNN IP Core Design}{17}
-\contentsline {subsection}{\numberline {3.1.1}Discussion}{17}
-\contentsline {section}{\numberline {3.2}Single Camera People Tracking}{18}
-\contentsline {subsection}{\numberline {3.2.1}Discussion}{18}
-\contentsline {subsection}{\numberline {3.2.2}Problems Faced}{18}
-\contentsline {section}{\numberline {3.3}Global Tracking (Tracking using multiple cameras)}{19}
-\contentsline {subsection}{\numberline {3.3.1}Discussion}{20}
-\contentsline {section}{\numberline {3.4}Business Intelligence Software}{20}
-\contentsline {section}{References}{23}
+\contentsline {chapter}{\numberline {2}Literature Review}{3}
+\contentsline {chapter}{\numberline {3}Methodology}{5}
+\contentsline {section}{\numberline {3.1}Introduction}{5}
+\contentsline {section}{\numberline {3.2}Overall Architecture}{5}
+\contentsline {section}{\numberline {3.3}Embedded System (Leaf Node)}{6}
+\contentsline {subsection}{\numberline {3.3.1}Xilinx ZC702 Board}{6}
+\contentsline {subsection}{\numberline {3.3.2}ZYNQ-7000 SoC}{7}
+\contentsline {section}{\numberline {3.4}Design Flow for ZYNQ-7000 based Embedded System}{8}
+\contentsline {subsection}{\numberline {3.4.1}Vivado HLS}{8}
+\contentsline {subsection}{\numberline {3.4.2}Vivado}{8}
+\contentsline {subsection}{\numberline {3.4.3}Xilinx SDK}{8}
+\contentsline {subsection}{\numberline {3.4.4}PetaLinux SDK}{9}
+\contentsline {section}{\numberline {3.5}Installing Linux on ZYNQ-7000}{9}
+\contentsline {section}{\numberline {3.6}People Detection and Feature Calculation Implementation on ZYNQ-7000 SoC}{10}
+\contentsline {subsection}{\numberline {3.6.1}IP core implementation on ZYNQ PL}{10}
+\contentsline {subsubsection}{Gaussian Mixture Model Background Subtraction IP Core}{10}
+\contentsline {subsubsection}{Feature Calculation IP Core}{10}
+\contentsline {subsection}{\numberline {3.6.2}IP Core drivers, Morphological Operations and Communication Protocol Implementation on ZYNQ PS}{10}
+\contentsline {subsubsection}{Linux Drivers for controlling IP cores}{10}
+\contentsline {subsubsection}{People Detection from Background Subtracted Binary Mask}{10}
+\contentsline {subsection}{\numberline {3.6.3}False Positive Reduction}{12}
+\contentsline {chapter}{\numberline {4}Results}{16}
+\contentsline {subsection}{\numberline {4.0.1}Discussion}{16}
+\contentsline {section}{References}{17}
