@@ -1,0 +1,44 @@
+\select@language {english}
+\contentsline {section}{\textbf {Approval}}{i}
+\contentsline {section}{\textbf {Declaration}}{ii}
+\contentsline {section}{\textbf {Abstract}}{iv}
+\contentsline {section}{\textbf {Acknowledgments}}{v}
+\contentsline {section}{\textbf {List of Figures}}{viii}
+\contentsline {section}{\textbf {List of Tables}}{ix}
+\contentsline {section}{\textbf {Acronyms and Abbreviations}}{x}
+\contentsline {chapter}{\numberline {1}\textbf {Introduction}}{1}
+\contentsline {section}{\numberline {1.1}Overview}{1}
+\contentsline {section}{\numberline {1.2}Primary Objectives of the Project}{1}
+\contentsline {section}{\numberline {1.3}Scope}{2}
+\contentsline {section}{\numberline {1.4}Overall Architecture}{3}
+\contentsline {section}{\numberline {1.5}Devices and Components Used}{4}
+\contentsline {subsection}{\numberline {1.5.1}Xilinx ZC702 Evaluation Kit}{4}
+\contentsline {section}{\numberline {1.6}Literature Review}{4}
+\contentsline {chapter}{\numberline {2}Methodology}{6}
+\contentsline {section}{\numberline {2.1}People Detection}{6}
+\contentsline {subsection}{\numberline {2.1.1}Background Subtraction}{6}
+\contentsline {subsection}{\numberline {2.1.2}Histogram of Gradients (HoG)}{7}
+\contentsline {subsection}{\numberline {2.1.3}Convolutional Neural Networks }{7}
+\contentsline {section}{\numberline {2.2}FPGA Hardware Design and Implementation}{8}
+\contentsline {subsection}{\numberline {2.2.1}Design flow used for FPGA based System}{8}
+\contentsline {subsection}{\numberline {2.2.2}IP Core Hardware Design}{9}
+\contentsline {subsection}{\numberline {2.2.3}Overall Hardware Design}{10}
+\contentsline {subsection}{\numberline {2.2.4}Linux Userspace Driver Development}{10}
+\contentsline {section}{\numberline {2.3}Multi Camera People Tracking}{11}
+\contentsline {subsection}{\numberline {2.3.1}Single Camera People Tracking}{11}
+\contentsline {subsubsection}{\relax \fontsize {14.4}{18}\selectfont Kalman Filter Based Tracking}{12}
+\contentsline {subsubsection}{\relax \fontsize {14.4}{18}\selectfont Improvements for Kalman FIlter based Tracking}{13}
+\contentsline {subsubsection}{\relax \fontsize {14.4}{18}\selectfont Discrete-Continuous Optimization for Multiple Target Tracking}{14}
+\contentsline {subsection}{\numberline {2.3.2}Global Tracking}{14}
+\contentsline {section}{\numberline {2.4}Communication among FPGA nodes and server}{15}
+\contentsline {section}{\numberline {2.5}Business Intelligence Software}{16}
+\contentsline {chapter}{\numberline {3}Results}{17}
+\contentsline {section}{\numberline {3.1}CNN IP Core Design}{17}
+\contentsline {subsection}{\numberline {3.1.1}Discussion}{17}
+\contentsline {section}{\numberline {3.2}Single Camera People Tracking}{18}
+\contentsline {subsection}{\numberline {3.2.1}Discussion}{18}
+\contentsline {subsection}{\numberline {3.2.2}Problems Faced}{18}
+\contentsline {section}{\numberline {3.3}Global Tracking (Tracking using multiple cameras)}{19}
+\contentsline {subsection}{\numberline {3.3.1}Discussion}{20}
+\contentsline {section}{\numberline {3.4}Business Intelligence Software}{20}
+\contentsline {section}{References}{23}
