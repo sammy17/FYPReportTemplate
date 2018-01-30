@@ -40,7 +40,14 @@
 \contentsline {subsubsection}{Tuning model parameters}{24}
 \contentsline {subsection}{\numberline {3.8.3}Particle Filter Based Tracking}{24}
 \contentsline {subsubsection}{Particle Initialization}{25}
-\contentsline {subsection}{\numberline {3.8.4}Business Intelligence Software}{25}
-\contentsline {chapter}{\numberline {4}Results}{28}
-\contentsline {subsection}{\numberline {4.0.1}Discussion}{28}
-\contentsline {section}{References}{29}
+\contentsline {subsubsection}{Particle Propagation}{25}
+\contentsline {subsubsection}{Updating Weights with a Measurement}{25}
+\contentsline {subsection}{\numberline {3.8.4}Choosing Particle Filtering over Kalman Filtering}{26}
+\contentsline {subsection}{\numberline {3.8.5}Data Association}{26}
+\contentsline {subsection}{\numberline {3.8.6}Sensor Fusion}{26}
+\contentsline {subsection}{\numberline {3.8.7}Multi Camera Tracking}{27}
+\contentsline {subsection}{\numberline {3.8.8}Communication with Web Server}{29}
+\contentsline {subsection}{\numberline {3.8.9}Business Intelligence Software}{30}
+\contentsline {chapter}{\numberline {4}Results}{32}
+\contentsline {subsection}{\numberline {4.0.1}Discussion}{32}
+\contentsline {section}{References}{33}

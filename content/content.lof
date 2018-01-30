@@ -16,5 +16,8 @@
 \contentsline {figure}{\numberline {3.12}{\ignorespaces Results of PCA based false positive elimination algorithm\relax }}{20}
 \contentsline {figure}{\numberline {3.13}{\ignorespaces Multiple People Tracking using Kalman Filter\relax }}{22}
 \contentsline {figure}{\numberline {3.14}{\ignorespaces Particle Filter based Tracking\relax }}{24}
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Flask Logo\relax }}{25}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Estimating global coordinates through calibrated cameras\relax }}{27}
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Multicamera correspondence estimation\relax }}{28}
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Block Diagram of the Communication Structure\relax }}{29}
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Flask Logo\relax }}{30}
 \addvspace {10\p@ }

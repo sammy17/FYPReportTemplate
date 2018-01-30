@@ -4,6 +4,8 @@
  \geometry{
  top=25mm,
  }
+ \usepackage{mathtools}
+\usepackage{amsmath}
 %\usepackage[showframe]{geometry}
 \usepackage{titlesec}
 %\usepackage{titletoc,tocloft}
@@ -728,7 +730,120 @@ In particle filtering sate space is represented as a distribution of particles. 
 
 A new particle tracker is initialized when a new object is detected for the first time. At this stage x, y are initialized to that of the detection location and vx, vy are initialized to 0. Weight of all the particles are initialized to $1/(no.\ of\ particles)$.
 
+\subsubsection{Particle Propagation}
 
+In this stage particles are propagated according to a constant velocity model. The dynamic model of the system is given equations \ref{eqn:prop1} and \ref{eqn:prop2}.
+
+\begin{equation}
+\label{eqn:prop1}
+X[t] = X[t-1] + Vx[t-1] * dt
+\end{equation}
+
+\begin{equation}
+\label{eqn:prop2}
+Y[t] = Y[t-1] + Vy[t-1] * dt
+\end{equation}
+We derive samples from a gaussian distribution to propagate individual particles. Mean of this gaussian distribution is zero with a different variances for 4 states. The 4 variances for x, y, vx and vy are 5.0, 5.0, 1.0 and 1.0.
+
+\subsubsection{Updating Weights with a Measurement}
+When a measurement comes the weights of the particles are updated and the particles are resampled according to weights. The weight update equation is as follows.
+
+\begin{equation}
+w = \frac{1}{\sqrt{2*\pi* \sigma }}exp\left (\frac{(x_p-x_d)^2+ (y_p-y_d)^2}{2*\sigma }\right )
+\end{equation}
+Here $x_p$ and $y_p$ are particle locations and $x_d$ and $y_d$ are detection locations. And $\sigma$ is an arbitrary constant.
+
+\subsection{Choosing Particle Filtering over Kalman Filtering}
+We implemented both Kalman filtering based tracking and particle filtering based tracking. Then we tracked the same video sequence with both the filters and observed the results. Clearly particle filtering gave better results. And it has the following advantages:
+\begin{itemize}
+\item Accuracy can be increased by increasing the number of particles (Current implementation consist of 100 particles)
+\item More parameters to control compared to the Kalman Filtering
+\end{itemize}
+
+\subsection{Data Association}
+Data association is an important part of this process because the tracking algorithm performance will be directly depend on the accuracy of data association. For this we utilized the hungarian algorithm. Here we a set of detections having a location and a color histogram, and also a set of tracks having the same. We will assign detections to tracks so that overall cost is minimized. The individual cost is given by equations \ref{eqn:association1},  \ref{eqn:association2} and \ref{eqn:association3}.
+
+\begin{equation}
+\label{eqn:association1}
+W_d = \frac{1}{\sqrt{2*\pi* \sigma }}exp\left (\frac{(x_t-x_d)^2+ (y_t-y_d)^2}{2*\sigma }\right )
+\end{equation}
+where $x_t$, $y_t$ are track locations and $x_d$, $y_d$ are detection locations.
+\begin{equation}
+\label{eqn:association2}
+d(H1,H2)=\sqrt{1-\frac{1}{\sqrt{\overline{H_1}\cdot \overline{H_2}\cdot N^2}}\sum_{I}^{ }\sqrt{H_1(I)\cdot H_2(I)}}
+\end{equation}
+Where $H_1$ is detection histogram and $H_2$ is track histogram and $H_1$ and $H_2$  represents the mean of the histograms. This is known as the bhattacharyya distance [10].
+
+\begin{equation}
+\label{eqn:association3}
+w = (1-\alpha)*W_d + \alpha*(1-d(H_1,H_2))
+\end{equation}
+Here $\alpha$ determines the dependence of the cost on the histogram. In the final implementation this was chosen as 0.4.
+\subsection{Sensor Fusion}
+Once we do single camera tracking for each camera we should synchronize tracks across cameras. Since we use ethernet for the local area network we assumed that network latency is quite low. Therefore we select the latest tracks of each camera for multi camera tracking. Although this method of sensor fusion is quite trivial it is suitable for our current application.
+
+\subsection{Multi Camera Tracking}
+
+Tracking via multiple cameras consist of 3 parts, people tracking per camera, correspondence estimation and global target tracking. There are 2 methods for correspondence estimation: homography based methods and calibration based methods. Homography based methods rely on a set of matched features to calculate homographic transforms between images. Calibration based methods rely on a pre calculated model of the camera.\\\\
+Out of these two methods we decided to use calibration based method because it can be easily integrated into single camera tracking algorithms that we considered. We only have to convert individual track coordinates into global coordinates and then perform global tracking.
+
+\begin{figure}[H]
+\includegraphics[width=\textwidth]{multi_cam.png}
+\centering
+\caption{Estimating global coordinates through calibrated cameras}
+\label{multi_cam}
+\end{figure}
+When we have two calibrated cameras as shown in figure (a) the global 3D coordinates can be calculated from the image coordinates obtained from the two cameras, but we have to match the points across the cameras in order to do so. But if we limit our points to an arbitrary plane as shown in figure (b) we can obtain image coordinates projected to that plane. Suppose we limit our points to the ground plane. For this we can multiply the image coordinates (homogenous) by a homography matrix to obtain the ground plane coordinates.
+\begin{equation}
+x_g = H \cdot x_i
+\end{equation}
+Where $H$ is a 3x3 homography matrix and $x_i$, $x_g$ in homogeneous coordinates
+\begin{figure}[H]
+\includegraphics[width=\textwidth]{multi_cam_map.png}
+\centering
+\caption{Multicamera correspondence estimation}
+\label{multi_cam_map}
+\end{figure}
+Once the image coordinates are transformed to the ground plane we can perform correspondence estimation to find tracks which are seen in multiple viewpoints. For this we can add each track to a node of a graph and join two tracks by an edge if the tracks belong to different cameras and the cost between them is lower than a threshold value.  The cost is calculated by equations \ref{eqn:multicam1}, \ref{eqn:multicam2} and \ref{eqn:multicam3}.
+
+\begin{equation}
+\label{eqn:multicam1}
+W_d = \frac{1}{\sqrt{2*\pi* \sigma }}exp\left (\frac{(x_a-x_b)^2+ (y_a-y_b)^2}{2*\sigma }\right )
+\end{equation}
+where a and b are two nodes in the graph.
+\begin{equation}
+\label{eqn:multicam2}
+d(H1,H2)=\sqrt{1-\frac{1}{\sqrt{\overline{H_1}\cdot \overline{H_2}\cdot N^2}}\sum_{I}^{ }\sqrt{H_1(I)\cdot H_2(I)}}
+\end{equation}
+Where $H_1$ and $H_2$ are the two histograms of nodes a, b and $H_1$ and $H_2$  represents the mean of the histograms. This is known as the bhattacharyya distance [10].
+\begin{equation}
+\label{eqn:multicam3}
+w = (1-\alpha)*W_d + \alpha*(1-d(H_1,H_2))
+\end{equation}
+Here $\alpha$ determines the dependence on histogram. In our implementation we have chosen $\alpha$ as 0.3. Please note that equations present in here and 3.8.5 have the same mathematics but are used in 2 different settings. Therefore the constants are chosen independently.\\\\
+Then we employed a simple greedy algorithm to merge corresponding points together. Here we assuming that cameras have only pairwise overlapping. This algorithm works as follows.
+\begin{itemize}
+\item Select the edge with lowest cost
+\item Merge them together if they have a cost lower than a threshold value
+\begin{itemize}
+\item Locations are merged by taking the average
+\item Histograms are merged by the the combination of two histograms.\\
+$H = \beta*H_1 + (1- \beta) * H_2$ Where $\beta$ is selected as 0.5.
+
+\end{itemize}
+\item Repeat until edges exist with a cost lower than a threshold value
+\end{itemize}
+\subsection{Communication with Web Server}
+The calculated features are sent to the server, in order to track people and generate business intelligence. To enable communication among FPGA nodes and server we wrote two code structures in C++ and python. C++ client and server snippets connects ZYNQ SoC and the server backend whereas another C++ client and a python server connects the web interface. The block diagram of the communication structure is shown in the figure below.
+\begin{figure}[H]
+\includegraphics[width=\textwidth]{comm.png}
+\centering
+\caption{Block Diagram of the Communication Structure}
+\label{flask}
+\end{figure}
+The communications protocol used is UDP (User Datagram Protocol) to ensure low latency and reduce the processing overhead between communication nodes. Since this solution needs to be a real-time application, using TCP (Transmission Control Protocol) is not beneficial. One of the main reasons is dropping packets is desirable over waiting for packets delayed due to retransmission.\\\\
+The retrieved features at the server backend are processed and multi camera tracking is done as discussed in the above section, which generates tracking results. Tracking results contain ground plane coordinates of the individuals, track ID and the time stamp at which the data was processed. This information is looped back to the server which is retrieved by a python server and redirects to a web server written on the Flask framework. Flask web framework is based on python and it eases generating business intelligence data.\\\\
+Clients can access the web interface through the URL zynq.projects.mrt.ac.lk which directs to an internal server in ENTC. All the processing to generate tracking information is done in the said server. We have acquired a public IP in order to ensure that a client of this product can access the information on the go. Authentication is provided so that unauthorized parties will not be able to access sensitive information.
 
 \subsection{Business Intelligence Software}
 
