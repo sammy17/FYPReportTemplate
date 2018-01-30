@@ -36,6 +36,8 @@
 %\setlength{\cftsubsecindent}{2cm}
 %\setlength{\cftsubsubsecindent}{4cm}
 
+\setcounter{secnumdepth}{4}
+
 \titleformat
 {\chapter} % command
 [display] % shape
@@ -312,7 +314,7 @@ ZYNQ-7000 SoC consists of a Xilinx XC7Z020-CLG484-1 FPGA and two ARM Cortex-A9 c
 In our implementation, we have installed a lightweight Linux distribution on dual ARM processors in ZYNQ-7000 SoC. Reasons for installing Linux and its usage is explained in a latter section.
 
 
-\section{Design Flow for ZYNQ-7000 based Embedded System}
+\subsection{Design Flow for ZYNQ-7000 based Embedded System}
 We used the standard Xilinx toolchain for developing an embedded system for designing and implementing our leaf node system. Figure \ref{design} shows a block diagram of the design flow with the design tools we used.
 
 \begin{figure}[H]
@@ -324,19 +326,19 @@ We used the standard Xilinx toolchain for developing an embedded system for desi
 
 Brief description about the usage of each tool in the design flow is included in the following subsections.
 
-\subsection{Vivado HLS}
+\subsubsection{Vivado HLS}
 HLS stands for High Level Synthesis. Task of Vivado HLS is to synthesize a function developed using a high level language (C, C++ and SystemC) into a RTL design (Hardware Descriptive Language Code) of an IP Core. 
 
-\subsection{Vivado}
+\subsubsection{Vivado}
 IP cores designed using Vivado HLS are then imported to Vivado for designing the overall architecture. This is the tool where we decide how the PL and PS parts of ZYNQ SoC is connected (which type of AXI protocol). After overall system is designed, its synthesized and implemented on the target device. As an output of this process, bit-stream file and hardware description (HDF) file is generated.
 
-\subsection{Xilinx SDK}
+\subsubsection{Xilinx SDK}
 HDF file generated is then imported to Xilinx SDK for testing the functionality of implemented hardware. Xilinx SDK has options for testing the hardware on the target device by writing a simple C/C++ application code for testing the functionality of the implemented hardware.
 
-\subsection{PetaLinux SDK}
+\subsubsection{PetaLinux SDK}
 After confirming the functionality of the hardware on the target device, HDF file is then imported to a PetaLinux SDK project for generating the Linux boot files for the custom hardware. Enabling the required kernel modules and editing the device tree to enable hardware peripheral access is done here. More details about running Linux on ZYNQ PS is explained in the next section.
 
-\section{Installing Linux on ZYNQ-7000}
+\subsection{Installing Linux on ZYNQ-7000}
 Lightweight customized Debian Linux distribution was installed on ARM processors of ZYNQ SoC. When it comes to running applications on PS of ZYNQ, there are two primary options,
 
 \begin{enumerate}
@@ -362,7 +364,7 @@ Installing a third-party popular Linux distribution on ZYNQ PS, for a custom har
 \item Changing the boot configuration of the board to boot from SD card
 \end{enumerate}
 
-\section{People Detection and Feature Calculation Implementation on ZYNQ-7000 SoC}
+\subsection{People Detection and Feature Calculation Implementation on ZYNQ-7000 SoC}
 As mentioned before, people detection and feature calculation is done on the leaf node, in other words, on ZYNQ-7000 SoC. This implementation utilizes both the processing system (PS) and Programmable Logic (PL) parts of ZYNQ-7000. While the main application runs on top of the Debian Linux OS on ZYNQ PS, it also contains code snippets for capturing video frames from USB web camera, controlling the IP cores and send detections and calculated features to the central server. Architecture of our implementation within ZYNQ SoC can be seen from figure . Each of the task implemented within PS part and the PL part of ZYNQ SoC is explained in next sections.
 
 \begin{figure}[H]
@@ -371,7 +373,41 @@ As mentioned before, people detection and feature calculation is done on the lea
 \caption{Architecture of the Leaf node}
 \label{leafnode_Archi}
 \end{figure}
-\subsection{IP core implementation on ZYNQ PL}
+
+There are various functions that needed to be executed in the ZYNQ SoC (leaf node). We have the freedom of choice implement these functions in PL or PS. We used the following set of criteria to divide functionality among PL and PS.
+If a certain function can be easily parallelized and the latency can be reduced using parallelization and other techniques, that function is implemented in PL
+If a certain function is inherently sequential, then it is implemented in PS (Implementing this in PL would not reduce the latency in most cases instead it might even increase the latency)
+If the function performs a complex task, it is implemented in PS (Implementing on PL take a long time)
+Considering above criteria, we have selected the functions that can be implemented on ZYNQ PL. Table \ref{plvsps} shows the functions implemented on PL side of the ZYNQ and PS side of the ZYNQ.
+\begin{table}[H]
+\centering
+\caption{Implementations on ZYNQ-7000 SoC}
+\label{plvsps}
+\begin{tabular}{|l|c|c|}
+\hline
+\multicolumn{1}{|c|}{\textbf{Task}}                                                                       & \textbf{Programmable Logic} & \multicolumn{1}{l|}{\textbf{Processing System}} \\ \hline
+\begin{tabular}[c]{@{}l@{}}Video frame capturing \\ from the camera\end{tabular}                          &                             & *                                               \\ \hline
+\begin{tabular}[c]{@{}l@{}}Gaussian mixture based \\ background subtraction\end{tabular}                  & *                           &                                                 \\ \hline
+\begin{tabular}[c]{@{}l@{}}Morphological operations \\ and people detection\end{tabular}                  &                             & *                                               \\ \hline
+\begin{tabular}[c]{@{}l@{}}Feature calculation for \\ people tracking\end{tabular}                        & *                           &                                                 \\ \hline
+\begin{tabular}[c]{@{}l@{}}Principal component analysis \\ based false positive elimination\end{tabular}  &                             & *                                               \\ \hline
+\begin{tabular}[c]{@{}l@{}}Sending detections and features \\ to central server via Ethernet\end{tabular} &                             & *                                               \\ \hline
+\end{tabular}
+\end{table}
+
+\subsubsection{IP core implementation on ZYNQ PL}
+
+As mentioned in a previous section, we used a Xilinx High Level Synthesis (HLS) tool called Vivado HLS. High Level Synthesis is an automated design process which converts an algorithmic or a behavioral description to an equivalent digital hardware. Vivado HLS tool is extremely useful in implementing RTL designs using high level implementations of algorithms, quickly and easily. 
+Usually using a Hardware Description Language (HDL) such as Verilog or VHDL is the most popular method of designing digital hardware. Compared to designing using HDL, there are few trade-offs in using HLS, which are listed below.
+Converting an algorithmic description of a problem to a hardware design is far more easier with HLS than HDL.
+Even though there are documentations related to how the high level languages maps to HDL, there is no way to know exactly how the algorithm will be mapped to hardware.
+HLS restricts the control over the final hardware design compared to using HDL.
+HLS tools are fairly new and still under development compared to HDL tools.
+As a personal observation, hardware designs with HLS (Vivado HLS) designed IP cores take less time for synthesis and implementation takes much less time compared to HDL (Verilog) designed IP cores.
+Time required for design and optimization with HLS is less than that of using HDL.
+
+IP core design is only a part of out project scope. Considering that and above factors as well as time period allocated for our project, we have decided to use Vivado HLS rather than Verilog (HDL). 
+
 
 \subsubsection{Gaussian Mixture Model Background Subtraction IP Core}
 
@@ -426,6 +462,14 @@ $\sigma^2$  is the default variance, $w$ is the default initial weight initializ
 \end{equation}
 
 Where $T = 0.7$ is the default background ratio. The minimum number of gaussians that satisfies the above equation are categorized as background distributions. If the matched condition of the pixel is satisfied by a gaussian which also satisfies the thresholding condition then it is a background pixel, else it$’$s a foreground pixel.
+Top level design of the backgroung subtraction IP core is shown in figure \ref{gmmip}.
+
+\begin{figure}[H]
+\includegraphics[width=0.8\textwidth]{gmmip}
+\centering
+\caption{Top level design of background subtraction IP core}
+\label{gmmip}
+\end{figure}
 
 \subsubsection{Feature Calculation IP Core}
 
@@ -435,7 +479,7 @@ An unique feature for each detected person was needed for tracking each person. 
 \item In the software simulation using above mentioned feature for people tracking, fairly good accuracy was observed. 
 \end{itemize}
 
-Figure x shows how the 3D histogram is calculated. Input to the feature calculation IP core is a image frame with each pixel’s RGB components, detected bounding box and background subtracted binary mask.
+Figure \ref{hist} shows how the 3D histogram is calculated. Input to the feature calculation IP core is a image frame with each pixel’s RGB components, detected bounding box and background subtracted binary mask.
 Algorithm of feature calculation IP core is implemented such that, while iterating through each pixel, it checks two conditions,
 
 \begin{enumerate}
@@ -448,12 +492,41 @@ In the next step, for each pixel, RGB components are divided by 8. Then these sc
 \includegraphics[width=\textwidth]{test.png}
 \centering
 \caption{Structure of the 3D RGB histogram}
-\label{morphology}
+\label{hist}
 \end{figure}
 
-Since RGB components of each pixel scaled down by 8, each dimension of the 3D histogram consists of 8 bins (256/8). Therefore result of the above process is a 8x8x8 3D histogram for each detected person. Output of the feature calculation IP core is a 512 element linear array which contains the flattened elements of 3D histogram for the detected person.
+Since RGB components of each pixel scaled down by 8, each dimension of the 3D histogram consists of 8 bins (256/8). Therefore result of the above process is a 8x8x8 3D histogram for each detected person. Output of the feature calculation IP core is a 512 element linear array which contains the flattened elements of 3D histogram for the detected person. Figure \ref{featureip} shows a top level block diagram of feature calculation IP core. 
+\begin{figure}[H]
+\includegraphics[width=0.8\textwidth]{featureip}
+\centering
+\caption{Top level design of feature calculation IP core}
+\label{featureip}
+\end{figure}
 
-\subsection{IP Core drivers, Morphological Operations and Communication Protocol Implementation on ZYNQ PS}
+\subsubsection{Optimizing Vivado HLS IP Core Designs}
+Usually, directly synthesizing C/C++algorithmic designs result in greater resource estimations in Vivado HLS. We have mainly used following two methods for optimizing IP core design in Vivado HLS.
+\begin{enumerate}
+\item Using compiler directives
+\item Dividing all arrays(including video frames) related to the processing into smaller arrays and pipelining at task level
+\end{enumerate} 
+Vivado HLS provide methods to control the mapping of software description to hardware, to some extent. One of the main method is to use compiler directives provided by Vivado HLS. Every HLS directive starts with \#pragma HLS. Table \ref{pragma} contains the mostly used HLS pragma compiler directives in our designs and brief description about each of them.
+
+\begin{table}[]
+\centering
+\caption{Vivado HLS Compiler Directives}
+\label{pragma}
+\begin{tabular}{|l|l|l}
+\cline{1-2}
+\textbf{HLS Directive Name} & \textbf{Description}                                                                                                                                                                                                                                                     &  \\ \cline{1-2}
+PIPELINE                    & Reduces the initiation interval for a function or loop,\\ & by allowing the concurrent execution of operations                                                                                                                                                                &  \\ \cline{1-2}
+DATAFLOW                    & Enables task-level pipelining, allowing functions and,\\ & loops to overlap in their operation, increasing the \\ & concurrency of the RTL implementation,\\ & and increasing the overall throughput of the design.                                                                    &  \\ \cline{1-2}
+UNROLL                      & Unroll loops to create multiple independent operations\\ & rather than a single collection of,operations. \\ & The UNROLL pragma transforms loops by creating \\ & multiple copies,of the loop body in the RTL design, \\ & which allows some or all loop iterations to occur in,parallel. &  \\ \cline{1-2}
+ARRAY\_PARTITION            & Partitions an array into smaller arrays or individual elements.                                                                                                                                                                                                          &  \\ \cline{1-2}
+\end{tabular}
+\end{table}
+
+
+\subsection{IP Core drivers and Morphological Operations Implementation on ZYNQ PS}
 
 \subsubsection{Linux Drivers for controlling IP cores}
 This was also a challenging task due to the lack of upto date documentation and the complexity of physical memory accessing through Linux kernel. But we managed to overcome this task by using a simple but effective method.\\
@@ -530,7 +603,7 @@ Morphological operations will give a cleaner image compared to the original back
 \\\\
 Next step in this process is to detect the bounding box surrounding the blob of a person. For this we use opencv inbuilt function for convex hull detection. A convex hull is the smallest polygon enclosing a set of points. Opencv’s implementation is based on the algorithm proposed by Sklansky [8]. After this process we obtain a set of bounding boxes corresponding to people detected. Resulting bounding boxes for a test image is shown in figure \ref{fig:sfig7}.
 
-\subsection{False Positive Reduction}
+\subsubsection{False Positive Reduction}
 Although the above process is able to detect people from an image, it also detects a lot of unwanted blobs due to various reasons such as reflections caused by background surfaces, imperfections of background modeling, etc. Therefore we need to utilize a method to reduce number of these false positives. Our initial approach was to select the bounding boxes satisfying a set of conditions as follows and reject all the other detections.
 \begin{itemize}
 \item Width of bounding box(w) > TW
@@ -618,7 +691,7 @@ We utilized this framework for false positive reduction of the detections. Once 
 
 When applying this method the system should first undergo a training stage where raw detection features are collected. Then coefficients of the first principal component is determined using this dataset. Then the optimum threshold is determined. This whole process was implemented in code so that system can automatically learn to reduce false positives. In the normal mode of operation the system directly uses these calculated coefficients and threshold for false positive reduction.
 
-\subsection{Communication Protocol among leaf nodes central server}
+\subsubsection{Communication Protocol among leaf nodes central server}
 
 Since our system is a multi camera system we need to connect each camera to a central server where people tracking is done. we need to design a communication algorithm to handle the communication between the server and camera nodes. We identified the following requirements for designing such a communication protocol.
 
@@ -645,6 +718,37 @@ Binary Mask & \begin{tabular}[c]{@{}l@{}}Binary mask obtained from background su
 \end{table}
 
 With this information the server can distinguish packets coming from different camera nodes. And also it can identify any missing frames. But in our current implementation we discard missing frames completely. This information is converted into a byte stream using serialization libraries of boost (a c++ library). Then this byte stream is sent to the server through an UDP packet of 49152 bytes. We have chosen this value such that each UDP packet is self contained (i.e. it contain all the information necessary to process the corresponding frame), therefore no fragmentation of UDP packets is necessary.
+
+\subsection{Overall Hardware Architecture on Leaf Node (ZYNQ SoC)}
+
+
+\begin{figure}[H]
+\includegraphics[width=\textwidth]{overallhardware}
+\centering
+\caption{Overall hardware architecture on Leaf Node}
+\label{overallhardware}
+\end{figure}
+
+
+Figure \ref{overallhardware} shows the overall hardware architecture on the ZYNQ-7000 SoC. One background subtraction IP core and three feature calculation IP cores were used in the final design. Each feature calculation IP core can calculate features for only one detected person at a time. Therefore, using multiple feature calculation IP cores, features related to three detections can be done in parallel. All the IP cores are connected to the Accelerator Coherency Port (ACP) on ZYNQ processing system through AXI Full interface. AXI Lite interfaces were used to configure the IP cores, which are connected to Master General Purpose Input/Output (MGPIO) port on ZYNQ processing system. There are two types of memory mapped slave ports on ZYNQ-7000 processing system,
+\begin{enumerate}
+\item High Performance Ports (HP0, HP1, HP2, HP3) - 32-bit data width
+\item Accelerator Coherency Port (ACP) - 64-bit data width
+\end{enumerate}
+ACP slave port was selected coherency considering the cache coherency issue. This will be explained in more detail in the next section.
+
+\subsubsection{Cache Coherency}
+
+Assume a scenario of two entities sharing a memory and one entity has a local cache. Lets call entity with cache as X and other entity as Y. If the value of a specific memory address is cached by X and Y update the value of that same memory location with a different value without notifying X. In this case, cache of X contains a old (wrong) value.  Cache coherency ensures avoiding these kind of scenarios. 
+\par ZYNQ SoC also has a cache coherency issue. PS and PL of ZYNQ SoC share a memory and PS has a local cache. But option of ensuring the cache coherency is only available on ACP port. Therefore, we selected ACP port as the slave on the ZYNQ SoC and manually configured some signals on the port. All bits of following signals on the ACP was set to 1.
+\begin{itemize}
+\item AWUSER
+\item ARUSER
+\item AWCACHE
+\item ARCACHE
+\end{itemize}
+
+
 
 \section{Central Server}
 In our system, people detection is done at each camera node. Then each camera send this information to the central server. Multi camera people tracking and counting is performed at the central server. This central server perform the following major tasks.

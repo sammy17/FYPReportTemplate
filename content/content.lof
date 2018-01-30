@@ -7,17 +7,20 @@
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Internal architecture of ZYNQ-7000 SoC\relax }}{8}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Design flow block diagram for ZYNQ-7000 based embedded system\relax }}{8}
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Architecture of the Leaf node\relax }}{11}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Structure of the 3D RGB histogram\relax }}{14}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Block diagram of the morphological operation flow to detect people from background subtracted binary mask\relax }}{15}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Results of morphological operations for a test image\relax }}{17}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Scatter plot matrix for the 6 features collected from running our object detection on a sample video\relax }}{18}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces First Vs. second pricipal component\relax }}{19}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Density of the first principal component\relax }}{19}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Results of PCA based false positive elimination algorithm\relax }}{20}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Multiple People Tracking using Kalman Filter\relax }}{22}
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Particle Filter based Tracking\relax }}{24}
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Estimating global coordinates through calibrated cameras\relax }}{27}
-\contentsline {figure}{\numberline {3.16}{\ignorespaces Multicamera correspondence estimation\relax }}{28}
-\contentsline {figure}{\numberline {3.17}{\ignorespaces Block Diagram of the Communication Structure\relax }}{29}
-\contentsline {figure}{\numberline {3.18}{\ignorespaces Flask Logo\relax }}{30}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Top level design of background subtraction IP core\relax }}{14}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Structure of the 3D RGB histogram\relax }}{16}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Top level design of feature calculation IP core\relax }}{16}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Block diagram of the morphological operation flow to detect people from background subtracted binary mask\relax }}{18}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Results of morphological operations for a test image\relax }}{20}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Scatter plot matrix for the 6 features collected from running our object detection on a sample video\relax }}{21}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces First Vs. second pricipal component\relax }}{22}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Density of the first principal component\relax }}{23}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Results of PCA based false positive elimination algorithm\relax }}{24}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Overall hardware architecture on Leaf Node\relax }}{25}
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Multiple People Tracking using Kalman Filter\relax }}{27}
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Particle Filter based Tracking\relax }}{29}
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Estimating global coordinates through calibrated cameras\relax }}{32}
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Multicamera correspondence estimation\relax }}{33}
+\contentsline {figure}{\numberline {3.20}{\ignorespaces Block Diagram of the Communication Structure\relax }}{34}
+\contentsline {figure}{\numberline {3.21}{\ignorespaces Flask Logo\relax }}{35}
 \addvspace {10\p@ }
