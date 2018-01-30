@@ -2,14 +2,19 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Overall block diagram of the end-to-end system\relax }}{5}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Overall block diagram of the end-to-end system\relax }}{6}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Xilinx ZC702 Development Board\relax }}{7}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Internal architecture of ZYNQ-7000 SoC\relax }}{7}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Internal architecture of ZYNQ-7000 SoC\relax }}{8}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Design flow block diagram for ZYNQ-7000 based embedded system\relax }}{8}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Block diagram of the morphological operation flow to detect people from background subtracted binary mask\relax }}{10}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Results of morphological operations for a test image\relax }}{11}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Scatter plot matrix for the 6 features collected from running our object detection on a sample video\relax }}{13}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces First Vs. second pricipal component\relax }}{14}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Density of the first principal component\relax }}{14}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Results of PCA based false positive elimination algorithm\relax }}{15}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Architecture of the Leaf node\relax }}{11}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Structure of the 3D RGB histogram\relax }}{14}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Block diagram of the morphological operation flow to detect people from background subtracted binary mask\relax }}{15}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Results of morphological operations for a test image\relax }}{17}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Scatter plot matrix for the 6 features collected from running our object detection on a sample video\relax }}{18}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces First Vs. second pricipal component\relax }}{19}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Density of the first principal component\relax }}{19}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Results of PCA based false positive elimination algorithm\relax }}{20}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Multiple People Tracking using Kalman Filter\relax }}{22}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Particle Filter based Tracking\relax }}{24}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Flask Logo\relax }}{25}
 \addvspace {10\p@ }

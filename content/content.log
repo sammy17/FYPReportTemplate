@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.1.3)  28 JAN 2018 16:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.1.3)  30 JAN 2018 07:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -657,7 +657,14 @@ Package caption Info: float package is loaded.
 )
 \c@subfigure=\count158
 \c@subtable=\count159
-) (./content.aux)
+) (./content.aux
+
+LaTeX Warning: Label `morphology' multiply defined.
+
+
+LaTeX Warning: Label `flask' multiply defined.
+
+)
 \openout1 = `content.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
@@ -854,22 +861,57 @@ Underfull \hbox (badness 10000) in paragraph at lines 150--154
 [5]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 157.
- (./content.toc)
+ (./content.toc [6])
 \tf@toc=\write4
 \openout4 = `content.toc'.
 
- [6] (./content.lof)
+ [7] (./content.lof)
 \tf@lof=\write5
 \openout5 = `content.lof'.
 
- [7] (./content.lot)
+ [8] (./content.lot)
 \tf@lot=\write6
 \openout6 = `content.lot'.
 
- [8] [9]
+ [9] [10]
 Chapter 1.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 200.
+
+Underfull \hbox (badness 10000) in paragraph at lines 202--211
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 202--211
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 202--211
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 202--211
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 202--211
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 202--211
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 202--211
+
+ []
+
 [1
 
 ] [2]
@@ -878,181 +920,363 @@ Chapter 2.
 
 ] [4]
 Chapter 3.
-<images/overall_block.png, id=51, 719.68875pt x 609.27625pt>
+
+Overfull \hbox (3.01329pt too wide) in paragraph at lines 242--244
+\T1/ptm/m/n/12 Calculated fea-tures for each im-age frame will be sent to the b
+ack-end server through
+ []
+
+<images/overall_block.png, id=54, 719.68875pt x 609.27625pt>
 File: images/overall_block.png Graphic file (type png)
 <use images/overall_block.png>
-Package pdftex.def Info: images/overall_block.png  used on input line 246. on i
-nput line 246.
+Package pdftex.def Info: images/overall_block.png  used on input line 251. on i
+nput line 251.
 Package pdftex.def Info: Requested size: 284.52756pt x 240.87994pt on input lin
-e 246.
+e 251.
 [5
 
- <./images/overall_block.png>]
+]
+Underfull \hbox (badness 10000) in paragraph at lines 265--272
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--272
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--272
+
+ []
+
+[6 <./images/overall_block.png>]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 268.
-<images/zc702.jpg, id=57, 334.24875pt x 250.68657pt>
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 273.
+<images/zc702.jpg, id=63, 334.24875pt x 250.68657pt>
 File: images/zc702.jpg Graphic file (type jpg)
 <use images/zc702.jpg>
-Package pdftex.def Info: images/zc702.jpg  used on input line 286. on input lin
-e 286.
+Package pdftex.def Info: images/zc702.jpg  used on input line 291. on input lin
+e 291.
 Package pdftex.def Info: Requested size: 284.52756pt x 213.41354pt on input lin
-e 286.
- [6]
-Overfull \hbox (6.50552pt too wide) in paragraph at lines 296--297
+e 291.
+ [7 <./images/zc702.jpg>]
+Overfull \hbox (6.50552pt too wide) in paragraph at lines 301--302
 \T1/ptm/m/n/12 ZYNQ-7000 SoC con-sists of a Xil-inx XC7Z020-CLG484-1 FPGA and t
 wo ARM Cortex-
  []
 
-<images/zynq.jpg, id=61, 1053.9375pt x 870.25125pt>
+<images/zynq.jpg, id=67, 1053.9375pt x 870.25125pt>
 File: images/zynq.jpg Graphic file (type jpg)
 <use images/zynq.jpg>
-Package pdftex.def Info: images/zynq.jpg  used on input line 299. on input line
- 299.
+Package pdftex.def Info: images/zynq.jpg  used on input line 304. on input line
+ 304.
 Package pdftex.def Info: Requested size: 284.52756pt x 234.94441pt on input lin
-e 299.
-[7 <./images/zc702.jpg> <./images/zynq.jpg>]
-Overfull \hbox (8.14517pt too wide) in paragraph at lines 308--308
+e 304.
+
+Overfull \hbox (8.14517pt too wide) in paragraph at lines 313--313
 []\T1/ptm/b/n/18 Design Flow for ZYNQ-7000 based Em-bed-ded Sys-
  []
 
-<images/design.jpg, id=65, 793.96625pt x 71.26625pt>
+<images/design.jpg, id=68, 793.96625pt x 71.26625pt>
 File: images/design.jpg Graphic file (type jpg)
 <use images/design.jpg>
-Package pdftex.def Info: images/design.jpg  used on input line 312. on input li
-ne 312.
+Package pdftex.def Info: images/design.jpg  used on input line 317. on input li
+ne 317.
 Package pdftex.def Info: Requested size: 369.88582pt x 33.20152pt on input line
- 312.
-[8 <./images/design.jpg>]
-<images/morphology.png, id=69, 569.12625pt x 217.81375pt>
+ 317.
+[8 <./images/zynq.jpg> <./images/design.jpg>] [9]
+<images/hardware.png, id=76, 553.06625pt x 396.48125pt>
+File: images/hardware.png Graphic file (type png)
+<use images/hardware.png>
+Package pdftex.def Info: images/hardware.png  used on input line 367. on input 
+line 367.
+Package pdftex.def Info: Requested size: 418.25368pt x 299.83456pt on input lin
+e 367.
+ [10]
+Underfull \hbox (badness 10000) in paragraph at lines 376--380
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 376--380
+
+ []
+
+[11 <./images/hardware.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 405--407
+
+ []
+
+[12]
+Missing character: There is no â in font zptmcm7t!
+Missing character: There is no € in font zptmcm7t!
+Missing character: There is no ™ in font zptmcm7t!
+<images/test.png, id=90, 359.3425pt x 297.11pt>
+File: images/test.png Graphic file (type png)
+<use images/test.png>
+Package pdftex.def Info: images/test.png  used on input line 446. on input line
+ 446.
+Package pdftex.def Info: Requested size: 418.25368pt x 345.84468pt on input lin
+e 446.
+ [13] [14 <./images/test.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 464--467
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 464--467
+
+ []
+
+<images/morphology.png, id=99, 569.12625pt x 217.81375pt>
 File: images/morphology.png Graphic file (type png)
 <use images/morphology.png>
-Package pdftex.def Info: images/morphology.png  used on input line 364. on inpu
-t line 364.
+Package pdftex.def Info: images/morphology.png  used on input line 470. on inpu
+t line 470.
 Package pdftex.def Info: Requested size: 369.88582pt x 141.56728pt on input lin
-e 364.
- [9]
-<images/morphology/original.jpeg, id=73, 321.2pt x 240.9pt>
+e 470.
+
+Underfull \hbox (badness 10000) in paragraph at lines 476--478
+
+ []
+
+[15 <./images/morphology.png>]
+<images/morphology/original.jpeg, id=105, 321.2pt x 240.9pt>
 File: images/morphology/original.jpeg Graphic file (type jpg)
 <use images/morphology/original.jpeg>
-Package pdftex.def Info: images/morphology/original.jpeg  used on input line 37
-6. on input line 376.
+Package pdftex.def Info: images/morphology/original.jpeg  used on input line 48
+2. on input line 482.
 Package pdftex.def Info: Requested size: 167.3021pt x 125.47823pt on input line
- 376.
-<images/morphology/bgsub.jpeg, id=74, 321.2pt x 240.9pt>
+ 482.
+<images/morphology/bgsub.jpeg, id=106, 321.2pt x 240.9pt>
 File: images/morphology/bgsub.jpeg Graphic file (type jpg)
 <use images/morphology/bgsub.jpeg>
-Package pdftex.def Info: images/morphology/bgsub.jpeg  used on input line 382. 
-on input line 382.
+Package pdftex.def Info: images/morphology/bgsub.jpeg  used on input line 488. 
+on input line 488.
 Package pdftex.def Info: Requested size: 167.3021pt x 125.47823pt on input line
- 382.
-<images/morphology/dilate1.jpeg, id=75, 321.2pt x 240.9pt>
+ 488.
+<images/morphology/dilate1.jpeg, id=107, 321.2pt x 240.9pt>
 File: images/morphology/dilate1.jpeg Graphic file (type jpg)
 <use images/morphology/dilate1.jpeg>
-Package pdftex.def Info: images/morphology/dilate1.jpeg  used on input line 388
-. on input line 388.
+Package pdftex.def Info: images/morphology/dilate1.jpeg  used on input line 494
+. on input line 494.
 Package pdftex.def Info: Requested size: 167.3021pt x 125.47823pt on input line
- 388.
-<images/morphology/dilate2.jpeg, id=76, 321.2pt x 240.9pt>
+ 494.
+<images/morphology/dilate2.jpeg, id=108, 321.2pt x 240.9pt>
 File: images/morphology/dilate2.jpeg Graphic file (type jpg)
 <use images/morphology/dilate2.jpeg>
-Package pdftex.def Info: images/morphology/dilate2.jpeg  used on input line 394
-. on input line 394.
+Package pdftex.def Info: images/morphology/dilate2.jpeg  used on input line 500
+. on input line 500.
 Package pdftex.def Info: Requested size: 167.3021pt x 125.47823pt on input line
- 394.
-<images/morphology/errode.jpeg, id=77, 321.2pt x 240.9pt>
+ 500.
+<images/morphology/errode.jpeg, id=109, 321.2pt x 240.9pt>
 File: images/morphology/errode.jpeg Graphic file (type jpg)
 <use images/morphology/errode.jpeg>
-Package pdftex.def Info: images/morphology/errode.jpeg  used on input line 400.
- on input line 400.
+Package pdftex.def Info: images/morphology/errode.jpeg  used on input line 506.
+ on input line 506.
 Package pdftex.def Info: Requested size: 167.3021pt x 125.47823pt on input line
- 400.
-<images/morphology/shape.jpeg, id=78, 321.2pt x 240.9pt>
+ 506.
+<images/morphology/shape.jpeg, id=110, 321.2pt x 240.9pt>
 File: images/morphology/shape.jpeg Graphic file (type jpg)
 <use images/morphology/shape.jpeg>
-Package pdftex.def Info: images/morphology/shape.jpeg  used on input line 406. 
-on input line 406.
+Package pdftex.def Info: images/morphology/shape.jpeg  used on input line 512. 
+on input line 512.
 Package pdftex.def Info: Requested size: 167.3021pt x 125.47823pt on input line
- 406.
-<images/morphology/detections.jpeg, id=79, 321.2pt x 240.9pt>
+ 512.
+<images/morphology/detections.jpeg, id=111, 321.2pt x 240.9pt>
 File: images/morphology/detections.jpeg Graphic file (type jpg)
 <use images/morphology/detections.jpeg>
 Package pdftex.def Info: images/morphology/detections.jpeg  used on input line 
-413. on input line 413.
+519. on input line 519.
 Package pdftex.def Info: Requested size: 167.30211pt x 125.47823pt on input lin
-e 413.
- [10 <./images/morphology.png>] [11 <./images/morphology/original.jpeg> <./imag
-es/morphology/bgsub.jpeg> <./images/morphology/dilate1.jpeg> <./images/morpholo
-gy/dilate2.jpeg> <./images/morphology/errode.jpeg> <./images/morphology/shape.j
-peg> <./images/morphology/detections.jpeg>]
-<images/pca/scatter_plots_pca.png, id=88, 1028.34187pt x 490.83376pt>
+e 519.
+
+Underfull \hbox (badness 10000) in paragraph at lines 527--530
+
+ []
+
+[16] [17 <./images/morphology/original.jpeg> <./images/morphology/bgsub.jpeg> <
+./images/morphology/dilate1.jpeg> <./images/morphology/dilate2.jpeg> <./images/
+morphology/errode.jpeg> <./images/morphology/shape.jpeg> <./images/morphology/d
+etections.jpeg>]
+<images/pca/scatter_plots_pca.png, id=118, 1028.34187pt x 490.83376pt>
 File: images/pca/scatter_plots_pca.png Graphic file (type png)
 <use images/pca/scatter_plots_pca.png>
-Package pdftex.def Info: images/pca/scatter_plots_pca.png  used on input line 4
-46. on input line 446.
+Package pdftex.def Info: images/pca/scatter_plots_pca.png  used on input line 5
+52. on input line 552.
 Package pdftex.def Info: Requested size: 418.25368pt x 199.63289pt on input lin
-e 446.
+e 552.
 
-[12]
+Underfull \hbox (badness 10000) in paragraph at lines 559--560
+
+ []
+
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 455.
+               Default added (so using `tbp') on input line 561.
 
-<images/pca/1_2_pca.png, id=92, 1028.34187pt x 490.83376pt>
+<images/pca/1_2_pca.png, id=119, 1028.34187pt x 490.83376pt>
 File: images/pca/1_2_pca.png Graphic file (type png)
 <use images/pca/1_2_pca.png>
-Package pdftex.def Info: images/pca/1_2_pca.png  used on input line 474. on inp
-ut line 474.
+Package pdftex.def Info: images/pca/1_2_pca.png  used on input line 580. on inp
+ut line 580.
 Package pdftex.def Info: Requested size: 418.25368pt x 199.63289pt on input lin
-e 474.
-[13 <./images/pca/scatter_plots_pca.png (PNG copy)>]
-<images/pca/density.png, id=96, 421.575pt x 316.18124pt>
+e 580.
+[18 <./images/pca/scatter_plots_pca.png (PNG copy)>]
+<images/pca/density.png, id=123, 421.575pt x 316.18124pt>
 File: images/pca/density.png Graphic file (type png)
 <use images/pca/density.png>
-Package pdftex.def Info: images/pca/density.png  used on input line 484. on inp
-ut line 484.
+Package pdftex.def Info: images/pca/density.png  used on input line 590. on inp
+ut line 590.
 Package pdftex.def Info: Requested size: 418.25368pt x 313.69583pt on input lin
-e 484.
- [14 <./images/pca/1_2_pca.png (PNG copy)> <./images/pca/density.png (PNG copy)
->]
-<images/pca/fals_positives.jpg, id=100, 321.2pt x 240.9pt>
+e 590.
+
+Underfull \hbox (badness 10000) in paragraph at lines 596--599
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 596--599
+
+ []
+
+[19 <./images/pca/1_2_pca.png (PNG copy)> <./images/pca/density.png (PNG copy)>
+]
+<images/pca/fals_positives.jpg, id=127, 321.2pt x 240.9pt>
 File: images/pca/fals_positives.jpg Graphic file (type jpg)
 <use images/pca/fals_positives.jpg>
-Package pdftex.def Info: images/pca/fals_positives.jpg  used on input line 497.
- on input line 497.
+Package pdftex.def Info: images/pca/fals_positives.jpg  used on input line 603.
+ on input line 603.
 Package pdftex.def Info: Requested size: 167.3021pt x 125.47823pt on input line
- 497.
-<images/pca/false_positives_eliminated.jpg, id=101, 321.2pt x 240.9pt>
+ 603.
+<images/pca/false_positives_eliminated.jpg, id=128, 321.2pt x 240.9pt>
 File: images/pca/false_positives_eliminated.jpg Graphic file (type jpg)
 <use images/pca/false_positives_eliminated.jpg>
 Package pdftex.def Info: images/pca/false_positives_eliminated.jpg  used on inp
-ut line 503. on input line 503.
+ut line 609. on input line 609.
 Package pdftex.def Info: Requested size: 167.3021pt x 125.47823pt on input line
- 503.
- [15 <./images/pca/fals_positives.jpg> <./images/pca/false_positives_eliminated
-.jpg>]
+ 609.
+
+Overfull \hbox (16.74242pt too wide) in paragraph at lines 634--643
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 629--643
+
+ []
+
+[20 <./images/pca/fals_positives.jpg> <./images/pca/false_positives_eliminated.
+jpg>] [21]
+Underfull \hbox (badness 10000) in paragraph at lines 660--662
+
+ []
+
+<images/kalman_hungary_tracker.png, id=136, 923.45pt x 413.545pt>
+File: images/kalman_hungary_tracker.png Graphic file (type png)
+<use images/kalman_hungary_tracker.png>
+Package pdftex.def Info: images/kalman_hungary_tracker.png  used on input line 
+666. on input line 666.
+Package pdftex.def Info: Requested size: 418.25368pt x 187.30507pt on input lin
+e 666.
+
+Underfull \hbox (badness 10000) in paragraph at lines 678--684
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 678--684
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 678--684
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 678--684
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 678--684
+
+ []
+
+[22 <./images/kalman_hungary_tracker.png>] [23]
+<images/particle_filter.png, id=144, 923.45pt x 413.545pt>
+File: images/particle_filter.png Graphic file (type png)
+<use images/particle_filter.png>
+Package pdftex.def Info: images/particle_filter.png  used on input line 712. on
+ input line 712.
+Package pdftex.def Info: Requested size: 418.25368pt x 187.30507pt on input lin
+e 712.
+
+Underfull \hbox (badness 10000) in paragraph at lines 718--720
+
+ []
+
+[24 <./images/particle_filter.png (PNG copy)>]
+<images/flask.png, id=148, 248.0175pt x 97.236pt>
+File: images/flask.png Graphic file (type png)
+<use images/flask.png>
+Package pdftex.def Info: images/flask.png  used on input line 738. on input lin
+e 738.
+Package pdftex.def Info: Requested size: 199.16928pt x 78.08414pt on input line
+ 738.
+
+Underfull \hbox (badness 10000) in paragraph at lines 743--748
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 743--748
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 743--748
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 743--748
+
+ []
+
+[25 <./images/flask.png>] [26] [27]
 Chapter 4.
-[16
+[28
 
-] [17
+] [29
 
-] (./content.aux) ) 
+] (./content.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 16766 strings out of 492990
- 313650 string characters out of 6135006
- 383594 words of memory out of 5000000
- 19929 multiletter control sequences out of 15000+600000
- 46524 words of font info for 61 fonts, out of 8000000 for 9000
+ 16809 strings out of 492990
+ 314387 string characters out of 6135006
+ 383708 words of memory out of 5000000
+ 19955 multiletter control sequences out of 15000+600000
+ 54277 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,14n,94p,1055b,551s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}<
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/urw/times/utmri8a.pfb>
-Output written on content.pdf (26 pages, 626098 bytes).
+ 62i,15n,94p,1369b,551s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol
+/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on content.pdf (39 pages, 767486 bytes).
 PDF statistics:
- 128 PDF objects out of 1000 (max. 8388607)
- 76 compressed objects within 1 object stream
+ 197 PDF objects out of 1000 (max. 8388607)
+ 118 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 98 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 123 words of extra memory for PDF output out of 10000 (max. 10000000)
 
