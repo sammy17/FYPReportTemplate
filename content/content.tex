@@ -210,8 +210,8 @@ There have been several systems which handle multi camera people tracking introd
 The scope of this project is to implement a scalable end to end system for Multi-Camera People Tracking utilizing a Zynq SoC for leaf node processing. Thereby we use an FPGA + ARM processor for leaf node processing, a central server for multi-camera people tracking and a web server for generating business intelligence.\\\\
 In this proposed system by using a FPGA + ARM processor we have achieved leaf node processing of people detection at a lower power and also enable the scalability and lower bandwidth requirement. \\\\
 People Detection in FPGA is an aspect that has been researched by many over the
-years. For example [2] suggests a FPGA based embedded platform for people detection using Gaussian Mixture Models and [3] suggests a similar system for people detection using Histogram of Features.\\\\
-Multi-Camera People Tracking systems is also a field which has been researched over the years. [4] suggests a multi-camera surveillance system implemented with background subtraction for detection and color features for tracking. [6] suggests another multi camera people tracking system which uses particle filters for tracking on the ground plane.
+years. For example [12] suggests a FPGA based embedded platform for people detection using Gaussian Mixture Models and [13] suggests a similar system for people detection using Histogram of Features.\\\\
+Multi-Camera People Tracking systems is also a field which has been researched over the years. [14] suggests a multi-camera surveillance system implemented with background subtraction for detection and color features for tracking. [16] suggests another multi camera people tracking system which uses particle filters for tracking on the ground plane.
 
 \section{Primary Objectives of the Project }
 
@@ -691,6 +691,12 @@ We can see that only the first two principal components give a significant contr
 Next we looked at the kernel density estimate of the first principal component as shown in figure \ref{pca3}. We can approximate this with a bimodal distribution. Therefore the problem reduces to finding the optimum threshold for this bimodal distribution. We used Otsu’s [9] thresholding algorithm to find this threshold.
 \\\\
 We utilized this framework for false positive reduction of the detections. Once we tested out this with several video sequences taken from different camera angles we found out that this method indeed gives better results as analysis suggested. Figure \ref{pca4:pca4} shows the results of PCA based false positive reduction.\\
+\begin{figure}[H]
+\includegraphics[width=0.9\textwidth]{pca_flow.png}
+\centering
+\caption{PCA approach for False Positives Reduction}
+\label{pca3}
+\end{figure}
 
 \begin{figure}
 \begin{subfigure}{.5\textwidth}
@@ -968,7 +974,15 @@ The calculated features are sent to the server, in order to track people and gen
 The communications protocol used is UDP (User Datagram Protocol) to ensure low latency and reduce the processing overhead between communication nodes. Since this solution needs to be a real-time application, using TCP (Transmission Control Protocol) is not beneficial. One of the main reasons is dropping packets is desirable over waiting for packets delayed due to retransmission.\\\\
 The retrieved features at the server backend are processed and multi camera tracking is done as discussed in the above section, which generates tracking results. Tracking results contain ground plane coordinates of the individuals, track ID and the time stamp at which the data was processed. This information is looped back to the server which is retrieved by a python server and redirects to a web server written on the Flask framework. Flask web framework is based on python and it eases generating business intelligence data.\\\\
 Clients can access the web interface through the URL zynq.projects.mrt.ac.lk which directs to an internal server in ENTC. All the processing to generate tracking information is done in the said server. We have acquired a public IP in order to ensure that a client of this product can access the information on the go. Authentication is provided so that unauthorized parties will not be able to access sensitive information.
-
+\subsection{QT GUI Application}
+A Qt based GUI is also introduced as a tool for analysis. This tool was created focusing admins of the system and provides functionality which will be in interest of admins who will be using the system for surveillance at all times. The tool provides following features.
+\begin{itemize}
+\item Leaf Node Detections - Real-time Detections mask for Each camera.
+\item Heatmap - Real-time generated heatmap of the people density throughout the store started at the time at which the system started.
+\item Real-time tracking - tracks of the customers currently at the store. This map is generated realtime and shows where a customer is located at that moment.
+\item Real-time counting - Real-time customer density of the store
+The graphs and maps generated by this application does not undergo any latency which is evident in the website.
+\end{itemize}
 \subsection{Business Intelligence Software}
 
 Business intelligence software provides the functionality as a website in order to allow access on the go. The web interface is based on Flask web Framework. Flask which is based on Python is ideal for interactive real time user interface which showcases graphical data because Python provides a large graphics library ensuring an aesthetic design pleasing the eyes of the user and conveying the necessary information at the same time effectively.
@@ -1125,6 +1139,34 @@ Web version of the business intelligence supports 4 formats that is density, tra
 \end{figure}
 \newpage
 
+QT GUI Application supports Real-time camera detections for each leaf node connected, real-time global tracking, heatmap and people count graphs. Interface of the QT GUI application is shown in the following figures.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{qt_cam.png}
+  \caption{Real-time Camera Detections}
+  \label{qt_graph1}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{qt_tracking.png}
+  \caption{Real-time Global Tracking}
+  \label{qt_graph2}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{qt_heatmap.png}
+  \caption{Real-time Heatmap}
+  \label{qt_graph3}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{qt_count.png}
+  \caption{Real-time People Count Graphs}
+  \label{qt_graph1}
+\end{figure}
 \chapter{Conclusion}
 
 For a business organization to stay on par with their competitors, understanding their customers is a must. This project provides a solution to that problem by processing the already available data in an intelligent manner and providing business insight to aid in making management decisions. Proposed system is scalable unlike most of the similar systems available in the market today.\\
@@ -1142,9 +1184,9 @@ For a business organization to stay on par with their competitors, understanding
 
 
 \newpage
-\chapter{References}
+%\chapter{References}
 %\section*{\textbf{References}}
-\addcontentsline{toc}{section}{References}
+\addcontentsline{toc}{section}{Bibliography}
 \begin{thebibliography}{10}
 
 \bibitem{1}
@@ -1169,13 +1211,43 @@ Tang, Nick C., et al. "Cross-camera knowledge transfer for multiview people coun
 Yang, Tao, et al. "Robust people detection and tracking in a multi-camera indoor visual surveillance system." \textit{Multimedia and Expo, 2007 IEEE International Conference on}. IEEE, 2007.
 
 \bibitem{8}
-Flask.pocoo.org. (2017). Tutorial — Flask Documentation (0.12). [online] Available at: http://flask.pocoo.org/docs/0.12/tutorial/ [Accessed 6 Oct. 2017].
+Flask.pocoo.org. (2017). Tutorial - Flask Documentation (0.12). [online] Available at: http://flask.pocoo.org/docs/0.12/tutorial/ [Accessed 6 Oct. 2017].
 
 \bibitem{9}
 Pythonprogramming.net. (2017). Python Programming Tutorials. [online] Available at: https://pythonprogramming.net/flask-registration-tutorial/ [Accessed 6 Oct. 2017].
 
 \bibitem{10}
-Flask-restful.readthedocs.io. (2017). Flask-RESTful — Flask-RESTful 0.3.6 documentation. [online] Available at: https://flask-restful.readthedocs.io/en/latest/ [Accessed 6 Oct. 2017].
+Flask-restful.readthedocs.io. (2017). Flask-RESTful - Flask-RESTful 0.3.6 documentation. [online] Available at: https://flask-restful.readthedocs.io/en/latest/ [Accessed 6 Oct. 2017].
+
+\bibitem{11}
+C. Stauffer and W. E. L. Grimson, "Adaptive background mixture models for real-time tracking," \textit{Proceedings of the IEEE Computer Society Conference on Computer Vision and Pattern Recognition (CVPR '99),} pp. 246-252, Fort Collins, Colo, USA, June 1999. 
+
+\bibitem{12}
+M. Genovese,E. Napoli,D.D. Caro,N. Petra, and A.G.M. Strollo, "FPGA Implementation of Gaussian Mixture Model Algorithm for 47 fps Segmentation  of 1080p Video," \textit{Journal  of  Electrical  and  Computer Engineering,} vol. 2013, pp. 1-8, Jan. 2013. 
+
+\bibitem{13}
+P. Y. Hsiao, S. Y. Lin, C. Y. Chen, "A Real-Time FPGA Based Human Detector", \textit{IS3C Internat. Symp.} on, pp. 1014-1017, 2016
+
+\bibitem{14}
+C. H. Chen, T. Y. Chen, J. C. Lin and D. J. Wang, "People Tracking in the Multi-camera Surveillance System," \textit{2011 Second International Conference on Innovations in Bio-inspired Computing and Applications,} Shenzhan, 2011, pp. 1-4.
+
+\bibitem{15}
+R. Eshel and Y. Moses, "Homography based multiple camera detection and tracking of people in a dense crowd," \textit{2008 IEEE Conference on Computer Vision and Pattern Recognition,} Anchorage, AK, 2008, pp. 1-8.
+
+\bibitem{16}
+W. Du, J. Piater, "Multi-Camera People Tracking by Collaborative Particle Filters and Principal Axis-Based Integration", \textit{Proc. Asian Conf. Computer Vision,} pp. 365-374, 2007.
+
+\bibitem{17}
+Suzuki, S., 1985. Topological structural analysis of digitized binary images by border following. \textit{Computer vision, graphics, and image processing,} 30(1), pp.32-46.
+
+\bibitem{18}
+Sklansky, J., 1982. Finding the convex hull of a simple polygon. \textit{Pattern Recognition Letters,} 1(2), pp.79-83.
+
+\bibitem{19}
+Otsu, N., 1979. A threshold selection method from gray-level histograms. \textit{IEEE transactions on systems, man, and cybernetics,} 9(1), pp.62-66.
+
+\bibitem{20} 
+Xilinx.com, 2018. [Online]. Available: https://www.xilinx.com/support/documenta\\tion/selection-guides/zynq-7000-product-selection-guide.pdf. [Accessed: 31- Jan- 2018].
 \end{thebibliography}
 
 

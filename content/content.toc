@@ -4,59 +4,61 @@
 \contentsline {section}{\textbf {Abstract}}{iv}
 \contentsline {section}{\textbf {Acknowledgments}}{v}
 \contentsline {section}{\textbf {List of Figures}}{viii}
-\contentsline {section}{\textbf {List of Tables}}{ix}
-\contentsline {section}{\textbf {Acronyms and Abbreviations}}{x}
+\contentsline {section}{\textbf {List of Tables}}{x}
+\contentsline {section}{\textbf {Acronyms and Abbreviations}}{xi}
 \contentsline {chapter}{\numberline {1}\textbf {Introduction}}{1}
-\contentsline {chapter}{\numberline {2}Literature Review}{3}
-\contentsline {chapter}{\numberline {3}Methodology}{5}
-\contentsline {section}{\numberline {3.1}Introduction}{5}
-\contentsline {section}{\numberline {3.2}Scope}{5}
-\contentsline {section}{\numberline {3.3}Overall Architecture}{6}
-\contentsline {section}{\numberline {3.4}Embedded System (Leaf Node)}{6}
-\contentsline {subsection}{\numberline {3.4.1}Xilinx ZC702 Board}{7}
-\contentsline {subsection}{\numberline {3.4.2}ZYNQ-7000 SoC}{8}
-\contentsline {subsection}{\numberline {3.4.3}Design Flow for ZYNQ-7000 based Embedded System}{8}
-\contentsline {subsubsection}{\numberline {3.4.3.1}Vivado HLS}{9}
-\contentsline {subsubsection}{\numberline {3.4.3.2}Vivado}{9}
-\contentsline {subsubsection}{\numberline {3.4.3.3}Xilinx SDK}{9}
-\contentsline {subsubsection}{\numberline {3.4.3.4}PetaLinux SDK}{9}
-\contentsline {subsection}{\numberline {3.4.4}Installing Linux on ZYNQ-7000}{9}
-\contentsline {subsection}{\numberline {3.4.5}People Detection and Feature Calculation Implementation on ZYNQ-7000 SoC}{10}
-\contentsline {subsubsection}{\numberline {3.4.5.1}IP core implementation on ZYNQ PL}{12}
-\contentsline {subsubsection}{\numberline {3.4.5.2}Gaussian Mixture Model Background Subtraction IP Core}{13}
-\contentsline {subsubsection}{\numberline {3.4.5.3}Feature Calculation IP Core}{15}
-\contentsline {subsubsection}{\numberline {3.4.5.4}Optimizing Vivado HLS IP Core Designs}{17}
-\contentsline {subsection}{\numberline {3.4.6}IP Core drivers and Morphological Operations Implementation on ZYNQ PS}{17}
-\contentsline {subsubsection}{\numberline {3.4.6.1}Linux Drivers for controlling IP cores}{17}
-\contentsline {subsubsection}{\numberline {3.4.6.2}People Detection from Background Subtracted Binary Mask}{18}
-\contentsline {subsubsection}{\numberline {3.4.6.3}False Positive Reduction}{19}
-\contentsline {subsubsection}{\numberline {3.4.6.4}Communication Protocol among leaf nodes central server}{24}
-\contentsline {subsection}{\numberline {3.4.7}Overall Hardware Architecture on Leaf Node (ZYNQ SoC)}{25}
-\contentsline {subsubsection}{\numberline {3.4.7.1}Cache Coherency}{26}
-\contentsline {section}{\numberline {3.5}Central Server}{26}
-\contentsline {subsection}{\numberline {3.5.1}Receiving and Unloading Data Packets from Camera Nodes}{27}
-\contentsline {subsection}{\numberline {3.5.2}Single Camera Tracking}{27}
-\contentsline {subsubsection}{\numberline {3.5.2.1}Kalman Filter based Tracking}{27}
-\contentsline {subsubsection}{\numberline {3.5.2.2}Improvements for Kalman FIlter based Tracking}{28}
-\contentsline {subsubsection}{\numberline {3.5.2.3}Gray Level Intensity Histogram as a Parameter in Cost Estimation}{28}
-\contentsline {subsubsection}{\numberline {3.5.2.4}Adding a Penalty for the Cost for High Velocities in Kalman Filter State}{29}
-\contentsline {subsubsection}{\numberline {3.5.2.5}Tuning model parameters}{29}
-\contentsline {subsection}{\numberline {3.5.3}Particle Filter Based Tracking}{29}
-\contentsline {subsubsection}{\numberline {3.5.3.1}Particle Initialization}{30}
-\contentsline {subsubsection}{\numberline {3.5.3.2}Particle Propagation}{30}
-\contentsline {subsubsection}{\numberline {3.5.3.3}Updating Weights with a Measurement}{30}
-\contentsline {subsection}{\numberline {3.5.4}Choosing Particle Filtering over Kalman Filtering}{31}
-\contentsline {subsection}{\numberline {3.5.5}Data Association}{31}
-\contentsline {subsection}{\numberline {3.5.6}Sensor Fusion}{31}
-\contentsline {subsection}{\numberline {3.5.7}Multi Camera Tracking}{32}
-\contentsline {subsection}{\numberline {3.5.8}Communication with Web Server}{34}
-\contentsline {subsection}{\numberline {3.5.9}Business Intelligence Software}{35}
-\contentsline {chapter}{\numberline {4}Results}{37}
-\contentsline {section}{\numberline {4.1}Acceleration Using ZYNQ PL}{37}
-\contentsline {section}{\numberline {4.2}Bandwidth Reduction}{37}
-\contentsline {section}{\numberline {4.3}Overall Hardware Utilization}{38}
-\contentsline {section}{\numberline {4.4}Total on Chip Power}{38}
-\contentsline {section}{\numberline {4.5}Detection Accuracy}{39}
-\contentsline {section}{\numberline {4.6}Business Intelligence Software}{40}
-\contentsline {section}{\numberline {4.7}Conclusion}{43}
-\contentsline {section}{References}{45}
+\contentsline {section}{\numberline {1.1}Primary Objectives of the Project }{2}
+\contentsline {section}{\numberline {1.2}Scope}{3}
+\contentsline {chapter}{\numberline {2}Literature Review}{4}
+\contentsline {chapter}{\numberline {3}Methodology}{6}
+\contentsline {section}{\numberline {3.1}Introduction}{6}
+\contentsline {section}{\numberline {3.2}Overall Architecture}{6}
+\contentsline {section}{\numberline {3.3}Embedded System (Leaf Node)}{7}
+\contentsline {subsection}{\numberline {3.3.1}Xilinx ZC702 Board}{7}
+\contentsline {subsection}{\numberline {3.3.2}ZYNQ-7000 SoC}{8}
+\contentsline {subsection}{\numberline {3.3.3}Design Flow for ZYNQ-7000 based Embedded System}{9}
+\contentsline {subsubsection}{\numberline {3.3.3.1}Vivado HLS}{9}
+\contentsline {subsubsection}{\numberline {3.3.3.2}Vivado}{9}
+\contentsline {subsubsection}{\numberline {3.3.3.3}Xilinx SDK}{9}
+\contentsline {subsubsection}{\numberline {3.3.3.4}PetaLinux SDK}{9}
+\contentsline {subsection}{\numberline {3.3.4}Installing Linux on ZYNQ-7000}{10}
+\contentsline {subsection}{\numberline {3.3.5}People Detection and Feature Calculation Implementation on ZYNQ-7000 SoC}{11}
+\contentsline {subsubsection}{\numberline {3.3.5.1}IP core implementation on ZYNQ PL}{12}
+\contentsline {subsubsection}{\numberline {3.3.5.2}Gaussian Mixture Model Background Subtraction IP Core}{13}
+\contentsline {subsubsection}{\numberline {3.3.5.3}Feature Calculation IP Core}{15}
+\contentsline {subsubsection}{\numberline {3.3.5.4}Optimizing Vivado HLS IP Core Designs}{17}
+\contentsline {subsection}{\numberline {3.3.6}IP Core drivers and Morphological Operations Implementation on ZYNQ PS}{17}
+\contentsline {subsubsection}{\numberline {3.3.6.1}Linux Drivers for controlling IP cores}{17}
+\contentsline {subsubsection}{\numberline {3.3.6.2}People Detection from Background Subtracted Binary Mask}{18}
+\contentsline {subsubsection}{\numberline {3.3.6.3}False Positive Reduction}{19}
+\contentsline {subsubsection}{\numberline {3.3.6.4}Communication Protocol among leaf nodes central server}{25}
+\contentsline {subsection}{\numberline {3.3.7}Overall Hardware Architecture on Leaf Node (ZYNQ SoC)}{26}
+\contentsline {subsubsection}{\numberline {3.3.7.1}Cache Coherency}{26}
+\contentsline {section}{\numberline {3.4}Central Server}{27}
+\contentsline {subsection}{\numberline {3.4.1}Receiving and Unloading Data Packets from Camera Nodes}{27}
+\contentsline {subsection}{\numberline {3.4.2}Single Camera Tracking}{27}
+\contentsline {subsubsection}{\numberline {3.4.2.1}Kalman Filter based Tracking}{28}
+\contentsline {subsubsection}{\numberline {3.4.2.2}Improvements for Kalman FIlter based Tracking}{29}
+\contentsline {subsubsection}{\numberline {3.4.2.3}Gray Level Intensity Histogram as a Parameter in Cost Estimation}{29}
+\contentsline {subsubsection}{\numberline {3.4.2.4}Adding a Penalty for the Cost for High Velocities in Kalman Filter State}{29}
+\contentsline {subsubsection}{\numberline {3.4.2.5}Tuning model parameters}{29}
+\contentsline {subsection}{\numberline {3.4.3}Particle Filter Based Tracking}{30}
+\contentsline {subsubsection}{\numberline {3.4.3.1}Particle Initialization}{31}
+\contentsline {subsubsection}{\numberline {3.4.3.2}Particle Propagation}{31}
+\contentsline {subsubsection}{\numberline {3.4.3.3}Updating Weights with a Measurement}{31}
+\contentsline {subsection}{\numberline {3.4.4}Choosing Particle Filtering over Kalman Filtering}{31}
+\contentsline {subsection}{\numberline {3.4.5}Data Association}{32}
+\contentsline {subsection}{\numberline {3.4.6}Sensor Fusion}{32}
+\contentsline {subsection}{\numberline {3.4.7}Multi Camera Tracking}{32}
+\contentsline {subsection}{\numberline {3.4.8}Communication with Web Server}{34}
+\contentsline {subsection}{\numberline {3.4.9}QT GUI Application}{35}
+\contentsline {subsection}{\numberline {3.4.10}Business Intelligence Software}{35}
+\contentsline {chapter}{\numberline {4}Results}{38}
+\contentsline {section}{\numberline {4.1}Acceleration Using ZYNQ PL}{38}
+\contentsline {section}{\numberline {4.2}Bandwidth Reduction}{38}
+\contentsline {section}{\numberline {4.3}Overall Hardware Utilization}{39}
+\contentsline {section}{\numberline {4.4}Total on Chip Power}{39}
+\contentsline {section}{\numberline {4.5}Detection Accuracy}{40}
+\contentsline {section}{\numberline {4.6}Business Intelligence Software}{41}
+\contentsline {chapter}{\numberline {5}Conclusion}{46}
+\contentsline {section}{Bibliography}{48}

@@ -6,6 +6,7 @@
 \contentsline {table}{\numberline {3.2}{\ignorespaces Vivado HLS Compiler Directives\relax }}{17}
 \contentsline {table}{\numberline {3.3}{\ignorespaces Percentage of variance along each pricipal component\relax }}{22}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Percentage acceleration by utilizing ZYNQ PL\relax }}{37}
-\contentsline {table}{\numberline {4.2}{\ignorespaces Total resources on ZYNQ PL (Xilinx XC7z020 FPGA)\relax }}{38}
-\contentsline {table}{\numberline {4.3}{\ignorespaces Accuracy of People Detection for Various Datasets\relax }}{39}
+\contentsline {table}{\numberline {4.1}{\ignorespaces Percentage acceleration by utilizing ZYNQ PL\relax }}{38}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Total resources on ZYNQ PL (Xilinx XC7z020 FPGA)\relax }}{39}
+\contentsline {table}{\numberline {4.3}{\ignorespaces Accuracy of People Detection for Various Datasets\relax }}{40}
+\addvspace {10\p@ }
