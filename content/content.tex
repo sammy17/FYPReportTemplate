@@ -212,6 +212,41 @@ In this proposed system by using a FPGA + ARM processor we have achieved leaf no
 People Detection in FPGA is an aspect that has been researched by many over the
 years. For example [2] suggests a FPGA based embedded platform for people detection using Gaussian Mixture Models and [3] suggests a similar system for people detection using Histogram of Features.\\\\
 Multi-Camera People Tracking systems is also a field which has been researched over the years. [4] suggests a multi-camera surveillance system implemented with background subtraction for detection and color features for tracking. [6] suggests another multi camera people tracking system which uses particle filters for tracking on the ground plane.
+
+\section{Primary Objectives of the Project }
+
+\begin{itemize}
+\item  People Detection algorithm in XILINX ZC702 kit\\
+People detection involves ﬁnding the bounding boxes of locations of people in every image frame. Accuracy of this is very critical since this will directly affect the people tracking results and also the business intelligence output. This task will be done in the programmable logic (PL) of the FPGA which will work much faster in terms of the performance. 
+
+\item Muti-Camera People Tracking\\
+A central server will receive the vectorized information to be used for multicamera people tracking. There will be several ZC702 devices interfaced with a camera which will be sending the people detection results to the server through ethernet. Server will fuse all these results and execute people tracking in a multicamera system. 
+
+\item  Business Intelligence Software \\
+End result of the project is to assist making business decisions in a large retail store like environment. System will use the multi-camera people tracking results to visualize the paths of the people using heat maps of people density and heat graphs, etc.
+
+
+
+\end{itemize}
+\newpage
+
+\section{Scope}
+The main components of the project that makes the scope is as follows.
+\begin{itemize}
+\item People Detection feature extraction\\
+This involves reading image frames from the camera and extracting the features
+required for people detection. This computation will be done in the Programmable
+Logic (PL) of Zynq ZC702 Evaluation Kit.
+\item Writing Linux Kernel drivers for controlling PL IP cores.\\
+Writing Linux Kernel drivers are required to control the IP cores from the software end.
+\item Communication with the backend server \\
+Calculated features for each image frame will be sent to the backend server through Ethernet for the rest of the processing.
+\item Multi- Camera People Tracking \\
+Multi-Camera people tracking will be done in the backend server using the features sent through each of the cameras.
+
+
+\end{itemize}
+
 \chapter{Literature Review}
 In this project main focus was to implement an end to end system for Multi-Camera People Tracking System and to use this system to generate business intuition. As explained earlier we use the technique of leaf node processing to achieve a scalable, low power, low bandwidth required system.\vspace{0.3cm} 
 
@@ -230,26 +265,11 @@ Other major challenge that we face is, how to extend multiple target tracking in
 By going through the available literature we were able to get an insight of the scope of our project. We identified some potential solutions for the challenges we have. We were also able to identify that implementing the overall system architecture for multi-camera people tracking with leaf node processing will be a novel contribution. 
 
 
+
 \chapter{Methodology}
 \section{Introduction}
 In this project we have designed and implemented an end to end multi camera people counting and tracking system based on Xilinx ZC702 development board. In this implementation we have considered the possibility of using leaf node processing to develop a scalable solution for multi camera people tracking. In this chapter we present the underline methodology of our system in detail.
 In order to give the reader a gradual walkthrough of our project we will explore each component of our system separately. First we will give an overview of the basic system. Then we will explore in detail the each component of our system. 
-\section{Scope}
-The main components of the project that makes the scope is as follows.
-\begin{itemize}
-\item People Detection feature extraction\\
-This involves reading image frames from the camera and extracting the features
-required for people detection. This computation will be done in the Programmable
-Logic (PL) of Zynq ZC702 Evaluation Kit.
-\item Writing Linux Kernel drivers for controlling PL IP cores.\\
-Writing Linux Kernel drivers are required to control the IP cores from the software end.
-\item Communication with the backend server \\
-Calculated features for each image frame will be sent to the backend server through Ethernet for the rest of the processing.
-\item Multi- Camera People Tracking \\
-Multi-Camera people tracking will be done in the backend server using the features sent through each of the cameras.
-
-
-\end{itemize}
 \section{Overall Architecture}
 \begin{figure}[H]
 \includegraphics[width=10cm]{overall_block.png}
@@ -1104,7 +1124,8 @@ Web version of the business intelligence supports 4 formats that is density, tra
   \label{graph2}
 \end{figure}
 \newpage
-\section{Conclusion}
+
+\chapter{Conclusion}
 
 For a business organization to stay on par with their competitors, understanding their customers is a must. This project provides a solution to that problem by processing the already available data in an intelligent manner and providing business insight to aid in making management decisions. Proposed system is scalable unlike most of the similar systems available in the market today.\\
 \par Leaf node processing is a novel approach that we introduced for people tracking. The systems in use today provides people tracking, but scalability issue comes into play in those systems. The main reason is those systems aggregate all the camera feeds to a central server and process the frames in the server. The scalability is largely limited by the processing power of the server. In our solution scalability was achieved by employing a node processing system which utilizes a FPGA + ARM Processor at the leaf node for the people detection. By distributing some of the processing to the leaf node we have been able to realize scalability to a large extent. Currently we have designed our system for 2 cameras. However, it is just a matter of installing another camera and FPGA + ARM Processor in the store to extend the system. Processing power of the server does not affect the functionality of the system at all.\\
@@ -1121,6 +1142,7 @@ For a business organization to stay on par with their competitors, understanding
 
 
 \newpage
+\chapter{References}
 %\section*{\textbf{References}}
 \addcontentsline{toc}{section}{References}
 \begin{thebibliography}{10}
