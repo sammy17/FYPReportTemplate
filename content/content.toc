@@ -52,5 +52,11 @@
 \contentsline {subsection}{\numberline {3.5.8}Communication with Web Server}{34}
 \contentsline {subsection}{\numberline {3.5.9}Business Intelligence Software}{35}
 \contentsline {chapter}{\numberline {4}Results}{37}
-\contentsline {subsection}{\numberline {4.0.1}Discussion}{37}
-\contentsline {section}{References}{38}
+\contentsline {section}{\numberline {4.1}Acceleration Using ZYNQ PL}{37}
+\contentsline {section}{\numberline {4.2}Bandwidth Reduction}{37}
+\contentsline {section}{\numberline {4.3}Overall Hardware Utilization}{38}
+\contentsline {section}{\numberline {4.4}Total on Chip Power}{38}
+\contentsline {section}{\numberline {4.5}Detection Accuracy}{39}
+\contentsline {section}{\numberline {4.6}Business Intelligence Software}{40}
+\contentsline {section}{\numberline {4.7}Conclusion}{43}
+\contentsline {section}{References}{45}

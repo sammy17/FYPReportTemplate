@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.1.27)  31 JAN 2018 04:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.1.27)  31 JAN 2018 15:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -685,6 +685,9 @@ LaTeX Warning: Label `flask' multiply defined.
 
 LaTeX Warning: Label `flask' multiply defined.
 
+
+LaTeX Warning: Label `flask' multiply defined.
+
 )
 \openout1 = `content.aux'.
 
@@ -1317,7 +1320,100 @@ Underfull \hbox (badness 10000) in paragraph at lines 962--967
 Chapter 4.
 [37
 
-] [38
+] <images/utilization.png, id=204, 494.44725pt x 202.356pt>
+File: images/utilization.png Graphic file (type png)
+
+<use images/utilization.png>
+Package pdftex.def Info: images/utilization.png used on input line 1023.
+(pdftex.def)             Requested size: 284.52756pt x 116.44641pt.
+
+<images/power.png, id=205, 495.0495pt x 198.7425pt>
+File: images/power.png Graphic file (type png)
+ <use images/power.png>
+Package pdftex.def Info: images/power.png used on input line 1035.
+(pdftex.def)             Requested size: 284.52756pt x 114.22752pt.
+
+[38 <./images/utilization.png>] [39 <./images/power.png>]
+<images/web1.png, id=215, 471.56175pt x 584.78474pt>
+File: images/web1.png Graphic file (type png)
+ <use images/web1.png>
+Package pdftex.def Info: images/web1.png used on input line 1071.
+(pdftex.def)             Requested size: 334.60422pt x 414.96806pt.
+
+<images/web2.png, id=216, 1383.66937pt x 778.40813pt>
+File: images/web2.png Graphic file (type png)
+ <use images/web2.png>
+Package pdftex.def Info: images/web2.png used on input line 1077.
+(pdftex.def)             Requested size: 334.60422pt x 188.2352pt.
+
+<images/login.png, id=217, 1380.65813pt x 776.9025pt>
+File: images/login.png Graphic file (type png)
+ <use images/login.png>
+Package pdftex.def Info: images/login.png used on input line 1083.
+(pdftex.def)             Requested size: 334.60422pt x 188.28601pt.
+
+[40 <./images/web1.png>]
+<images/Capture.PNG, id=223, 1142.46825pt x 546.24075pt>
+File: images/Capture.PNG Graphic file (type png)
+
+<use images/Capture.PNG>
+Package pdftex.def Info: images/Capture.PNG used on input line 1089.
+(pdftex.def)             Requested size: 334.60422pt x 159.98106pt.
+
+<images/heatmap.png, id=224, 540.8205pt x 525.76425pt>
+File: images/heatmap.png Graphic file (type png)
+
+<use images/heatmap.png>
+Package pdftex.def Info: images/heatmap.png used on input line 1096.
+(pdftex.def)             Requested size: 250.95476pt x 243.9644pt.
+ <images/density.png, id=225, 542.025pt x 504.08325pt>
+File: images/density.png Graphic file (type png)
+
+<use images/density.png>
+Package pdftex.def Info: images/density.png used on input line 1102.
+(pdftex.def)             Requested size: 250.95476pt x 233.38867pt.
+ [41 <./images/web2.png> <./images/login.png> <./images/Capture.PNG>] [42 <./im
+ages/heatmap.png> <./images/density.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1109--1110
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1110--1111
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1111--1112
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1112--1113
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1113--1114
+
+ []
+
+[43]
+Underfull \hbox (badness 10000) in paragraph at lines 1114--1115
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1115--1116
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1116--1117
+
+ []
+
+[44] [45
 
 ] (./content.aux)
 
@@ -1325,10 +1421,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 17306 strings out of 493013
- 323182 string characters out of 6135682
- 396848 words of memory out of 5000000
- 20425 multiletter control sequences out of 15000+600000
+ 17355 strings out of 493013
+ 324041 string characters out of 6135682
+ 396958 words of memory out of 5000000
+ 20467 multiletter control sequences out of 15000+600000
  54277 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,15n,94p,1369b,553s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1341,10 +1437,10 @@ urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on content.pdf (48 pages, 1633597 bytes).
+Output written on content.pdf (55 pages, 3328478 bytes).
 PDF statistics:
- 241 PDF objects out of 1000 (max. 8388607)
- 140 compressed objects within 2 object streams
+ 278 PDF objects out of 1000 (max. 8388607)
+ 156 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 153 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 193 words of extra memory for PDF output out of 10000 (max. 10000000)
 
