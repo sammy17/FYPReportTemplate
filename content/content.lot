@@ -4,7 +4,7 @@
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {3.1}{\ignorespaces Implementations on ZYNQ-7000 SoC\relax }}{12}
 \contentsline {table}{\numberline {3.2}{\ignorespaces Vivado HLS Compiler Directives\relax }}{17}
-\contentsline {table}{\numberline {3.3}{\ignorespaces Percentage of variance along each pricipal component\relax }}{22}
+\contentsline {table}{\numberline {3.3}{\ignorespaces Percentage of variance along each principal component\relax }}{22}
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {4.1}{\ignorespaces Percentage acceleration by utilizing ZYNQ PL\relax }}{38}
 \contentsline {table}{\numberline {4.2}{\ignorespaces Total resources on ZYNQ PL (Xilinx XC7z020 FPGA)\relax }}{39}

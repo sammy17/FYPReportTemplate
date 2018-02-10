@@ -139,8 +139,8 @@ customers is a must. Tapping into the customers$'$ subconscious is the preeminen
 As a solution to this problem, we propose a scalable multi-camera people tracking system for a large department store like environment. The main focus of this project is to implement an end to end system for multi-camera people tracking with business intelligence.
 Novelty of this system from contemporary multi-camera people tracking systems is the introduction of leaf node processing, where part of the processing is done in a hardware system close to the camera. By this way we could achieve the scalability required for a large department store like environment and reduce bandwidth usage in such systems.\\
 This proposed system comprises of leaf nodes, central server and the web server. Leaf nodes are integrated close each camera. We use Zynq SoCs for leaf nodes and these devices read video frames from the cameras, detects people for each frame using GMM based background subtraction, calculate color histogram features for each detected person and sends the bounding boxes and features to the server using UDP.\\
-A central server will receive this information from each leaf node and do people tracking by using particle filters and hungarian algorithm for data association. Multi-camera tracking is also achieved by means of homography based method and a graph algorithm. Real time tracking and heatmaps are generated in the server GUI.\\
-Finally business intelligence software hosted in a web server, where real time people tracking for the whole store, heatmaps for desired time period, people count graphs for desired time period and real time people count graphs are implemented.\\
+A central server will receive this information from each leaf node and do people tracking by using particle filters and hungarian algorithm for data association. Multi-camera tracking is also achieved by means of homography based method and a graph algorithm. Real time tracking and heat maps are generated in the server GUI.\\
+Finally business intelligence software hosted in a web server, where real time people tracking for the whole store, heat maps for desired time period, people count graphs for desired time period and real time people count graphs are implemented.\\
 Therefore by the introduction of leaf node processing we achieve a scalable system since the processing power required at the central server is reduced. We achieve a low power system for leaf nodes by using Zynq SoCs and we reduce the bandwidth usage since we only send the bounding boxes and features for tracking to the server.
 
 
@@ -185,10 +185,10 @@ SoC                      & System on Chip                                    \\
 RTL                      & Register Transfer Level                           \\
 AXI                      & Advanced eXtensible Interface                      \\
 HLS                      & High Level Synthesis                              \\
-UIO                      & Userspace Input/Output                            \\
+UIO                      & User-space Input/Output                            \\
 REST                     & Representational State Transfer                   \\
 API                      & Application Programming Interface                 \\
-AJAX                     & Asynchronous JavaScript ond XML                   \\
+AJAX                     & Asynchronous JavaScript and XML                   \\
 JSON                     & JavaScript Object Notation                        \\
 UDP                      & User Datagram Protocol                            \\
 TCP                      & Transmission Control Protocol                     \\
@@ -203,7 +203,7 @@ DDR                      & Double Data Rate
 
 \chapter{\textbf{Introduction}}
 
-Nowadays retail stores are very popular among people. Even in Sri Lanka, retail stores like Cargills Food City and House of Fashion are visited by at least few hundreds of customers daily. In these type of retail stores, one of the factors that are used to measure the effectiveness of an advertisement or the popularity of store is the conversion rate. This number represents the percentage of the people actually bought something out all the people that visited the store. Usual way of calculating the conversion rate is by counting the people coming to the store and checking out at one of the counters. It is impractical to do this manually in a large retail store environment. Other than calculating the conversion rate, various business decisions could be made for the betterment of the store by analyzing customer behaviour. \\\\
+Nowadays retail stores are very popular among people. Even in Sri Lanka, retail stores like Cargills Food City and House of Fashion are visited by at least few hundreds of customers daily. In these type of retail stores, one of the factors that are used to measure the effectiveness of an advertisement or the popularity of store is the conversion rate. This number represents the percentage of the people actually bought something out all the people that visited the store. Usual way of calculating the conversion rate is by counting the people coming to the store and checking out at one of the counters. It is impractical to do this manually in a large retail store environment. Other than calculating the conversion rate, various business decisions could be made for the betterment of the store by analyzing customer behavior. \\\\
 Enhancing customer experience by rearranging the store structure, efficiently allocating staff to high density areas, understanding traffic trends and identify "opportunity hours" and schedule labor hours accordingly to optimize service levels are some of such business decisions In order to assist making business decisions, large-scale retail stores need to count and track people using a number of ceiling-mounted cameras. In such environment it is hard to keep track of customer behavior separately using a manual system.\\\\
 Identifying the history of  customers and understanding the customer density inside the areas of the department store can be critical for financial and business decisions. However if a system is in place which counts and tracks the customers inside the store and generates basic intelligence to the managerial level, it can expedite the decision making process. This project is aimed at developing such a system. We have implemented a people tracking and counting system adaptable to any large scale store structure which is able to process multiple video streams obtained through separate cameras mounted on the store and generate business intelligence.\\\\
 There have been several systems which handle multi camera people tracking introduced in the past decade. All these systems incorporate a central server which will receive all the frames from all the cameras to handle the people detection and tracking tasks real-time. Major drawback of these systems is the scalability. When the number of cameras increase, the bandwidth usage for sending video frames to the central server will be increased and the processing power required at the central server will increase. This raises the requirement for processing video frames close to the camera which is defined as leaf node processing. \\\\
@@ -217,7 +217,7 @@ Multi-Camera People Tracking systems is also a field which has been researched o
 
 \begin{itemize}
 \item  People Detection algorithm in XILINX ZC702 kit\\
-People detection involves ﬁnding the bounding boxes of locations of people in every image frame. Accuracy of this is very critical since this will directly affect the people tracking results and also the business intelligence output. This task will be done in the programmable logic (PL) of the FPGA which will work much faster in terms of the performance. 
+People detection involves finding the bounding boxes of locations of people in every image frame. Accuracy of this is very critical since this will directly affect the people tracking results and also the business intelligence output. This task will be done in the programmable logic (PL) of the FPGA which will work much faster in terms of the performance. 
 
 \item Muti-Camera People Tracking\\
 A central server will receive the vectorized information to be used for multicamera people tracking. There will be several ZC702 devices interfaced with a camera which will be sending the people detection results to the server through ethernet. Server will fuse all these results and execute people tracking in a multicamera system. 
@@ -546,7 +546,7 @@ ARRAY\_PARTITION            & Partitions an array into smaller arrays or individ
 \end{table}
 
 
-\subsection{IP Core drivers and Morphological Operations Implementation on ZYNQ PS}
+\subsection{IP Core Drivers and Morphological Operations Implementation on ZYNQ PS}
 
 \subsubsection{Linux Drivers for controlling IP cores}
 This was also a challenging task due to the lack of upto date documentation and the complexity of physical memory accessing through Linux kernel. But we managed to overcome this task by using a simple but effective method.\\
@@ -655,7 +655,7 @@ We can see from the scatter plots above that most of the above features are high
 
 \begin{table}[]
 \centering
-\caption{Percentage of variance along each pricipal component}
+\caption{Percentage of variance along each principal component}
 \label{pca-table}
 \begin{tabular}{|c|c|}
 \hline
@@ -674,7 +674,7 @@ We can see that only the first two principal components give a significant contr
 \begin{figure}[H]
 \includegraphics[width=\textwidth]{pca/1_2_pca.png}
 \centering
-\caption{First Vs. second pricipal component}
+\caption{First Vs. second principal component}
 \label{pca2}
 \end{figure}
 
@@ -727,7 +727,7 @@ Since our system is a multi camera system we need to connect each camera to a ce
 \item Scalable with increasing number of cameras
 \end{enumerate}
 
-Taking these requirements into consideration we designed a communication algorithm. We used User Datagram Protocol (UDP) to send the data packets, since it has lower overhead and it is also connectionless. In our architecture the backend server will be listening to packets coming from cameras over the network. Each camera node can just start sending data packets to the server at anypoint in time. There is no connecting phase. Server will distinguish packets from different cameras and act accordingly. The advantage of this kind of a setup is we can plugin any camera to the network quite easily and switch it on and start sending data.\\\\
+Taking these requirements into consideration we designed a communication algorithm. We used User Datagram Protocol (UDP) to send the data packets, since it has lower overhead and it is also connectionless. In our architecture the back-end server will be listening to packets coming from cameras over the network. Each camera node can just start sending data packets to the server at any point in time. There is no connecting phase. Server will distinguish packets from different cameras and act accordingly. The advantage of this kind of a setup is we can plug-in any camera to the network quite easily and switch it on and start sending data.\\\\
 Each datagram sent from a camera will contain the following information.
 \begin{table}[H]
 \centering
@@ -786,7 +786,7 @@ In our system, people detection is done at each camera node. Then each camera se
 \end{enumerate}
 
 \subsection{Receiving and Unloading Data Packets from Camera Nodes}
-As mentioned previously we have designed a scalable communication protocol to connect camera nodes to the server. In our implementation we have a UDP server running on a dedicated thread. It listens to any incoming packets through the network. Packets are received, deserialized and pushed into a queue. All the frames in the queue are processed at a interval of 100 ms.
+As mentioned previously we have designed a scalable communication protocol to connect camera nodes to the server. In our implementation we have a UDP server running on a dedicated thread. It listens to any incoming packets through the network. When a packet is received, serialized data in the packet is decoded and pushed into a queue. All the frames in the queue are processed at an interval of 100 ms.
 
 \subsection{Single Camera Tracking}
 When it comes to object tracking, detection based tracking methods are the most popular. Multiple object tracking can be decomposed into two parts as, data association and target tracking. These multi object tracking algorithms can be divided into two categories. The first category relies on past frames to estimate the current state recursively. The second category allows for a certain latency and globally solves for all trajectories within a given time window. \\\\
@@ -800,7 +800,7 @@ Since our system is to be run in real time, methods under first category are mor
 \caption{Multiple People Tracking using Kalman Filter}
 \label{flask}
 \end{figure}
-Here detection coordinates are fed to the backend tracking system by individual camera nodes (camera + zynq zc702). The next part of the algorithms calculates a cost matrix for detections vs existing tracks. For m detections and n tracks an entry of the cost matrix is given by equation (3.10).
+Here detection coordinates are fed to the back-end tracking system by individual camera nodes (camera + zynq zc702). The next part of the algorithms calculates a cost matrix for detections vs existing tracks. For m detections and n tracks an entry of the cost matrix is given by equation (3.10).
 
 
 \begin{equation}
@@ -808,13 +808,13 @@ Here detection coordinates are fed to the backend tracking system by individual 
 \end{equation}
 
 Then detections having the minimum track cost lower than a threshold value are kept and detections exceeding the threshold value are initialized as new tracks. \\\\
-Here each track is a kalman filter. Dynamics model used in the kalman filter is a constant velocity model consisting of 6 state variables, namely \string{x coordinate, y coordinate, width, height, x velocity, y velocity\string} and 4 measurement variables, namely  \string{x coordinate, y coordinate, width, height\string}.\\\\
+Here each track is a Kalman filter. Dynamics model used in the Kalman filter is a constant velocity model consisting of 6 state variables, namely \string{x coordinate, y coordinate, width, height, x velocity, y velocity\string} and 4 measurement variables, namely  \string{x coordinate, y coordinate, width, height\string}.\\\\
 Detections to track assignments are done through the Hungarian algorithm. The Hungarian method is a combinatorial optimization algorithm that solves the assignment problem in polynomial time. Here the individual cost is the euclidean distance between x,y coordinates of the detection and the track. However this can be modified to include the width and height as well.\\\\
 Tracks which have not been assigned to a detection within consecutive frames greater than a threshold value are simply deleted. \\\\
-Although the kalman filter based tracking gives somewhat satisfactory results, we decided to try out particle filter based tracking also.\\\\
+Although the Kalman filter based tracking gives somewhat satisfactory results, we decided to try out particle filter based tracking also.\\\\
 When we look at results we identified several weak points in our current tracking scheme. So we applied some modifications.
 
-\subsubsection{Improvements for Kalman FIlter based Tracking}
+\subsubsection{Improvements for Kalman FIlter Based Tracking}
 In the data association step we have only considered the euclidean distance between detection and tracker coordinates for cost estimation. We improved the accuracy of data association by applying following modifications.
 
 \subsubsection{Gray Level Intensity Histogram as a Parameter in Cost Estimation}
@@ -828,9 +828,9 @@ Then the correlation between the detection histogram and the tracker histogram i
 
 \subsubsection{Adding a Penalty for the Cost for High Velocities in Kalman Filter State}
 
-When the kalman filter tends to diverge the velocity value in the state vector becomes high. We can discard the kalman filter quickly by adding a penalty to the cost when the velocity is greater than a certain threshold.
+When the Kalman filter tends to diverge the velocity value in the state vector becomes high. We can discard the Kalman filter quickly by adding a penalty to the cost when the velocity is greater than a certain threshold.
 
-\subsubsection{Tuning model parameters}
+\subsubsection{Tuning Model Parameters}
 We have the following model parameters that must be properly tuned. Currently this is done in an ad hoc manner.
 
 \begin{itemize}
@@ -847,7 +847,7 @@ We have the following model parameters that must be properly tuned. Currently th
 \label{particle}
 \end{figure}
 
-Target tracking system comprising of particle filter trackers are shown in figure \ref{particle}. Arrangement is the same as the one with kalman filter trackers. Only difference is in using particle filter based trackers instead of kalman filter based ones.\\\\
+Target tracking system comprising of particle filter trackers are shown in figure \ref{particle}. Arrangement is the same as the one with Kalman filter trackers. Only difference is in using particle filter based trackers instead of Kalman filter based ones.\\\\
 In this setting the particle filter tracks the lower center point of a bounding, which corresponds to the foot of a person. We are using a constant velocity model for particle propagation.  State of a particle consist of 4 states (x, y, vx - velocity in x direction, vy - velocity in y direction). Out of these vx and vy are hidden states. A particle tracker undergoes following 3 stages.
 \begin{enumerate}
 \item Particle initialization
@@ -873,10 +873,10 @@ X[t] = X[t-1] + Vx[t-1] * dt
 \label{eqn:prop2}
 Y[t] = Y[t-1] + Vy[t-1] * dt
 \end{equation}
-We derive samples from a gaussian distribution to propagate individual particles. Mean of this gaussian distribution is zero with a different variances for 4 states. The 4 variances for x, y, vx and vy are 5.0, 5.0, 1.0 and 1.0.
+We derive samples from a Gaussian distribution to propagate individual particles. Mean of this Gaussian distribution is zero with a different variances for 4 states. The 4 variances for x, y, vx and vy are 5.0, 5.0, 1.0 and 1.0.
 
 \subsubsection{Updating Weights with a Measurement}
-When a measurement comes the weights of the particles are updated and the particles are resampled according to weights. The weight update equation is as follows.
+When a measurement comes the weights of the particles are updated and the particles are re-sampled according to weights. The weight update equation is as follows.
 
 \begin{equation}
 w = \frac{1}{\sqrt{2*\pi* \sigma }}exp\left (\frac{(x_p-x_d)^2+ (y_p-y_d)^2}{2*\sigma }\right )
@@ -891,7 +891,7 @@ We implemented both Kalman filtering based tracking and particle filtering based
 \end{itemize}
 
 \subsection{Data Association}
-Data association is an important part of this process because the tracking algorithm performance will be directly depend on the accuracy of data association. For this we utilized the hungarian algorithm. Here we a set of detections having a location and a color histogram, and also a set of tracks having the same. We will assign detections to tracks so that overall cost is minimized. The individual cost is given by equations \ref{eqn:association1},  \ref{eqn:association2} and \ref{eqn:association3}.
+Data association is an important part of this process because the tracking algorithm performance will be directly depend on the accuracy of data association. For this we utilized the Hungarian algorithm. Here we a set of detections having a location and a color histogram, and also a set of tracks having the same. We will assign detections to tracks so that overall cost is minimized. The individual cost is given by equations \ref{eqn:association1},  \ref{eqn:association2} and \ref{eqn:association3}.
 
 \begin{equation}
 \label{eqn:association1}
@@ -902,7 +902,7 @@ where $x_t$, $y_t$ are track locations and $x_d$, $y_d$ are detection locations.
 \label{eqn:association2}
 d(H1,H2)=\sqrt{1-\frac{1}{\sqrt{\overline{H_1}\cdot \overline{H_2}\cdot N^2}}\sum_{I}^{ }\sqrt{H_1(I)\cdot H_2(I)}}
 \end{equation}
-Where $H_1$ is detection histogram and $H_2$ is track histogram and $H_1$ and $H_2$  represents the mean of the histograms. This is known as the bhattacharyya distance [10].
+Where $H_1$ is detection histogram and $H_2$ is track histogram and $H_1$ and $H_2$  represents the mean of the histograms. This is known as the Bhattacharyya distance [10].
 
 \begin{equation}
 \label{eqn:association3}
@@ -910,11 +910,11 @@ w = (1-\alpha)*W_d + \alpha*(1-d(H_1,H_2))
 \end{equation}
 Here $\alpha$ determines the dependence of the cost on the histogram. In the final implementation this was chosen as 0.4.
 \subsection{Sensor Fusion}
-Once we do single camera tracking for each camera we should synchronize tracks across cameras. Since we use ethernet for the local area network we assumed that network latency is quite low. Therefore we select the latest tracks of each camera for multi camera tracking. Although this method of sensor fusion is quite trivial it is suitable for our current application.
+Once we do single camera tracking for each camera we should synchronize tracks across cameras. Since we use Ethernet for the local area network we assumed that network latency is quite low. Therefore we select the latest tracks of each camera for multi camera tracking. Although this method of sensor fusion is quite trivial it is suitable for our current application.
 
 \subsection{Multi Camera Tracking}
 
-Tracking via multiple cameras consist of 3 parts, people tracking per camera, correspondence estimation and global target tracking. There are 2 methods for correspondence estimation: homography based methods and calibration based methods. Homography based methods rely on a set of matched features to calculate homographic transforms between images. Calibration based methods rely on a pre calculated model of the camera.\\\\
+Tracking via multiple cameras consist of 3 parts, people tracking per camera, correspondence estimation and global target tracking. There are 2 methods for correspondence estimation: homography based methods and calibration based methods. Homography based methods rely on a set of matched features to calculate homographic transforms between images. Calibration based methods rely on a pre-calculated model of the camera.\\\\
 Out of these two methods we decided to use calibration based method because it can be easily integrated into single camera tracking algorithms that we considered. We only have to convert individual track coordinates into global coordinates and then perform global tracking.
 
 \begin{figure}[H]
@@ -923,7 +923,7 @@ Out of these two methods we decided to use calibration based method because it c
 \caption{Estimating global coordinates through calibrated cameras}
 \label{multi_cam}
 \end{figure}
-When we have two calibrated cameras as shown in figure (a) the global 3D coordinates can be calculated from the image coordinates obtained from the two cameras, but we have to match the points across the cameras in order to do so. But if we limit our points to an arbitrary plane as shown in figure (b) we can obtain image coordinates projected to that plane. Suppose we limit our points to the ground plane. For this we can multiply the image coordinates (homogenous) by a homography matrix to obtain the ground plane coordinates.
+When we have two calibrated cameras as shown in figure (a) the global 3D coordinates can be calculated from the image coordinates obtained from the two cameras, but we have to match the points across the cameras in order to do so. But if we limit our points to an arbitrary plane as shown in figure (b) we can obtain image coordinates projected to that plane. Suppose we limit our points to the ground plane. For this we can multiply the image coordinates (homogeneous) by a homography matrix to obtain the ground plane coordinates.
 \begin{equation}
 x_g = H \cdot x_i
 \end{equation}
@@ -931,7 +931,7 @@ Where $H$ is a 3x3 homography matrix and $x_i$, $x_g$ in homogeneous coordinates
 \begin{figure}[H]
 \includegraphics[width=\textwidth]{multi_cam_map.png}
 \centering
-\caption{Multicamera correspondence estimation}
+\caption{Multi-camera correspondence estimation}
 \label{multi_cam_map}
 \end{figure}
 Once the image coordinates are transformed to the ground plane we can perform correspondence estimation to find tracks which are seen in multiple viewpoints. For this we can add each track to a node of a graph and join two tracks by an edge if the tracks belong to different cameras and the cost between them is lower than a threshold value.  The cost is calculated by equations \ref{eqn:multicam1}, \ref{eqn:multicam2} and \ref{eqn:multicam3}.
@@ -945,7 +945,7 @@ where a and b are two nodes in the graph.
 \label{eqn:multicam2}
 d(H1,H2)=\sqrt{1-\frac{1}{\sqrt{\overline{H_1}\cdot \overline{H_2}\cdot N^2}}\sum_{I}^{ }\sqrt{H_1(I)\cdot H_2(I)}}
 \end{equation}
-Where $H_1$ and $H_2$ are the two histograms of nodes a, b and $H_1$ and $H_2$  represents the mean of the histograms. This is known as the bhattacharyya distance [10].
+Where $H_1$ and $H_2$ are the two histograms of nodes a, b and $H_1$ and $H_2$  represents the mean of the histograms. This is known as the Bhattacharyya distance [10].
 \begin{equation}
 \label{eqn:multicam3}
 w = (1-\alpha)*W_d + \alpha*(1-d(H_1,H_2))
@@ -964,7 +964,7 @@ $H = \beta*H_1 + (1- \beta) * H_2$ Where $\beta$ is selected as 0.5.
 \item Repeat until edges exist with a cost lower than a threshold value
 \end{itemize}
 \subsection{Communication with Web Server}
-The calculated features are sent to the server, in order to track people and generate business intelligence. To enable communication among FPGA nodes and server we wrote two code structures in C++ and python. C++ client and server snippets connects ZYNQ SoC and the server backend whereas another C++ client and a python server connects the web interface. The block diagram of the communication structure is shown in the figure below.
+The calculated features are sent to the server, in order to track people and generate business intelligence. To enable communication among FPGA nodes and server we wrote two code structures in C++ and python. C++ client and server snippets connects ZYNQ SoC and the server back-end whereas another C++ client and a python server connects the web interface. The block diagram of the communication structure is shown in the figure below.
 \begin{figure}[H]
 \includegraphics[width=\textwidth]{comm.png}
 \centering
@@ -972,14 +972,14 @@ The calculated features are sent to the server, in order to track people and gen
 \label{flask}
 \end{figure}
 The communications protocol used is UDP (User Datagram Protocol) to ensure low latency and reduce the processing overhead between communication nodes. Since this solution needs to be a real-time application, using TCP (Transmission Control Protocol) is not beneficial. One of the main reasons is dropping packets is desirable over waiting for packets delayed due to retransmission.\\\\
-The retrieved features at the server backend are processed and multi camera tracking is done as discussed in the above section, which generates tracking results. Tracking results contain ground plane coordinates of the individuals, track ID and the time stamp at which the data was processed. This information is looped back to the server which is retrieved by a python server and redirects to a web server written on the Flask framework. Flask web framework is based on python and it eases generating business intelligence data.\\\\
+The retrieved features at the server back-end are processed and multi camera tracking is done as discussed in the above section, which generates tracking results. Tracking results contain ground plane coordinates of the individuals, track ID and the time stamp at which the data was processed. This information is looped back to the server which is retrieved by a python server and redirects to a web server written on the Flask framework. Flask web framework is based on python and it eases generating business intelligence data.\\\\
 Clients can access the web interface through the URL zynq.projects.mrt.ac.lk which directs to an internal server in ENTC. All the processing to generate tracking information is done in the said server. We have acquired a public IP in order to ensure that a client of this product can access the information on the go. Authentication is provided so that unauthorized parties will not be able to access sensitive information.
 \subsection{QT GUI Application}
-A Qt based GUI is also introduced as a tool for analysis. This tool was created focusing admins of the system and provides functionality which will be in interest of admins who will be using the system for surveillance at all times. The tool provides following features.
+A Qt based GUI is also introduced as a tool for analysis. This tool was created focusing system administrators and provides functionality which will be in interest for those who will be using a camera system for surveillance at all times. The tool provides following features.
 \begin{itemize}
 \item Leaf Node Detections - Real-time Detections mask for Each camera.
-\item Heatmap - Real-time generated heatmap of the people density throughout the store started at the time at which the system started.
-\item Real-time tracking - tracks of the customers currently at the store. This map is generated realtime and shows where a customer is located at that moment.
+\item Heat map - Real-time generated heat map of the people density throughout the store started at the time at which the system started.
+\item Real-time tracking - tracks of the customers currently at the store. This map is generated real-time and shows where a customer is located at that moment.
 \item Real-time counting - Real-time customer density of the store
 The graphs and maps generated by this application does not undergo any latency which is evident in the website.
 \end{itemize}
@@ -993,23 +993,23 @@ Business intelligence software provides the functionality as a website in order 
 \caption{Flask Logo}
 \label{flask}
 \end{figure}
-To retrieve real time data to the web server we have taken the RESTfull approach, which is based on REST API (Representational State Transfer Application Programming Interface). REST is any interface between two systems which uses HTTP to obtain data and generate operations on those data in a variety of formats, such as XML and JSON. For our design, the web page needs to be constantly updated without reloading the page. That is, the page that generates business intelligence (various graphs) needs to be drawn realtime. To ensure that the data is received realtime without a special user interaction such as pressing a button or refreshing the page we have integrated REST API and AJAX calls which provides the needed functionality.\\\\
+To retrieve real time data to the web server we have taken the RESTfull approach, which is based on REST API (Representational State Transfer Application Programming Interface). REST is any interface between two systems which uses HTTP to obtain data and generate operations on those data in a variety of formats, such as XML and JSON. For our design, the web page needs to be constantly updated without reloading the page. That is, the page that generates business intelligence (various graphs) needs to be drawn real-time. To ensure that the data is received real-time without a special user interaction such as pressing a button or refreshing the page we have integrated REST API and AJAX calls which provides the needed functionality.\\\\
 Another advantage of the RESTfull approach is that it enables data transfer in JSON object format. JSON is a text-based data format following JavaScript object syntax, which exists as a dictionary which is useful in transmitting data across networks. The data is retrieved to the javascript with AJAX(Asynchronous JavaScript and XML) calls. AJAX calls are important in this scenario because data needs to be sent to the server in the background after the page has been loaded and update it without reloading the page.\\\\
-The received data from the server is written to a database to facilitate data storing and retrieval at future time. This is developed with MySQL database platform. Received data is written to two separate tables one to showcase heatmap information and one to provide historical density information. \\\\
-All the user credentials are stored in the database in a separate table as well. To access information about his/her store the manager should have user credentials created by the admin team. After successfully logging in only can he access the needed information. Successfully logged in user would be redirected to a URL with generated information about his office.\\\\
+The received data from the server is written to a database to facilitate data storing and retrieval at future time. This is developed with MySQL database platform. Received data is written to two separate tables one to showcase heat map information and one to provide historical density information. \\\\
+All the user credentials are stored in the database in a separate table as well. To access information about his/her store the manager should have user credentials created by the administrator team. After successfully logging in only can he access the needed information. Successfully logged in user would be redirected to a URL with generated information about his office.\\\\
 Web version of the business intelligence supports 4 formats.
 \begin{enumerate}
 
 \item Density - real time store density graph showing the number of customers at the moment.
 \item Tracking - real time store map being updated showing the position of each customer at the moment.
 
-\item Heatmap - an interface is provided to enter the starting time and ending time. Heatmap is drawn showing the areas most utilized by the customers during the time period specified. The red color shows high customer density and blue shows relatively low customer density.
+\item Heat map - an interface is provided to enter the starting time and ending time. Heat map is drawn showing the areas most utilized by the customers during the time period specified. The red color shows high customer density and blue shows relatively low customer density.
 
 \item Historical - when the starting time and ending time is specified customer density over time is drawn for the specified time period. 
 
 \end{enumerate}
 
-This information is vital for an organization in various ways. The number of customers currently browsing the store would be a good indicator to understand how much sales staff should be reassigned to the cashier. Tracking maps could be beneficial to comprehend the customer behavior. Paths customers take while browsing through the store can be recognized and the store can be restructured to provide the ultimate customer experience. If a higher number of customers search for a specific product after selecting another product this could be taken as an indicator that these two products should be placed near to each other. With the heatmap information, a manager would be able to understand customer behavior at different time periods. Which places tend to attract more customers at morning and how should the sales staff be dispersed throughout the store at that time period could be identified. The places that is ideal to showcase advertisements could be identified by looking through these maps. Also at what time advertisements should be shown or promotional activates should take place could be recognized. Historical density data could be utilized into forecasting the number of customers that the store would attract in following days or the same period in the next year. Trends could be analyzed from this data to formulate plans for future. 
+This information is vital for an organization in various ways. The number of customers currently browsing the store would be a good indicator to understand how much sales staff should be reassigned to the cashier. Tracking maps could be beneficial to comprehend the customer behavior. Paths customers take while browsing through the store can be recognized and the store can be restructured to provide the ultimate customer experience. If a higher number of customers search for a specific product after selecting another product this could be taken as an indicator that these two products should be placed near to each other. With the heat map information, a manager would be able to understand customer behavior at different time periods. Which places tend to attract more customers at morning and how should the sales staff be dispersed throughout the store at that time period could be identified. The places that is ideal to showcase advertisements could be identified by looking through these maps. Also at what time advertisements should be shown or promotional activates should take place could be recognized. Historical density data could be utilized into forecasting the number of customers that the store would attract in following days or the same period in the next year. Trends could be analyzed from this data to formulate plans for future. 
 
 \chapter{Results}
 
@@ -1096,8 +1096,8 @@ The detection accuracy could be further improved by implementing a more sophisti
 
 
 \section{Business Intelligence Software}
-The subsequent offering of the system is business intelligence software which comes in two versions.  one as a website for the managers and one as a QT GUI application for the admins of the system. 
-Web version of the business intelligence supports 4 formats that is density, tracking, heat-map, historical. The interface of the website is shown in figures \ref{web:1}, \ref{web:2}, \ref{web:3} and \ref{web:4}. Graphs generated by the website is shown in figures \ref{graph1} and \ref{graph2}.
+The subsequent offering of the system is business intelligence software which comes in two versions.  one as a website for the managers and one as a QT GUI application for the administrator of the system. 
+Web version of the business intelligence supports 4 formats that is density, tracking, heat map, historical. The interface of the website is shown in figures \ref{web:1}, \ref{web:2}, \ref{web:3} and \ref{web:4}. Graphs generated by the website is shown in figures \ref{graph1} and \ref{graph2}.
 
 
 \begin{figure}[H]
@@ -1128,7 +1128,7 @@ Web version of the business intelligence supports 4 formats that is density, tra
 \begin{figure}[H]
   \centering
   \includegraphics[width=.6\linewidth]{heatmap}
-  \caption{Heat-map generated by the web interface}
+  \caption{Heat map generated by the web interface}
   \label{graph1}
 \end{figure}
 \begin{figure}[H]
@@ -1139,7 +1139,7 @@ Web version of the business intelligence supports 4 formats that is density, tra
 \end{figure}
 \newpage
 
-QT GUI Application supports Real-time camera detections for each leaf node connected, real-time global tracking, heatmap and people count graphs. Interface of the QT GUI application is shown in the following figures.
+QT GUI Application supports Real-time camera detections for each leaf node connected, real-time global tracking, heat map and people count graphs. Interface of the QT GUI application is shown in the following figures.
 \begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{qt_cam.png}
@@ -1157,7 +1157,7 @@ QT GUI Application supports Real-time camera detections for each leaf node conne
 \begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{qt_heatmap.png}
-  \caption{Real-time Heatmap}
+  \caption{Real-time Heat map}
   \label{qt_graph3}
 \end{figure}
 

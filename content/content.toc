@@ -7,7 +7,7 @@
 \contentsline {section}{\textbf {List of Tables}}{x}
 \contentsline {section}{\textbf {Acronyms and Abbreviations}}{xi}
 \contentsline {chapter}{\numberline {1}\textbf {Introduction}}{1}
-\contentsline {section}{\numberline {1.1}Primary Objectives of the Project }{2}
+\contentsline {section}{\numberline {1.1}Objectives of the Project }{2}
 \contentsline {section}{\numberline {1.2}Scope}{3}
 \contentsline {chapter}{\numberline {2}Literature Review}{4}
 \contentsline {chapter}{\numberline {3}Methodology}{6}
@@ -27,7 +27,7 @@
 \contentsline {subsubsection}{\numberline {3.3.5.2}Gaussian Mixture Model Background Subtraction IP Core}{13}
 \contentsline {subsubsection}{\numberline {3.3.5.3}Feature Calculation IP Core}{15}
 \contentsline {subsubsection}{\numberline {3.3.5.4}Optimizing Vivado HLS IP Core Designs}{17}
-\contentsline {subsection}{\numberline {3.3.6}IP Core drivers and Morphological Operations Implementation on ZYNQ PS}{17}
+\contentsline {subsection}{\numberline {3.3.6}IP Core Drivers and Morphological Operations Implementation on ZYNQ PS}{17}
 \contentsline {subsubsection}{\numberline {3.3.6.1}Linux Drivers for controlling IP cores}{17}
 \contentsline {subsubsection}{\numberline {3.3.6.2}People Detection from Background Subtracted Binary Mask}{18}
 \contentsline {subsubsection}{\numberline {3.3.6.3}False Positive Reduction}{19}
@@ -38,10 +38,10 @@
 \contentsline {subsection}{\numberline {3.4.1}Receiving and Unloading Data Packets from Camera Nodes}{27}
 \contentsline {subsection}{\numberline {3.4.2}Single Camera Tracking}{27}
 \contentsline {subsubsection}{\numberline {3.4.2.1}Kalman Filter based Tracking}{28}
-\contentsline {subsubsection}{\numberline {3.4.2.2}Improvements for Kalman FIlter based Tracking}{29}
+\contentsline {subsubsection}{\numberline {3.4.2.2}Improvements for Kalman FIlter Based Tracking}{29}
 \contentsline {subsubsection}{\numberline {3.4.2.3}Gray Level Intensity Histogram as a Parameter in Cost Estimation}{29}
 \contentsline {subsubsection}{\numberline {3.4.2.4}Adding a Penalty for the Cost for High Velocities in Kalman Filter State}{29}
-\contentsline {subsubsection}{\numberline {3.4.2.5}Tuning model parameters}{29}
+\contentsline {subsubsection}{\numberline {3.4.2.5}Tuning Model Parameters}{29}
 \contentsline {subsection}{\numberline {3.4.3}Particle Filter Based Tracking}{30}
 \contentsline {subsubsection}{\numberline {3.4.3.1}Particle Initialization}{31}
 \contentsline {subsubsection}{\numberline {3.4.3.2}Particle Propagation}{31}
@@ -61,4 +61,4 @@
 \contentsline {section}{\numberline {4.5}Detection Accuracy}{40}
 \contentsline {section}{\numberline {4.6}Business Intelligence Software}{41}
 \contentsline {chapter}{\numberline {5}Conclusion}{46}
-\contentsline {section}{Bibliography}{48}
+\contentsline {section}{\textbf {Bibliographical References}}{48}
