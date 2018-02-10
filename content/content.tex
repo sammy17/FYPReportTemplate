@@ -88,7 +88,7 @@ Date: ......................\\
 \fontsize{18pt}{12}\selectfont{\textbf{Declaration}}
 \end{center}
 \fontsize{12pt}{12}\selectfont
-This declaration is made on October 5, 2017.\\[1cm]
+This declaration is made on January 31, 2018.\\[1cm]
 \textbf{Declaration by Project Group}\\
 We declare that the dissertation entitled People Counting and Tracking with Xilinx ZC702 Evaluation Kits and the work presented in it are our own. We confirm that:
 \begin{itemize}
@@ -204,8 +204,8 @@ DDR                      & Double Data Rate
 \chapter{\textbf{Introduction}}
 
 Nowadays retail stores are very popular among people. Even in Sri Lanka, retail stores like Cargills Food City and House of Fashion are visited by at least few hundreds of customers daily. In these type of retail stores, one of the factors that are used to measure the effectiveness of an advertisement or the popularity of store is the conversion rate. This number represents the percentage of the people actually bought something out all the people that visited the store. Usual way of calculating the conversion rate is by counting the people coming to the store and checking out at one of the counters. It is impractical to do this manually in a large retail store environment. Other than calculating the conversion rate, various business decisions could be made for the betterment of the store by analyzing customer behaviour. \\\\
-Enhancing customer experience by rearranging the store structure, efﬁciently allocating staff to high density areas, understanding Trafﬁc trends and identify "opportunity hours" and schedule labor hours accordingly to optimize service levels are some of such business decisions In order to assist making business decisions, large-scale retail stores need to count and track people using a number of ceiling-mounted cameras. In such environment it is hard to keep track of customer behavior separately using a manual system.\\\\
-Identifying the history of  customers and understanding the customer density inside the areas of the department store can be critical for ﬁnancial and business decisions. However if a system is in place which counts and tracks the customers inside the store and generates basic intelligence to the managerial level, it can expedite the decision making process. This project is aimed at developing such a system. We have implemented a people tracking and counting system adaptable to any large scale store structure which is able to process multiple video streams obtained through separate cameras mounted on the store and generate business intelligence.\\\\
+Enhancing customer experience by rearranging the store structure, efficiently allocating staff to high density areas, understanding traffic trends and identify "opportunity hours" and schedule labor hours accordingly to optimize service levels are some of such business decisions In order to assist making business decisions, large-scale retail stores need to count and track people using a number of ceiling-mounted cameras. In such environment it is hard to keep track of customer behavior separately using a manual system.\\\\
+Identifying the history of  customers and understanding the customer density inside the areas of the department store can be critical for financial and business decisions. However if a system is in place which counts and tracks the customers inside the store and generates basic intelligence to the managerial level, it can expedite the decision making process. This project is aimed at developing such a system. We have implemented a people tracking and counting system adaptable to any large scale store structure which is able to process multiple video streams obtained through separate cameras mounted on the store and generate business intelligence.\\\\
 There have been several systems which handle multi camera people tracking introduced in the past decade. All these systems incorporate a central server which will receive all the frames from all the cameras to handle the people detection and tracking tasks real-time. Major drawback of these systems is the scalability. When the number of cameras increase, the bandwidth usage for sending video frames to the central server will be increased and the processing power required at the central server will increase. This raises the requirement for processing video frames close to the camera which is defined as leaf node processing. \\\\
 The scope of this project is to implement a scalable end to end system for Multi-Camera People Tracking utilizing a Zynq SoC for leaf node processing. Thereby we use an FPGA + ARM processor for leaf node processing, a central server for multi-camera people tracking and a web server for generating business intelligence.\\\\
 In this proposed system by using a FPGA + ARM processor we have achieved leaf node processing of people detection at a lower power and also enable the scalability and lower bandwidth requirement. \\\\
@@ -213,7 +213,7 @@ People Detection in FPGA is an aspect that has been researched by many over the
 years. For example [12] suggests a FPGA based embedded platform for people detection using Gaussian Mixture Models and [13] suggests a similar system for people detection using Histogram of Features.\\\\
 Multi-Camera People Tracking systems is also a field which has been researched over the years. [14] suggests a multi-camera surveillance system implemented with background subtraction for detection and color features for tracking. [16] suggests another multi camera people tracking system which uses particle filters for tracking on the ground plane.
 
-\section{Primary Objectives of the Project }
+\section{Objectives of the Project }
 
 \begin{itemize}
 \item  People Detection algorithm in XILINX ZC702 kit\\
@@ -431,7 +431,7 @@ IP core design is only a part of out project scope. Considering that and above f
 
 \subsubsection{Gaussian Mixture Model Background Subtraction IP Core}
 
-Gaussian Mixture Model Background Subtraction IP Core is implmented using Vivado HLS tool. Algorithm is explained as follows.\\\\
+Gaussian Mixture Model Background Subtraction IP Core is implmented using Vivado HLS tool. Algorithm is explained as follows.\\\\ GMM for background subtraction is introduced in [12].
 Gaussian Mixture Models uses a statistical model in which the probability distribution of the luminosity of each pixel is modeled with a mixture of Gaussian distributions. GMM performs really well in identifying the background even in luminosity changes. Our implemented system contains GMM IP core based on the OpenCV GMM algorithm.  The algorithm is optimized for hardware implementation by sectoring the received frame into 60 parts and processing it separately such that the latency and the BRAM utilization is minimized.\\\\
 The proposed system models a pixel as a mixture of 2 gaussians. We have limited the system to two models, as a considerable increase of accuracy was not observed by increasing the no of models compared to the increase in resources and latency. A very low latency is desirable for this application as the process needs to be real time. Each model is represented by 4 parameters: mean($\mu$) , variance($\sigma^2$) , weight($w$) and Fitness value ($F$). The weight can be defined as the confidence that a certain gaussian occurs. These parameters differ for each gaussian of each pixel and are updated for every incoming frame of the video.\\
 The fitness value is defined as following,
@@ -499,7 +499,7 @@ An unique feature for each detected person was needed for tracking each person. 
 \item In the software simulation using above mentioned feature for people tracking, fairly good accuracy was observed. 
 \end{itemize}
 
-Figure \ref{hist} shows how the 3D histogram is calculated. Input to the feature calculation IP core is a image frame with each pixel’s RGB components, detected bounding box and background subtracted binary mask.
+Figure \ref{hist} shows how the 3D histogram is calculated. Input to the feature calculation IP core is a image frame with each pixel's RGB components, detected bounding box and background subtracted binary mask.
 Algorithm of feature calculation IP core is implemented such that, while iterating through each pixel, it checks two conditions,
 
 \begin{enumerate}
@@ -569,7 +569,7 @@ Input/output AXI busses of the IP cores implemented in the ZYNQ PL is mapped ont
 \end{figure}
 
 Once the background subtracted binary mask is obtained a set of operations are performed as shown in figure \ref{morphology} to enhance the binary image for object detections. 
-First a set of morphological operations are performed to clean out the image as necessary. Since the quality of the background model can vary due to various environmental conditions, background subtraction will not give a cleanly filled blob for the shape of a person. There will be a lot of black pixels on the boundary as well as inside the shape of a person. We can use the morphological operation ‘closing’ to fill out these holes. It is essentially two dilations followed by an erosion. Structuring element used here is a 3x3 rectangle. We have tested out several alternatives for the kernel but this kernel size and shape gave the best results for the sequences of images we have tested. Therefore we used it in our final implementation. The results of morphological operations for a test images is shown in figure \ref{fig:sfig3}, \ref{fig:sfig4} and \ref{fig:sfig5}.\\
+First a set of morphological operations are performed to clean out the image as necessary. Since the quality of the background model can vary due to various environmental conditions, background subtraction will not give a cleanly filled blob for the shape of a person. There will be a lot of black pixels on the boundary as well as inside the shape of a person. We can use the morphological operation `closing' to fill out these holes. It is essentially two dilations followed by an erosion. Structuring element used here is a 3x3 rectangle. We have tested out several alternatives for the kernel but this kernel size and shape gave the best results for the sequences of images we have tested. Therefore we used it in our final implementation. The results of morphological operations for a test images is shown in figure \ref{fig:sfig3}, \ref{fig:sfig4} and \ref{fig:sfig5}.\\
 
 \begin{figure}
 \begin{subfigure}{.5\textwidth}
@@ -619,9 +619,9 @@ First a set of morphological operations are performed to clean out the image as 
 \label{fig:fig}
 \end{figure}
 
-Morphological operations will give a cleaner image compared to the original background subtracted image. Next contour detection is applied to the output image resulting from morphological operations. We have used inbuilt functions of opencv for this. They have implemented contour detection based on Suzuki’s [7] border following algorithm. Then again using inbuilt functions of opencv we fill out these contours. It will completely fill the shape of the person. The result of this operation for a test image is shown in figure \ref{fig:sfig6}.
+Morphological operations will give a cleaner image compared to the original background subtracted image. Next contour detection is applied to the output image resulting from morphological operations. We have used inbuilt functions of opencv for this. They have implemented contour detection based on Suzuki's [17] border following algorithm. Then again using inbuilt functions of opencv we fill out these contours. It will completely fill the shape of the person. The result of this operation for a test image is shown in figure \ref{fig:sfig6}.
 \\\\
-Next step in this process is to detect the bounding box surrounding the blob of a person. For this we use opencv inbuilt function for convex hull detection. A convex hull is the smallest polygon enclosing a set of points. Opencv’s implementation is based on the algorithm proposed by Sklansky [8]. After this process we obtain a set of bounding boxes corresponding to people detected. Resulting bounding boxes for a test image is shown in figure \ref{fig:sfig7}.
+Next step in this process is to detect the bounding box surrounding the blob of a person. For this we use opencv inbuilt function for convex hull detection. A convex hull is the smallest polygon enclosing a set of points. Opencv's implementation is based on the algorithm proposed by Sklansky [18]. After this process we obtain a set of bounding boxes corresponding to people detected. Resulting bounding boxes for a test image is shown in figure \ref{fig:sfig7}.
 
 \subsubsection{False Positive Reduction}
 Although the above process is able to detect people from an image, it also detects a lot of unwanted blobs due to various reasons such as reflections caused by background surfaces, imperfections of background modeling, etc. Therefore we need to utilize a method to reduce number of these false positives. Our initial approach was to select the bounding boxes satisfying a set of conditions as follows and reject all the other detections.
@@ -688,7 +688,7 @@ We can see that only the first two principal components give a significant contr
 \label{pca3}
 \end{figure}
 
-Next we looked at the kernel density estimate of the first principal component as shown in figure \ref{pca3}. We can approximate this with a bimodal distribution. Therefore the problem reduces to finding the optimum threshold for this bimodal distribution. We used Otsu’s [9] thresholding algorithm to find this threshold.
+Next we looked at the kernel density estimate of the first principal component as shown in figure \ref{pca3}. We can approximate this with a bimodal distribution. Therefore the problem reduces to finding the optimum threshold for this bimodal distribution. We used Otsu's [19] thresholding algorithm to find this threshold.
 \\\\
 We utilized this framework for false positive reduction of the detections. Once we tested out this with several video sequences taken from different camera angles we found out that this method indeed gives better results as analysis suggested. Figure \ref{pca4:pca4} shows the results of PCA based false positive reduction.\\
 \begin{figure}[H]
@@ -1186,7 +1186,7 @@ For a business organization to stay on par with their competitors, understanding
 \newpage
 %\chapter{References}
 %\section*{\textbf{References}}
-\addcontentsline{toc}{section}{Bibliography}
+\addcontentsline{toc}{section}{\textbf{Bibliographical References}}
 \begin{thebibliography}{10}
 
 \bibitem{1}
@@ -1247,7 +1247,21 @@ Sklansky, J., 1982. Finding the convex hull of a simple polygon. \textit{Pattern
 Otsu, N., 1979. A threshold selection method from gray-level histograms. \textit{IEEE transactions on systems, man, and cybernetics,} 9(1), pp.62-66.
 
 \bibitem{20} 
-Xilinx.com, 2018. [Online]. Available: https://www.xilinx.com/support/documenta\\tion/selection-guides/zynq-7000-product-selection-guide.pdf. [Accessed: 31- Jan- 2018].
+Jan- 2018].
+Todd Fredrich, P. (2018). REST API Tutorial. [online] Restapitutorial.com. Available at: http://www.restapitutorial.com/ [Accessed 10 Aug. 2017].
+
+\bibitem{21} 
+Zivkovic, Z. (2004). Improved Adaptive Gaussian Mixture Model for Background Subtraction. ICPR.
+
+\bibitem{22} 
+Power, W. and Schoonees, J. (2002). Understanding Background Mixture Models for Foreground Segmentation. In: mage and Vision Computing New Zealand. Auckland, New Zealand.
+
+\bibitem{23} 
+Flask.pocoo.org. (n.d.). Welcome | Flask (A Python Microframework). [online] Available at: http://flask.pocoo.org/ [Accessed 1 Jul. 2017].
+
+\bibitem{24} 
+Xilinx.com, 2018. [Online]. Available: https://www.xilinx.com/support/documenta\\tion/selection-guides/zynq-7000-product-selection-guide.pdf. [Accessed: 31- 
+
 \end{thebibliography}
 
 
