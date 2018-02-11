@@ -71,7 +71,7 @@
 \end{tabular}
 \end{table}
 \vspace{2.5cm}
-\noindent This is to certify that I/we have read this project and that in my/our opinion it is fully adequate, in scope and quality, as an Undergraduate Graduation Project.\\[1cm]
+\noindent This is to certify that I/we have read this project and that in my/our opinion it is fully adequate, in scope and quality, as an undergraduate graduation project.\\[1cm]
 Supervisors:\\[0.5cm]
 Dr. Ranga Rodrigo\\[1cm]
 Signature: ......................\\[1cm]
@@ -102,13 +102,13 @@ We declare that the dissertation entitled People Counting and Tracking with Xili
 \begin{table}[h]
 \begin{tabular}{cccc}
 ........................... &&& \hspace{5cm}...........................  \\
-Date                        &&& \hspace{5cm}R.V.C.N Abeyrathne (130008K) \\[1cm]
+Date                        &&& \hspace{5cm}R.V.C.N. Abeyrathne (130008K) \\[1cm]
                             &&& \hspace{5cm}...........................  \\
-                            &&& \hspace{5cm}D.L Dampahalage (130093M)    \\[1cm]
+                            &&& \hspace{5cm}D.L. Dampahalage (130093M)    \\[1cm]
                             &&& \hspace{5cm}...........................  \\
-                            &&& \hspace{5cm}H.A.S.P Gunasekara (130183N) \\[1cm]
+                            &&& \hspace{5cm}H.A.S.P. Gunasekara (130183N) \\[1cm]
                             &&& \hspace{5cm}...........................  \\
-                            &&& \hspace{5cm}W.M.D.K Weerakoon (130633V) 
+                            &&& \hspace{5cm}W.M.D.K. Weerakoon (130633V) 
 \end{tabular}
 \end{table}
 \newpage
@@ -130,18 +130,17 @@ Dr. Peshala G. Jayasekara   & \hspace{5cm}Date
 \fontsize{18pt}{18}\selectfont{\textbf{Abstract\\[1cm]
 People Counting and Tracking with Xilinx ZC702\\
 Evaluation Kits}}\\[0.5cm]
-\fontsize{12pt}{12}\selectfont{Group Members: R.V.C.N Abeyrathne, D.L Dampahalage, H.A.S.P Gunasekara, W.M.D.K Weerakoon}\\[0.25cm]
+\fontsize{12pt}{12}\selectfont{Group Members: R.V.C.N. Abeyrathne, D.L. Dampahalage, H.A.S.P. Gunasekara, W.M.D.K. Weerakoon}\\[0.25cm]
 Supervisors: Dr. Ranga Rodrigo, Dr. Ajith Pasqual, Dr. Peshala G. Jayasekara
 \end{center}
-\textit{Keywords}: FPGA,ZYNQ-7000, people counting, multi-camera, multiple people tracking, particle filters, gaussian mixture models\\[0.5cm]
-In the contemporary society making correct decisions is vital for any business organization to stay on par with competitors. For that intent identifying and understanding the
-customers is a must. Tapping into the customers$'$ subconscious is the preeminent way of making correct business decisions and for that an organization should track and analyze customer behavior.\\
+\textit{Keywords}: FPGA,ZYNQ-7000, people counting, multi-camera, multiple people tracking, particle filters, Gaussian mixture models\\[0.5cm]
+Being able to track people within an environment like a large retail store using cameras is important. However, processing video streams from a large number of cameras centrally for multi-camera, multi-target tracking is impractical. \\
 As a solution to this problem, we propose a scalable multi-camera people tracking system for a large department store like environment. The main focus of this project is to implement an end to end system for multi-camera people tracking with business intelligence.
-Novelty of this system from contemporary multi-camera people tracking systems is the introduction of leaf node processing, where part of the processing is done in a hardware system close to the camera. By this way we could achieve the scalability required for a large department store like environment and reduce bandwidth usage in such systems.\\
-This proposed system comprises of leaf nodes, central server and the web server. Leaf nodes are integrated close each camera. We use Zynq SoCs for leaf nodes and these devices read video frames from the cameras, detects people for each frame using GMM based background subtraction, calculate color histogram features for each detected person and sends the bounding boxes and features to the server using UDP.\\
-A central server will receive this information from each leaf node and do people tracking by using particle filters and hungarian algorithm for data association. Multi-camera tracking is also achieved by means of homography based method and a graph algorithm. Real time tracking and heat maps are generated in the server GUI.\\
-Finally business intelligence software hosted in a web server, where real time people tracking for the whole store, heat maps for desired time period, people count graphs for desired time period and real time people count graphs are implemented.\\
-Therefore by the introduction of leaf node processing we achieve a scalable system since the processing power required at the central server is reduced. We achieve a low power system for leaf nodes by using Zynq SoCs and we reduce the bandwidth usage since we only send the bounding boxes and features for tracking to the server.
+Novelty of this system from contemporary multi-camera people tracking systems is the introduction of leaf node processing, where part of the processing is done in a hardware system close to the camera. By this way we could achieve the scalability required for an environment like large department store and reduce bandwidth usage in such systems.\\
+This proposed system comprises of leaf nodes, central server and a web server. Leaf nodes are integrated close to each camera. We use Zynq SoCs for leaf nodes and these devices read video frames from the cameras, detects people for each frame using a Gaussian Mixture Model (GMM) based background subtraction, calculate color histogram features for each detected person and sends the bounding boxes and features to the server using User Datagram Protocol (UDP).\\
+A central server receives this information from each leaf node and performs people tracking by using particle filters and the Hungarian algorithm for data association. Multi-camera tracking is also achieved by means of homography based method and a graph algorithm. Real time tracking and heat maps are generated in the server Graphical User Interface (GUI).\\
+Finally, business intelligence software hosted in a web server, where real time people tracking for the whole store, heat maps for desired time period, people count graphs for desired time period and real time people count graphs are implemented.\\
+Therefore by the introduction of leaf node processing we achieve a scalable system since the processing power required at the central server is reduced. We achieve a low power system for leaf nodes by using Zynq SoCs and reduce the bandwidth usage since we only send the bounding boxes and features for tracking to the server.
 
 
 \newpage
@@ -155,6 +154,7 @@ We would like to express our deepest appreciation and sincere gratitude to our p
 We are indebted to our final year project coordinator, Dr. Anjula Silva for his counsel regarding the project.
 We would also like to take this opportunity to thank Ms. Salgado for her advices on compiling a finer report.
 We would like to acknowledge with much appreciation the non-academic staff of the department who gave us their fullest support in providing necessary laboratory facilities.\\
+\par We would like to convey our deepest gratitude to Xilinx, Inc for providing us with Xilinx Zynq-7000 All Programmable SoC ZC702 Evaluation Kits.\\
 \par Finally, our thanks and appreciations also goes out to our batch mates who helped in numerous ways to make this endeavor a success.
 \newpage
 \titleformat*{\section}{\centering\bfseries\Large}
@@ -216,14 +216,14 @@ Multi-Camera People Tracking systems is also a field which has been researched o
 \section{Objectives of the Project }
 
 \begin{itemize}
-\item  People Detection algorithm in XILINX ZC702 kit\\
-People detection involves finding the bounding boxes of locations of people in every image frame. Accuracy of this is very critical since this will directly affect the people tracking results and also the business intelligence output. This task will be done in the programmable logic (PL) of the FPGA which will work much faster in terms of the performance. 
+\item  People Detection Algorithm in XILINX ZC702 kit\\
+People detection involves finding the bounding boxes of locations of people in every image frame. Accuracy of this is very critical since this will directly affect the people tracking results and also the business intelligence output. This task is done in the programmable logic (PL) of the FPGA which works much faster than if it was executed sequentially in the arm processor. 
 
 \item Muti-Camera People Tracking\\
-A central server will receive the vectorized information to be used for multicamera people tracking. There will be several ZC702 devices interfaced with a camera which will be sending the people detection results to the server through ethernet. Server will fuse all these results and execute people tracking in a multicamera system. 
+A central server receives the vectorized information to be used for multicamera people tracking. There are several ZC702 devices interfaced with a camera which will be sending the people detection results to the server through Ethernet. Server fuses all these results and performs people tracking in a multicamera system. 
 
 \item  Business Intelligence Software \\
-End result of the project is to assist making business decisions in a large retail store like environment. System will use the multi-camera people tracking results to visualize the paths of the people using heat maps of people density and heat graphs, etc.
+End result of the project is to assist making business decisions in a large retail store like environment. The end system uses the multi-camera people tracking results to visualize the paths of the people using heat maps of people density and heat graphs, etc.
 
 
 
@@ -233,34 +233,34 @@ End result of the project is to assist making business decisions in a large reta
 \section{Scope}
 The main components of the project that makes the scope is as follows.
 \begin{itemize}
-\item People Detection feature extraction\\
+\item People detection feature extraction\\
 This involves reading image frames from the camera and extracting the features
 required for people detection. This computation will be done in the Programmable
 Logic (PL) of Zynq ZC702 Evaluation Kit.
-\item Writing Linux Kernel drivers for controlling PL IP cores.\\
-Writing Linux Kernel drivers are required to control the IP cores from the software end.
-\item Communication with the backend server \\
-Calculated features for each image frame will be sent to the backend server through Ethernet for the rest of the processing.
-\item Multi- Camera People Tracking \\
-Multi-Camera people tracking will be done in the backend server using the features sent through each of the cameras.
+\item Writing Linux kernel drivers for controlling PL IP cores.\\
+Writing Linux kernel drivers are required to control the IP cores from the software end.
+\item Communication with the back-end server \\
+Calculated features for each image frame is sent to the back-end server through Ethernet for the rest of the processing.
+\item Multi- camera people tracking \\
+Multi-camera people tracking is done at the back-end server using the features sent through each of the cameras.
 
 
 \end{itemize}
 
 \chapter{Literature Review}
-In this project main focus was to implement an end to end system for Multi-Camera People Tracking System and to use this system to generate business intuition. As explained earlier we use the technique of leaf node processing to achieve a scalable, low power, low bandwidth required system.\vspace{0.3cm} 
+In this project main focus was to implement an end to end system for Multi-camera people Tracking System and to use this system to generate business intuition. As explained earlier we use the technique of leaf node processing to achieve a scalable, low power, low bandwidth required system.\vspace{0.3cm} 
 
-There are several challenging tasks in implementing this system. One is people detection in FPGA. There are various ways to achieve this. One way is to use a blob detection algorithm as used by Vicente, Alfredo Gardel, et al. [1] in 2009.They have done background subtraction followed by contour detection to select head candidates for videos obtained using overhead cameras and they have implemented people detection part in a low cost FPGA (spartan3).\vspace{0.3cm}
+There are several challenging tasks in implementing this system. One is people detection in FPGA. There are various ways to achieve this. One way is to use a blob detection algorithm as used by Vicente, Alfredo Gardel, \textit{et al}. [1] in 2009.They have done background subtraction followed by contour detection to select head candidates for videos obtained using overhead cameras and they have implemented people detection part in a low cost FPGA (spartan3).\vspace{0.3cm}
 
-Feature based methods are also another way to do people detection. In these methods a set of features are calculated around a window and some kind of machine learning algorithm is used to train a classifier that can classify each window into "contains a person" and "not contains a person". One such method is Histogram Oriented Gradient (HoG) based method suggested by Dalal, Navneet, and Bill Triggs. [2] in 2005. A variation of HoG is implemented on FPGA by Negi, Kazuhiro, et al. [3] in 2011.\vspace{0.3cm}
+Feature based methods are also another way to do people detection. In these methods a set of features are calculated around a window and some kind of machine learning algorithm is used to train a classifier that can classify each window into "contains a person" and "not contains a person". One such method is Histogram Oriented Gradient (HoG) based method suggested by Dalal, Navneet, and Bill Triggs. [2] in 2005. A variation of HoG is implemented on FPGA by Negi, Kazuhiro, \textit{et al}. [3] in 2011.\vspace{0.3cm}
 
 Another approach that can be used for people detection is to utilize a neural network. If we can come up with a suitable neural network architecture, this method has the potential to outperform all the other methods mentioned earlier. There are several open source implementations of such architectures available. One such architecture is given by Redmon, Joseph, et al. [4] in 2016. Their work has made a huge leap in object detection space. Due to its success their architecture is utilized by many people. Challenge though in using this approach is the complexity of implementing a convolutional neural network in an FPGA.  Implementing a CNN architecture in FPGA with the available resources and to achieve real time processing is an immense challenge. \vspace{0.3cm}
 
-We used a background subtraction based method for people detection in the proposed system. Though we considered using either HoG or CNN, as our focus was to implement the end end architecture for multi-camera people tracking with leaf node processing, background subtractions deemed to be a feasible solution. We could improve the existing system by implementing either HoG or CNN as a future improvement.\vspace{0.3cm}
+We used a background subtraction based method for people detection in the proposed system. Though we considered using either HoG or CNN, as our focus was to implement the end to end architecture for multi-camera people tracking with leaf node processing, background subtractions deemed to be a feasible solution. We could improve the existing system by implementing either HoG or CNN as a future improvement.\vspace{0.3cm}
 
-Other major challenge we have is people tracking based on our detections. There are many traditional approaches to this such as tracking using kalman filter and assigning detections to tracks using the Hungarian algorithm. But multi target tracking also can be formulated as a discrete-continuous optimization problem [5]. Andriyenko, Anton, Konrad Schindler, and Stefan Roth [5] in 2012 have considered data association as a discrete optimization problem with label costs. And they have posed trajectory estimation as a continuous fitting problem with closed form solutions. And there method has performed well on some known data sets.\vspace{0.3cm}
+Other major challenge we have is people tracking based on our detections. There are many traditional approaches to this such as tracking using kalman filter and assigning detections to tracks using the Hungarian algorithm. But multi target tracking also can be formulated as a discrete-continuous optimization problem [5]. Andriyenko, Anton, Konrad Schindler, and Stefan Roth [5] in 2012 have considered data association as a discrete optimization problem with label costs. And they have posed trajectory estimation as a continuous fitting problem with closed form solutions. And their method has performed well on some known data sets.\vspace{0.3cm}
 
-Other major challenge that we face is, how to extend multiple target tracking into a multi camera framework. There are some research papers discussing this issue. Tang, Nick C., et al. [6] in 2015 suggest a two pass regression framework to solve this challenge. First pass regression predicts the people count based on the features calculated from intra-camera video frames. And then the second pass is based on the conflicts between the prediction derived from multiple views. They have formulated this as a transfer learning problem. Yang, Tao, et al. [7] in 2007 discusses another method to do this. In this approach first they do single camera tracking and they transform these tracked paths into a global coordinate system. Then by using their multi camera handoff algorithm, they can track people across multiple cameras. Here they calculate a match score for an object appearing in a camera under overlapping or non overlapping conditions for all tracks under all cameras. The track having the maximum score is selected.\vspace{0.3cm}
+Other major challenge that we face is, how to extend multiple target tracking into a multi camera framework. There are some research papers discussing this issue. Tang, Nick C., \textit{et al}. [6] in 2015 suggest a two pass regression framework to solve this challenge. First pass regression predicts the people count based on the features calculated from intra-camera video frames. And then the second pass is based on the conflicts between the prediction derived from multiple views. They have formulated this as a transfer learning problem. Yang, Tao, \textit{et al}. [7] in 2007 discusses another method to do this. In this approach first they do single camera tracking and they transform these tracked paths into a global coordinate system. Then by using their multi camera hand-off algorithm, they can track people across multiple cameras. Here they calculate a match score for an object appearing in a camera under overlapping or non overlapping conditions for all tracks under all cameras. The track having the maximum score is selected.\vspace{0.3cm}
 
 By going through the available literature we were able to get an insight of the scope of our project. We identified some potential solutions for the challenges we have. We were also able to identify that implementing the overall system architecture for multi-camera people tracking with leaf node processing will be a novel contribution. 
 
@@ -286,13 +286,13 @@ Business intelligence generation and displaying interfaces.
 We will explore each of the above components separately in the following sections.
 
 \section{Embedded System (Leaf Node)}
-Generally the term 'leaf node' is used for a system placed at the edge or bottom of a hierarchical network (of systems). In our system, leaf node is the embedded system connected to the camera.  \\\\
-This embedded system  is responsible for capturing live video frames from the camera and preprocessing before sending into the central server. Objective of preprocessing on the leaf node is to reduce the required bandwidth of the network to send information (video in this case) to the central server and to reduce the processing done one the central server in a scalable manner. 
+Generally the term `leaf node' is used for a system placed at the edge or bottom of a hierarchical network (of systems). In our system, leaf node is the embedded system connected to the camera.  \\\\
+This embedded system  is responsible for capturing live video frames from the camera and preprocessing before sending into the central server. Objective of preprocessing on the leaf node is to reduce the required bandwidth of the network to send information (video in this case) to the central server and to reduce the processing done on the central server in a scalable manner. 
 In a large system consisting of few hundreds of cameras, reduction of the bandwidth required and the processing power of the central system for each camera makes a big difference in the central system processing and bandwidth requirements, making the system more scalable.  
 \\\\
-In our prototype system, leaf node consists of a web camera connected to a Xilinx ZC702 development board and its responsible for doing people detection of the live video feed and feature calculation of the detected people. Implementations of the people detection and feature calculation algorithms are explained in detail in later sections. These calculated features of the detected people are then sent to the central server via a custom application layer protocol based on User Datagram Protocol (UDP) / Internet Protocol (IP) over Ethernet.
+In our prototype system, leaf node consists of a web camera connected to a Xilinx ZC702 development board which is responsible for doing people detection of the live video feed and feature calculation of the detected people. Implementations of the people detection and feature calculation algorithms are explained in detail in later sections. These calculated features of the detected people are then sent to the central server via a custom application layer protocol based on User Datagram Protocol (UDP) / Internet Protocol (IP) over Ethernet.
 \\\\
-Following sections provide an overview about the feature of Xilinx ZC702 board and ZYNQ-7000 All Programmable (AP) System on Chip (SoC).
+Following sections provide an overview about the features of Xilinx ZC702 board and ZYNQ-7000 All Programmable (AP) System on Chip (SoC).
 
 \subsection{Xilinx ZC702 Board}
 Xilinx ZC702 board, shown in Figure \ref{board}, is a development board manufactured by Xilinx targeting embedded hardware (FPGA) design development. This board consists of a ZYNQ-7000 AP SoC with various other peripherals. Key features and peripherals of Xilinx ZC702 is listed below.
@@ -415,7 +415,7 @@ Considering above criteria, we have selected the functions that can be implement
 \end{tabular}
 \end{table}
 
-\subsubsection{IP core implementation on ZYNQ PL}
+\subsubsection{IP Core Implementation on ZYNQ PL}
 
 As mentioned in a previous section, we used a Xilinx High Level Synthesis (HLS) tool called Vivado HLS. High Level Synthesis is an automated design process which converts an algorithmic or a behavioral description to an equivalent digital hardware. Vivado HLS tool is extremely useful in implementing RTL designs using high level implementations of algorithms, quickly and easily. 
 Usually using a Hardware Description Language (HDL) such as Verilog or VHDL is the most popular method of designing digital hardware. Compared to designing using HDL, there are few trade-offs in using HLS, which are listed below.
@@ -626,12 +626,12 @@ Next step in this process is to detect the bounding box surrounding the blob of 
 \subsubsection{False Positive Reduction}
 Although the above process is able to detect people from an image, it also detects a lot of unwanted blobs due to various reasons such as reflections caused by background surfaces, imperfections of background modeling, etc. Therefore we need to utilize a method to reduce number of these false positives. Our initial approach was to select the bounding boxes satisfying a set of conditions as follows and reject all the other detections.
 \begin{itemize}
-\item Width of bounding box(w) > TW
-\item Height of bounding box(h) > TH
-\item TAR1 > Aspect ratio(w/h) > TAR2
-\item TCA1 > Contour Area > TCA2
+\item Width of bounding box(w) > \textit{TW}
+\item Height of bounding box(h) > \textit{TH}
+\item \textit{TAR1} > Aspect ratio(w/h) > \textit{TAR2}
+\item \textit{TCA1} > Contour Area > \textit{TCA2}
 \end{itemize}
-Here TW, TH, TAR1, TAR2, TCA1 and TCA2 are constants that are chosen arbitrarily. Initially we tuned up these constants manually by looking at the results. But this was a tedious task and this has to be redone once the camera position is changed. Therefore we explored the possibility of machine learning based automatic way to do this.
+Here \textit{TW}, \textit{TH}, \textit{TAR1}, \textit{TAR2}, \textit{TCA1} and \textit{TCA2} are constants that are chosen arbitrarily. Initially we tuned up these constants manually by looking at the results. But this was a tedious task and this has to be redone once the camera position is changed. Therefore we explored the possibility of machine learning based automatic way to do this.
 
 \noindent We selected a few features of the bounding boxes into consideration as follows:
 \begin{enumerate}
@@ -646,7 +646,7 @@ Here TW, TH, TAR1, TAR2, TCA1 and TCA2 are constants that are chosen arbitrarily
 \begin{figure}[H]
 \includegraphics[width=\textwidth]{pca/scatter_plots_pca.png}
 \centering
-\caption{Scatter plot matrix for the 6 features collected from running our object detection on a sample video}
+\caption{Scatter plot matrix for the 6 features collected from running our object detection on a sample video. Here off diagonal plots are the scatter plots and the diagonal plots are just individual distributions. Features are arranged in the order given above.}
 \label{pca1}
 \end{figure}
 
@@ -804,8 +804,9 @@ Here detection coordinates are fed to the back-end tracking system by individual
 
 
 \begin{equation}
- c_{ij}= cost(detection\ i, track\ j) \quad  where \quad i=1,...,m ; j=1,...,n
-\end{equation}
+ c_{ij}= cost(detection_i, track_j) \end{equation} 
+where \textit{i=1,...,m} ; \textit{j=1,...,n}
+
 
 Then detections having the minimum track cost lower than a threshold value are kept and detections exceeding the threshold value are initialized as new tracks. \\\\
 Here each track is a Kalman filter. Dynamics model used in the Kalman filter is a constant velocity model consisting of 6 state variables, namely \string{x coordinate, y coordinate, width, height, x velocity, y velocity\string} and 4 measurement variables, namely  \string{x coordinate, y coordinate, width, height\string}.\\\\
@@ -814,14 +815,14 @@ Tracks which have not been assigned to a detection within consecutive frames gre
 Although the Kalman filter based tracking gives somewhat satisfactory results, we decided to try out particle filter based tracking also.\\\\
 When we look at results we identified several weak points in our current tracking scheme. So we applied some modifications.
 
-\subsubsection{Improvements for Kalman FIlter Based Tracking}
+\subsubsection{Improvements for Kalman Filter Based Tracking}
 In the data association step we have only considered the euclidean distance between detection and tracker coordinates for cost estimation. We improved the accuracy of data association by applying following modifications.
 
 \subsubsection{Gray Level Intensity Histogram as a Parameter in Cost Estimation}
 We obtained the gray level intensity histogram for all the detection locations. And we included a histogram parameter in each tracker, where the histogram of the tracker is modified as follows at each assignment of a detection.
 
 \begin{equation}
-histogram_{tracker} = \alpha * histogram_{detection} + (1-\alpha) *histogram_{tracker} \quad where \ 0 < \alpha < 1
+histogram_{tracker} = \alpha histogram_{detection} + (1-\alpha) histogram_{tracker} \quad where \ 0 < \alpha < 1
 \end{equation}
 
 Then the correlation between the detection histogram and the tracker histogram is calculated and its inverse $(1/correlation \ coef.)$ is added to the cost. This makes our cost sensitive to the similarity of detection and tracker regions.
@@ -866,12 +867,12 @@ In this stage particles are propagated according to a constant velocity model. T
 
 \begin{equation}
 \label{eqn:prop1}
-X[t] = X[t-1] + Vx[t-1] * dt
+X[t] = X[t-1] + V_x[t-1] dt
 \end{equation}
 
 \begin{equation}
 \label{eqn:prop2}
-Y[t] = Y[t-1] + Vy[t-1] * dt
+Y[t] = Y[t-1] + V_y[t-1] dt
 \end{equation}
 We derive samples from a Gaussian distribution to propagate individual particles. Mean of this Gaussian distribution is zero with a different variances for 4 states. The 4 variances for x, y, vx and vy are 5.0, 5.0, 1.0 and 1.0.
 
@@ -879,7 +880,7 @@ We derive samples from a Gaussian distribution to propagate individual particles
 When a measurement comes the weights of the particles are updated and the particles are re-sampled according to weights. The weight update equation is as follows.
 
 \begin{equation}
-w = \frac{1}{\sqrt{2*\pi* \sigma }}exp\left (\frac{(x_p-x_d)^2+ (y_p-y_d)^2}{2*\sigma }\right )
+w = \frac{1}{\sqrt{2\pi\sigma }}exp\left (\frac{(x_p-x_d)^2+ (y_p-y_d)^2}{2\sigma }\right )
 \end{equation}
 Here $x_p$ and $y_p$ are particle locations and $x_d$ and $y_d$ are detection locations. And $\sigma$ is an arbitrary constant.
 
@@ -895,7 +896,7 @@ Data association is an important part of this process because the tracking algor
 
 \begin{equation}
 \label{eqn:association1}
-W_d = \frac{1}{\sqrt{2*\pi* \sigma }}exp\left (\frac{(x_t-x_d)^2+ (y_t-y_d)^2}{2*\sigma }\right )
+W_d = \frac{1}{\sqrt{2\pi \sigma }}exp\left (\frac{(x_t-x_d)^2+ (y_t-y_d)^2}{2\sigma }\right )
 \end{equation}
 where $x_t$, $y_t$ are track locations and $x_d$, $y_d$ are detection locations.
 \begin{equation}
@@ -906,7 +907,7 @@ Where $H_1$ is detection histogram and $H_2$ is track histogram and $H_1$ and $H
 
 \begin{equation}
 \label{eqn:association3}
-w = (1-\alpha)*W_d + \alpha*(1-d(H_1,H_2))
+w = (1-\alpha)W_d + \alpha(1-d(H_1,H_2))
 \end{equation}
 Here $\alpha$ determines the dependence of the cost on the histogram. In the final implementation this was chosen as 0.4.
 \subsection{Sensor Fusion}
@@ -938,17 +939,17 @@ Once the image coordinates are transformed to the ground plane we can perform co
 
 \begin{equation}
 \label{eqn:multicam1}
-W_d = \frac{1}{\sqrt{2*\pi* \sigma }}exp\left (\frac{(x_a-x_b)^2+ (y_a-y_b)^2}{2*\sigma }\right )
+W_d = \frac{1}{\sqrt{2\pi \sigma }}exp\left (\frac{(x_a-x_b)^2+ (y_a-y_b)^2}{2\sigma }\right )
 \end{equation}
 where a and b are two nodes in the graph.
 \begin{equation}
 \label{eqn:multicam2}
 d(H1,H2)=\sqrt{1-\frac{1}{\sqrt{\overline{H_1}\cdot \overline{H_2}\cdot N^2}}\sum_{I}^{ }\sqrt{H_1(I)\cdot H_2(I)}}
 \end{equation}
-Where $H_1$ and $H_2$ are the two histograms of nodes a, b and $H_1$ and $H_2$  represents the mean of the histograms. This is known as the Bhattacharyya distance [10].
+Where $H_1$ and $H_2$ are the two histograms of nodes a, b and $H_1$ and $H_2$  represents the mean of the histograms. This is known as the Bhattacharyya distance [10] as mentioned above.
 \begin{equation}
 \label{eqn:multicam3}
-w = (1-\alpha)*W_d + \alpha*(1-d(H_1,H_2))
+w = (1-\alpha)W_d + \alpha(1-d(H_1,H_2))
 \end{equation}
 Here $\alpha$ determines the dependence on histogram. In our implementation we have chosen $\alpha$ as 0.3. Please note that equations present in here and 3.8.5 have the same mathematics but are used in 2 different settings. Therefore the constants are chosen independently.\\\\
 Then we employed a simple greedy algorithm to merge corresponding points together. Here we assuming that cameras have only pairwise overlapping. This algorithm works as follows.
@@ -958,7 +959,7 @@ Then we employed a simple greedy algorithm to merge corresponding points togethe
 \begin{itemize}
 \item Locations are merged by taking the average
 \item Histograms are merged by the the combination of two histograms.\\
-$H = \beta*H_1 + (1- \beta) * H_2$ Where $\beta$ is selected as 0.5.
+$H = \beta H_1 + (1- \beta)  H_2$ Where $\beta$ is selected as 0.5.
 
 \end{itemize}
 \item Repeat until edges exist with a cost lower than a threshold value
