@@ -23,7 +23,7 @@
 \contentsline {subsubsection}{\numberline {3.3.3.4}PetaLinux SDK}{9}
 \contentsline {subsection}{\numberline {3.3.4}Installing Linux on ZYNQ-7000}{10}
 \contentsline {subsection}{\numberline {3.3.5}People Detection and Feature Calculation Implementation on ZYNQ-7000 SoC}{11}
-\contentsline {subsubsection}{\numberline {3.3.5.1}IP core implementation on ZYNQ PL}{12}
+\contentsline {subsubsection}{\numberline {3.3.5.1}IP Core Implementation on ZYNQ PL}{12}
 \contentsline {subsubsection}{\numberline {3.3.5.2}Gaussian Mixture Model Background Subtraction IP Core}{13}
 \contentsline {subsubsection}{\numberline {3.3.5.3}Feature Calculation IP Core}{15}
 \contentsline {subsubsection}{\numberline {3.3.5.4}Optimizing Vivado HLS IP Core Designs}{17}
@@ -38,7 +38,7 @@
 \contentsline {subsection}{\numberline {3.4.1}Receiving and Unloading Data Packets from Camera Nodes}{27}
 \contentsline {subsection}{\numberline {3.4.2}Single Camera Tracking}{27}
 \contentsline {subsubsection}{\numberline {3.4.2.1}Kalman Filter based Tracking}{28}
-\contentsline {subsubsection}{\numberline {3.4.2.2}Improvements for Kalman FIlter Based Tracking}{29}
+\contentsline {subsubsection}{\numberline {3.4.2.2}Improvements for Kalman Filter Based Tracking}{29}
 \contentsline {subsubsection}{\numberline {3.4.2.3}Gray Level Intensity Histogram as a Parameter in Cost Estimation}{29}
 \contentsline {subsubsection}{\numberline {3.4.2.4}Adding a Penalty for the Cost for High Velocities in Kalman Filter State}{29}
 \contentsline {subsubsection}{\numberline {3.4.2.5}Tuning Model Parameters}{29}
