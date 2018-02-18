@@ -4,6 +4,7 @@
  \geometry{
  top=25mm,
  }
+ \usepackage{multirow}
  \usepackage{mathtools}
 \usepackage{amsmath}
 %\usepackage[showframe]{geometry}
@@ -139,7 +140,7 @@ As a solution to this problem, we propose a scalable multi-camera people trackin
 Novelty of this system from contemporary multi-camera people tracking systems is the introduction of leaf node processing, where part of the processing is done in a hardware system close to the camera. By this way we could achieve the scalability required for an environment like large department store and reduce bandwidth usage in such systems.\\
 This proposed system comprises of leaf nodes, central server and a web server. Leaf nodes are integrated close to each camera. We use Zynq SoCs for leaf nodes and these devices read video frames from the cameras, detects people for each frame using a Gaussian Mixture Model (GMM) based background subtraction, calculate color histogram features for each detected person and sends the bounding boxes and features to the server using User Datagram Protocol (UDP).\\
 A central server receives this information from each leaf node and performs people tracking by using particle filters and the Hungarian algorithm for data association. Multi-camera tracking is also achieved by means of homography based method and a graph algorithm. Real time tracking and heat maps are generated in the server Graphical User Interface (GUI).\\
-Finally, business intelligence software hosted in a web server, where real time people tracking for the whole store, heat maps for desired time period, people count graphs for desired time period and real time people count graphs are implemented.\\
+Finally, a business intelligence software was hosted in a web server, where real time people tracking for the whole store, heat maps for desired time period, people count graphs for desired time period and real time people count graphs are implemented.\\
 Therefore by the introduction of leaf node processing we achieve a scalable system since the processing power required at the central server is reduced. We achieve a low power system for leaf nodes by using Zynq SoCs and reduce the bandwidth usage since we only send the bounding boxes and features for tracking to the server.
 
 
@@ -203,15 +204,15 @@ DDR                      & Double Data Rate
 
 \chapter{\textbf{Introduction}}
 
-Nowadays retail stores are very popular among people. Even in Sri Lanka, retail stores like Cargills Food City and House of Fashion are visited by at least few hundreds of customers daily. In these type of retail stores, one of the factors that are used to measure the effectiveness of an advertisement or the popularity of store is the conversion rate. This number represents the percentage of the people actually bought something out all the people that visited the store. Usual way of calculating the conversion rate is by counting the people coming to the store and checking out at one of the counters. It is impractical to do this manually in a large retail store environment. Other than calculating the conversion rate, various business decisions could be made for the betterment of the store by analyzing customer behavior. \\\\
+Nowadays, retail stores are very popular among people. Even in Sri Lanka, retail stores like Cargills Food City and House of Fashion are visited by few hundreds of customers daily. In these type of retail stores, one of the factors that are used to measure the effectiveness of an advertisement or the popularity of store is the conversion rate. This number represents the percentage of the people actually bought something out all the people that visited the store. Usual way of calculating the conversion rate is by counting the people coming to the store and checking out at one of the counters. It is impractical to do this manually in a large retail store environment. Other than calculating the conversion rate, various business decisions could be made for the betterment of the store by analyzing customer behavior. \\\\
 Enhancing customer experience by rearranging the store structure, efficiently allocating staff to high density areas, understanding traffic trends and identify "opportunity hours" and schedule labor hours accordingly to optimize service levels are some of such business decisions In order to assist making business decisions, large-scale retail stores need to count and track people using a number of ceiling-mounted cameras. In such environment it is hard to keep track of customer behavior separately using a manual system.\\\\
-Identifying the history of  customers and understanding the customer density inside the areas of the department store can be critical for financial and business decisions. However if a system is in place which counts and tracks the customers inside the store and generates basic intelligence to the managerial level, it can expedite the decision making process. This project is aimed at developing such a system. We have implemented a people tracking and counting system adaptable to any large scale store structure which is able to process multiple video streams obtained through separate cameras mounted on the store and generate business intelligence.\\\\
+Identifying the history of  customers and understanding the customer density inside the areas of the department store can be critical for financial and business decisions. However, if a system is in place which counts and tracks the customers inside the store and generates basic intelligence to the managerial level, it can expedite the decision making process. This project is aimed at developing such a system. We have implemented a people tracking and counting system adaptable to any large scale store structure which is able to process multiple video streams obtained through separate cameras mounted on the store and generate business intelligence.\\\\
 There have been several systems which handle multi camera people tracking introduced in the past decade. All these systems incorporate a central server which will receive all the frames from all the cameras to handle the people detection and tracking tasks real-time. Major drawback of these systems is the scalability. When the number of cameras increase, the bandwidth usage for sending video frames to the central server will be increased and the processing power required at the central server will increase. This raises the requirement for processing video frames close to the camera which is defined as leaf node processing. \\\\
 The scope of this project is to implement a scalable end to end system for Multi-Camera People Tracking utilizing a Zynq SoC for leaf node processing. Thereby we use an FPGA + ARM processor for leaf node processing, a central server for multi-camera people tracking and a web server for generating business intelligence.\\\\
-In this proposed system by using a FPGA + ARM processor we have achieved leaf node processing of people detection at a lower power and also enable the scalability and lower bandwidth requirement. \\\\
-People Detection in FPGA is an aspect that has been researched by many over the
-years. For example [12] suggests a FPGA based embedded platform for people detection using Gaussian Mixture Models and [13] suggests a similar system for people detection using Histogram of Features.\\\\
-Multi-Camera People Tracking systems is also a field which has been researched over the years. [14] suggests a multi-camera surveillance system implemented with background subtraction for detection and color features for tracking. [16] suggests another multi camera people tracking system which uses particle filters for tracking on the ground plane.
+In this proposed system by using a FPGA + ARM processor we have achieved leaf node processing of people detection with a low power scalable system with a low bandwidth requirement. \\\\
+People Detection on FPGA is an aspect that has been researched by many over the
+years. For example, there are suggested implementations of FPGA based embedded platform for people detection using Gaussian Mixture Models[12] and a similar system for people detection using Histogram of Features[13].\\\\
+Multi-Camera People Tracking systems is also a field which has been researched over the years. There is an implementation of a multi-camera surveillance system with background subtraction for detection and color features for tracking[14]. Another existing multi-camera people tracking system uses particle filters for tracking on the ground plane[16].
 
 \section{Objectives of the Project }
 
@@ -220,10 +221,10 @@ Multi-Camera People Tracking systems is also a field which has been researched o
 People detection involves finding the bounding boxes of locations of people in every image frame. Accuracy of this is very critical since this will directly affect the people tracking results and also the business intelligence output. This task is done in the programmable logic (PL) of the FPGA which works much faster than if it was executed sequentially in the arm processor. 
 
 \item Muti-Camera People Tracking\\
-A central server receives the vectorized information to be used for multicamera people tracking. There are several ZC702 devices interfaced with a camera which will be sending the people detection results to the server through Ethernet. Server fuses all these results and performs people tracking in a multicamera system. 
+A central server receives the vectorized information to be used for multi-camera people tracking. There are several ZC702 devices interfaced with a camera which sends the people detection results to the server through Ethernet. Server fuses all these results and performs people tracking in a multi-camera system. 
 
 \item  Business Intelligence Software \\
-End result of the project is to assist making business decisions in a large retail store like environment. The end system uses the multi-camera people tracking results to visualize the paths of the people using heat maps of people density and heat graphs, etc.
+End result of the project is to assist making business decisions in a large retail store like environment. The end system uses the multi-camera people tracking results to visualize the paths of the people using heat maps of people density and people count graphs.
 
 
 
@@ -231,7 +232,7 @@ End result of the project is to assist making business decisions in a large reta
 \newpage
 
 \section{Scope}
-The main components of the project that makes the scope is as follows.
+The main components of the project that makes the scope is as follows,
 \begin{itemize}
 \item People detection feature extraction\\
 This involves reading image frames from the camera and extracting the features
@@ -241,14 +242,14 @@ Logic (PL) of Zynq ZC702 Evaluation Kit.
 Writing Linux kernel drivers are required to control the IP cores from the software end.
 \item Communication with the back-end server \\
 Calculated features for each image frame is sent to the back-end server through Ethernet for the rest of the processing.
-\item Multi- camera people tracking \\
+\item Multi-camera people tracking \\
 Multi-camera people tracking is done at the back-end server using the features sent through each of the cameras.
 
 
 \end{itemize}
 
 \chapter{Literature Review}
-In this project main focus was to implement an end to end system for Multi-camera people Tracking System and to use this system to generate business intuition. As explained earlier we use the technique of leaf node processing to achieve a scalable, low power, low bandwidth required system.\vspace{0.3cm} 
+In this project main focus was to implement an end-to-end system for Multi-camera people Tracking System and to use this system to generate business intuition. As explained earlier we use the technique of leaf node processing to achieve a scalable, low power, low bandwidth required system.\vspace{0.3cm} 
 
 There are several challenging tasks in implementing this system. One is people detection in FPGA. There are various ways to achieve this. One way is to use a blob detection algorithm as used by Vicente, Alfredo Gardel, \textit{et al}. [1] in 2009.They have done background subtraction followed by contour detection to select head candidates for videos obtained using overhead cameras and they have implemented people detection part in a low cost FPGA (spartan3).\vspace{0.3cm}
 
@@ -286,7 +287,7 @@ Business intelligence generation and displaying interfaces.
 We will explore each of the above components separately in the following sections.
 
 \section{Embedded System (Leaf Node)}
-Generally the term `leaf node' is used for a system placed at the edge or bottom of a hierarchical network (of systems). In our system, leaf node is the embedded system connected to the camera.  \\\\
+Generally the term 'leaf node' is used for a system placed at the edge or bottom of a hierarchical network (of systems). In our system, leaf node is the embedded system connected to the camera.  \\\\
 This embedded system  is responsible for capturing live video frames from the camera and preprocessing before sending into the central server. Objective of preprocessing on the leaf node is to reduce the required bandwidth of the network to send information (video in this case) to the central server and to reduce the processing done on the central server in a scalable manner. 
 In a large system consisting of few hundreds of cameras, reduction of the bandwidth required and the processing power of the central system for each camera makes a big difference in the central system processing and bandwidth requirements, making the system more scalable.  
 \\\\
@@ -314,7 +315,7 @@ Xilinx ZC702 board, shown in Figure \ref{board}, is a development board manufact
 \begin{figure}[H]
 \includegraphics[width=10cm]{zc702.jpg}
 \centering
-\caption{Xilinx ZC702 Development Board [ source : https://www.xilinx.com]}
+\caption{Xilinx ZC702 development board [ source : https://www.xilinx.com]}
 \label{board}
 \end{figure}
 
@@ -385,12 +386,12 @@ Installing a third-party popular Linux distribution on ZYNQ PS, for a custom har
 \end{enumerate}
 
 \subsection{People Detection and Feature Calculation Implementation on ZYNQ-7000 SoC}
-As mentioned before, people detection and feature calculation is done on the leaf node, in other words, on ZYNQ-7000 SoC. This implementation utilizes both the processing system (PS) and Programmable Logic (PL) parts of ZYNQ-7000. While the main application runs on top of the Debian Linux OS on ZYNQ PS, it also contains code snippets for capturing video frames from USB web camera, controlling the IP cores and send detections and calculated features to the central server. Architecture of our implementation within ZYNQ SoC can be seen from figure . Each of the task implemented within PS part and the PL part of ZYNQ SoC is explained in next sections.
+As mentioned before, people detection and feature calculation is done on the leaf node, in other words, on ZYNQ-7000 SoC. This implementation utilizes both the processing system (PS) and Programmable Logic (PL) parts of ZYNQ-7000. While the main application runs on top of the Debian Linux OS on ZYNQ PS, it also contains code snippets for capturing video frames from USB web camera, controlling the IP cores and send detections and calculated features to the central server. Architecture of our implementation within ZYNQ SoC can be seen from figure \ref{leafnode_Archi}. Each of the task implemented within PS part and the PL part of ZYNQ SoC is explained in next sections.
 
 \begin{figure}[H]
-\includegraphics[width=\textwidth]{hardware.png}
+\includegraphics[width=10cm]{hardware.png}
 \centering
-\caption{Architecture of the Leaf node}
+\caption{Architecture of the leaf node}
 \label{leafnode_Archi}
 \end{figure}
 
@@ -433,20 +434,20 @@ IP core design is only a part of out project scope. Considering that and above f
 
 Gaussian Mixture Model Background Subtraction IP Core is implmented using Vivado HLS tool. Algorithm is explained as follows.\\\\ GMM for background subtraction is introduced in [12].
 Gaussian Mixture Models uses a statistical model in which the probability distribution of the luminosity of each pixel is modeled with a mixture of Gaussian distributions. GMM performs really well in identifying the background even in luminosity changes. Our implemented system contains GMM IP core based on the OpenCV GMM algorithm.  The algorithm is optimized for hardware implementation by sectoring the received frame into 60 parts and processing it separately such that the latency and the BRAM utilization is minimized.\\\\
-The proposed system models a pixel as a mixture of 2 gaussians. We have limited the system to two models, as a considerable increase of accuracy was not observed by increasing the no of models compared to the increase in resources and latency. A very low latency is desirable for this application as the process needs to be real time. Each model is represented by 4 parameters: mean($\mu$) , variance($\sigma^2$) , weight($w$) and Fitness value ($F$). The weight can be defined as the confidence that a certain gaussian occurs. These parameters differ for each gaussian of each pixel and are updated for every incoming frame of the video.\\
+The proposed system models a pixel as a mixture of 2 Gaussian models. We have limited the system to two models, as a considerable increase of accuracy was not observed by increasing the no of models compared to the increase in resources and latency. A very low latency is desirable for this application as the process needs to be real time. Each model is represented by 4 parameters: mean($\mu$) , variance($\sigma^2$) , weight($w$) and Fitness value ($F$). The weight can be defined as the confidence that a certain Gaussian occurs. These parameters differ for each Gaussian of each pixel and are updated for every incoming frame of the video.\\
 The fitness value is defined as following,
 
 \begin{equation}
 F(p,k,t)=\frac{w(p,k,t)}{\sigma(p,k,t)}
 \end{equation}
 
-Where $p$ - index of the pixel, $k$ - index of the gaussian distribution and $t$ - frame number. As we employ only two models we compute 2 $F$ values for a single pixel in a frame. The matched condition is checked with the following condition. 
+Where $p$ - index of the pixel, $k$ - index of the Gaussian distribution and $t$ - frame number. As we employ only two models we compute 2 $F$ values for a single pixel in a frame. The matched condition is checked with the following condition. 
 
 \begin{equation}
 M(p,k)=1 \quad \textrm{if}  \quad |pix- \mu(p,k,t)| < 2.5\sigma(p,k,t)
 \end{equation}
 
-The above condition checks whether the said pixel can be categorized as a background pixel. As can be seen this condition could be true for more than one gaussian. Thus, the matched distribution is taken as the distribution with the highest F value. The parameters of the matched distribution are updated as follows. 
+The above condition checks whether the said pixel can be categorized as a background pixel. As can be seen this condition could be true for more than one Gaussian. Thus, the matched distribution is taken as the distribution with the highest F value. The parameters of the matched distribution are updated as follows. 
 
 \begin{equation}
  \mu(p,k,t+1)=  \mu(p,k,t)+ \alpha(pix- \mu(p,k,t))  
@@ -460,8 +461,8 @@ The above condition checks whether the said pixel can be categorized as a backgr
  w(p,k,t+1)=  w(p,k,t)- \alpha w(p,k,t)+\alpha
 \end{equation}
 
-$pix$ is the value of the pixel. The learning rate $\alpha$ defines the rate that mean variance and weight are updated. parameters of the unmatched gaussians are not updated. For the first frame $\alpha = 1$, so that the background is initialized from the first frame.  Therefore this algorithm heavily depends on a correct background image being achieved through the first frame.\\\\
-If no appropriate gaussian mixture found at all, that is no gaussian distribution for a certain pixel confirms the first condition then the weakest mixture is removed and a new one is created. The weakest mixture is defined as the mixture with the lowest $F$ value.
+$pix$ is the value of the pixel. The learning rate $\alpha$ defines the rate that mean variance and weight are updated. parameters of the unmatched Gaussian models are not updated. For the first frame $\alpha = 1$, so that the background is initialized from the first frame.  Therefore this algorithm heavily depends on a correct background image being achieved through the first frame.\\\\
+If no appropriate Gaussian mixture found at all, that is no Gaussian distribution for a certain pixel confirms the first condition then the weakest mixture is removed and a new one is created. The weakest mixture is defined as the mixture with the lowest $F$ value.
 
 \begin{equation}
  \mu(p,k,t+1)=  pix
@@ -475,17 +476,17 @@ If no appropriate gaussian mixture found at all, that is no gaussian distributio
  w(p,k,t+1)=w
 \end{equation}
 
-$\sigma^2$  is the default variance, $w$ is the default initial weight initialized at 0.05. If no appropriate gaussian is found for a certain pixel then that pixel is categorized as a foreground pixel for that frame. However, if a gaussian satisfies matched condition for a pixel, then that pixel is not straight away assigned as a background pixel. A thresholding condition is checked to see whether the matched gaussian distribution is a background gaussian or not. Fitness values are sorted from maximum to minimum and weights of the respective gaussians are added in succession according to the following equation.
+$\sigma^2$  is the default variance, $w$ is the default initial weight initialized at 0.05. If no appropriate Gaussian is found for a certain pixel then that pixel is categorized as a foreground pixel for that frame. However, if a Gaussian satisfies matched condition for a pixel, then that pixel is not straight away assigned as a background pixel. A thresholding condition is checked to see whether the matched Gaussian distribution is a background Gaussian or not. Fitness values are sorted from maximum to minimum and weights of the respective Gaussian models are added in succession according to the following equation.
 
 \begin{equation}
 \min \sum_{k=1}^{b} w(p,k,t)>T
 \end{equation}
 
-Where $T = 0.7$ is the default background ratio. The minimum number of gaussians that satisfies the above equation are categorized as background distributions. If the matched condition of the pixel is satisfied by a gaussian which also satisfies the thresholding condition then it is a background pixel, else it$’$s a foreground pixel.
+Where $T = 0.7$ is the default background ratio. The minimum number of Gaussian models that satisfies the above equation are categorized as background distributions. If the matched condition of the pixel is satisfied by a Gaussian which also satisfies the thresholding condition then it is a background pixel, else it$’$s a foreground pixel.
 Top level design of the backgroung subtraction IP core is shown in figure \ref{gmmip}.
 
 \begin{figure}[H]
-\includegraphics[width=0.8\textwidth]{gmmip}
+\includegraphics[width=0.5\textwidth]{gmmip}
 \centering
 \caption{Top level design of background subtraction IP core}
 \label{gmmip}
@@ -509,7 +510,7 @@ Algorithm of feature calculation IP core is implemented such that, while iterati
 If any of the above conditions fail, algorithm moves on to the next pixel. Otherwise that pixel is proceeded through to the next step.\\
 In the next step, for each pixel, RGB components are divided by 8. Then these scaled down RGB components are used as the indexes for finding the relevant location of the histogram for that pixel. After relevant coordinate is located on the histogram, it will be incremented by 1.
 \begin{figure}[H]
-\includegraphics[width=\textwidth]{test.png}
+\includegraphics[width=0.7\textwidth]{test.png}
 \centering
 \caption{Structure of the 3D RGB histogram}
 \label{hist}
@@ -533,7 +534,7 @@ Vivado HLS provide methods to control the mapping of software description to har
 
 \begin{table}[]
 \centering
-\caption{Vivado HLS Compiler Directives}
+\caption{Vivado HLS compiler directives}
 \label{pragma}
 \begin{tabular}{|l|l|l}
 \cline{1-2}
@@ -558,7 +559,7 @@ When IP cores are generated using Vivado HLS, tool also generates the  following
 \end{itemize}
 But these functions cannot be used directly in the Linux side of ZYNQ PS for controlling the IP cores in the PL, because physical DDR3 memory cannot be directly accessed from Linux OS. Linux only allows the usage of virtual memory in the userspace of Linux OS. 'mmap' function in C++ language was used to overcome this barrier.\\\\
 What 'mmap' function does is, it maps a specified region in the physical DDR3 memory onto virtual memory, which can be accessed from the Linux OS userspace level. \\\\
-Input/output AXI busses of the IP cores implemented in the ZYNQ PL is mapped onto specific memory locations in the DDR3 RAM. An userspace driver was developed to map these control memory locations and input/output memory locations into virtual memory. Then C functions generated by Vivado HLS were adapted to use these virtual memory to access the physical memory locations relevant to IP cores in an indirect manner. This is shown in figure x as the mapped DDR memory to Debian Linux.
+Input/output AXI busses of the IP cores implemented in the ZYNQ PL is mapped onto specific memory locations in the DDR3 RAM. An userspace driver was developed to map these control memory locations and input/output memory locations into virtual memory. Then C functions generated by Vivado HLS were adapted to use these virtual memory to access the physical memory locations relevant to IP cores in an indirect manner. This is shown in figure \ref{leafnode_Archi} as the mapped DDR memory to Debian Linux.
 \subsubsection{People Detection from Background Subtracted Binary Mask}
 
 \begin{figure}[H]
@@ -674,7 +675,7 @@ We can see that only the first two principal components give a significant contr
 \begin{figure}[H]
 \includegraphics[width=\textwidth]{pca/1_2_pca.png}
 \centering
-\caption{First Vs. second principal component}
+\caption{First versus second principal component}
 \label{pca2}
 \end{figure}
 
@@ -694,7 +695,7 @@ We utilized this framework for false positive reduction of the detections. Once 
 \begin{figure}[H]
 \includegraphics[width=0.9\textwidth]{pca_flow.png}
 \centering
-\caption{PCA approach for False Positives Reduction}
+\caption{PCA approach for false positives reduction}
 \label{pca3}
 \end{figure}
 
@@ -751,7 +752,7 @@ With this information the server can distinguish packets coming from different c
 \begin{figure}[H]
 \includegraphics[width=\textwidth]{overallhardware}
 \centering
-\caption{Overall hardware architecture on Leaf Node}
+\caption{Overall hardware architecture on leaf node}
 \label{overallhardware}
 \end{figure}
 
@@ -792,12 +793,12 @@ As mentioned previously we have designed a scalable communication protocol to co
 When it comes to object tracking, detection based tracking methods are the most popular. Multiple object tracking can be decomposed into two parts as, data association and target tracking. These multi object tracking algorithms can be divided into two categories. The first category relies on past frames to estimate the current state recursively. The second category allows for a certain latency and globally solves for all trajectories within a given time window. \\\\
 Since our system is to be run in real time, methods under first category are more appropriate for us. Under the first category we tried out Hungary algorithm followed by Kalman Filter based tracker for each object being tracked. As an alternative we tried out particle filter based tracking also. Out of these two we decided to use particle filter based tracking in our implementation due to reasons we will discuss later. 
 
-\subsubsection{Kalman Filter based Tracking}
+\subsubsection{Kalman Filter Based Tracking}
 
 \begin{figure}[H]
 \includegraphics[width=\textwidth]{kalman_hungary_tracker.png}
 \centering
-\caption{Multiple People Tracking using Kalman Filter}
+\caption{Multiple people tracking using Kalman filter}
 \label{flask}
 \end{figure}
 Here detection coordinates are fed to the back-end tracking system by individual camera nodes (camera + zynq zc702). The next part of the algorithms calculates a cost matrix for detections vs existing tracks. For m detections and n tracks an entry of the cost matrix is given by equation (3.10).
@@ -822,7 +823,7 @@ In the data association step we have only considered the euclidean distance betw
 We obtained the gray level intensity histogram for all the detection locations. And we included a histogram parameter in each tracker, where the histogram of the tracker is modified as follows at each assignment of a detection.
 
 \begin{equation}
-histogram_{tracker} = \alpha histogram_{detection} + (1-\alpha) histogram_{tracker} \quad where \ 0 < \alpha < 1
+histogram_{tracker} = \alpha. histogram_{detection} + (1-\alpha) histogram_{tracker} \quad where \ 0 < \alpha < 1
 \end{equation}
 
 Then the correlation between the detection histogram and the tracker histogram is calculated and its inverse $(1/correlation \ coef.)$ is added to the cost. This makes our cost sensitive to the similarity of detection and tracker regions.
@@ -844,7 +845,7 @@ We have the following model parameters that must be properly tuned. Currently th
 \begin{figure}[H]
 \includegraphics[width=\textwidth]{particle_filter.png}
 \centering
-\caption{Particle Filter based Tracking}
+\caption{Particle filter based tracking}
 \label{particle}
 \end{figure}
 
@@ -913,7 +914,7 @@ Here $\alpha$ determines the dependence of the cost on the histogram. In the fin
 \subsection{Sensor Fusion}
 Once we do single camera tracking for each camera we should synchronize tracks across cameras. Since we use Ethernet for the local area network we assumed that network latency is quite low. Therefore we select the latest tracks of each camera for multi camera tracking. Although this method of sensor fusion is quite trivial it is suitable for our current application.
 
-\subsection{Multi Camera Tracking}
+\subsection{Multi-Camera Tracking}
 
 Tracking via multiple cameras consist of 3 parts, people tracking per camera, correspondence estimation and global target tracking. There are 2 methods for correspondence estimation: homography based methods and calibration based methods. Homography based methods rely on a set of matched features to calculate homographic transforms between images. Calibration based methods rely on a pre-calculated model of the camera.\\\\
 Out of these two methods we decided to use calibration based method because it can be easily integrated into single camera tracking algorithms that we considered. We only have to convert individual track coordinates into global coordinates and then perform global tracking.
@@ -959,7 +960,7 @@ Then we employed a simple greedy algorithm to merge corresponding points togethe
 \begin{itemize}
 \item Locations are merged by taking the average
 \item Histograms are merged by the the combination of two histograms.\\
-$H = \beta H_1 + (1- \beta)  H_2$ Where $\beta$ is selected as 0.5.
+$H = \beta. H_1 + (1- \beta)  H_2$ Where $\beta$ is selected as 0.5.
 
 \end{itemize}
 \item Repeat until edges exist with a cost lower than a threshold value
@@ -969,7 +970,7 @@ The calculated features are sent to the server, in order to track people and gen
 \begin{figure}[H]
 \includegraphics[width=\textwidth]{comm.png}
 \centering
-\caption{Block Diagram of the Communication Structure}
+\caption{Block Diagram of the communication structure}
 \label{flask}
 \end{figure}
 The communications protocol used is UDP (User Datagram Protocol) to ensure low latency and reduce the processing overhead between communication nodes. Since this solution needs to be a real-time application, using TCP (Transmission Control Protocol) is not beneficial. One of the main reasons is dropping packets is desirable over waiting for packets delayed due to retransmission.\\\\
@@ -1019,8 +1020,8 @@ We ran the proposed people detection algorithm as a software simulation on the A
 \begin{tabular}{|l|c|}
 \hline
 \multicolumn{1}{|c|}{\textbf{Scenario}}                                                                & \textbf{Average Latency} \\ \hline
-\begin{tabular}[c]{@{}l@{}}People detection running on \\ Dual ARM processors in ZYNQ SoC\end{tabular} & 30650us                  \\ \hline
-\begin{tabular}[c]{@{}l@{}}People detection running on both \\ PL and PS of ZYNQ SoC\end{tabular}      & 21365us                  \\ \hline
+\begin{tabular}[c]{@{}l@{}}People detection running on \\ Dual ARM processors in ZYNQ SoC\end{tabular} & $30.650$ ms                  \\ \hline
+\begin{tabular}[c]{@{}l@{}}People detection running on both \\ PL and PS of ZYNQ SoC\end{tabular}      & $21.365$ ms                  \\ \hline
 \textbf{Percentage acceleration}                                                                       & \textbf{30.29\%}         \\ \hline
 \end{tabular}
 \end{table}
@@ -1029,7 +1030,7 @@ As can be seen even though 30\% acceleration was achieved this could be further 
 
 \section{Bandwidth Reduction}
  
-As we are implementing leaf node processing one of the main results we could achieve was the reduction in bandwidth usage. The received frames are processed at the leaf node to generate bounding box and feature data. Only the x,y coordinates and width and height of the bounding box, track number and features are sent to the server. In other systems whole video frame is sent to the server for detection and tracking.  We have been able to achieve 78.67\% bandwidth reduction with our solution by just sending summarized data. This is a huge reduction in bandwidth usage that we have achieved.
+As we are implementing leaf node processing one of the main results we could achieve was the reduction in bandwidth usage. The received frames are processed at the leaf node to generate bounding box and feature data. $x,y$ coordinates of the top left corner of the bounding box and width and height of the bounding box along with the track number and features are sent to the server. In other systems whole video frame is sent to the server for detection and tracking.  We have been able to achieve 78.67\% bandwidth reduction with our solution by just sending summarized data. This is a huge reduction in bandwidth usage that we have achieved.
 
 \section{Overall Hardware Utilization}
 Table \ref{uti1} shows the number of resources available on ZYNQ PL (resources of XC7z020 FPGA). Figure \ref{util2} shows the percentage utilization for our overall design on ZYNQ PL. This includes one background subtraction IP core and three feature calculation IP cores.
@@ -1060,13 +1061,25 @@ DSP Slices                              & 220             \\ \hline
 
 
 \section{Total on Chip Power}
-Figure shows the power estimates generated by Vivado tool for our overall design.
-\begin{figure}[H]
-\includegraphics[width=10cm]{power.png}
+Table \ref{power} shows the power estimates generated by Vivado tool for our overall design.
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{table}[H]
 \centering
-\caption{Power estimation of the overall system on ZYNQ SoC}
-\label{flask}
-\end{figure}
+\caption{Power estimation for the hardware design}
+\label{power}
+\begin{tabular}{|l|l|c|c|}
+\hline
+\multicolumn{1}{|c|}{\textbf{Type of power}} & \multicolumn{1}{c|}{\textbf{Type of hardware}} & \textbf{Power estimation (W)} & \multicolumn{1}{l|}{\textbf{Total power (W)}} \\ \hline
+\multirow{6}{*}{Dynamic power}               & Clocks                                         & 0.095                         & \multirow{6}{*}{2.13}                         \\ \cline{2-3}
+                                             & Signals                                        & 0.176                         &                                               \\ \cline{2-3}
+                                             & Logic                                          & 0.142                         &                                               \\ \cline{2-3}
+                                             & BRAM                                           & 0.124                         &                                               \\ \cline{2-3}
+                                             & DSP                                            & 0.027                         &                                               \\ \cline{2-3}
+                                             & PS7 (Processing System)                        & 1.567                         &                                               \\ \hline
+\multicolumn{2}{|l|}{Static power}                                                            & 0.174                         & 0.174                                         \\ \hline
+\end{tabular}
+\end{table}
 
 \section{Detection Accuracy}
 Detection accuracy is vital in understanding the precision of the system. The whole system depends on how accurately it can identify a person in the frame. Tracking information gets affected by the detection accuracy since if it cannot correctly detect a person the generated tracking information would be wrong from the beginning.
@@ -1074,7 +1087,7 @@ We have tested our detection accuracy against multi camera datasets available. T
 Table \ref{accuracy} showcases the results we have obtained for those test data.
 \begin{table}[H]
 \centering
-\caption{Accuracy of People Detection for Various Datasets}
+\caption{Accuracy of people detection for various datasets}
 \label{accuracy}
 \begin{tabular}{|l|c|c|c|}
 \hline
@@ -1139,28 +1152,28 @@ QT GUI Application supports Real-time camera detections for each leaf node conne
 \begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{qt_cam.png}
-  \caption{Real-time Camera Detections}
+  \caption{Real-time camera detections}
   \label{qt_graph1}
 \end{figure}
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{qt_tracking.png}
-  \caption{Real-time Global Tracking}
+  \caption{Real-time global tracking}
   \label{qt_graph2}
 \end{figure}
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{qt_heatmap.png}
-  \caption{Real-time Heat map}
+  \caption{Real-time heat map}
   \label{qt_graph3}
 \end{figure}
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{qt_count.png}
-  \caption{Real-time People Count Graphs}
+  \caption{Real-time people count graphs}
   \label{qt_graph1}
 \end{figure}
 \chapter{Conclusion}

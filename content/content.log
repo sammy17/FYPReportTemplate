@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.1.27)  17 FEB 2018 09:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.1.27)  18 FEB 2018 13:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -54,28 +54,35 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen110
 \Gm@dimlist=\toks15
 )
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
+\multirow@colwidth=\skip43
+\multirow@cntb=\count91
+\multirow@dima=\skip44
+\bigstrutjot=\dimen111
+)
 (/usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
 Package: mathtools 2015/11/12 v1.18 mathematical typesetting tools
 
 (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count91
-\calc@Bcount=\count92
-\calc@Adimen=\dimen111
-\calc@Bdimen=\dimen112
-\calc@Askip=\skip43
-\calc@Bskip=\skip44
+\calc@Acount=\count92
+\calc@Bcount=\count93
+\calc@Adimen=\dimen112
+\calc@Bdimen=\dimen113
+\calc@Askip=\skip45
+\calc@Bskip=\skip46
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count93
-\calc@Cskip=\skip45
+\calc@Ccount=\count94
+\calc@Cskip=\skip47
 )
 (/usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2016/11/05 v2.16a AMS math features
-\@mathmargin=\skip46
+\@mathmargin=\skip48
 
 For additional information on amsmath, use the `?' option.
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -84,49 +91,49 @@ Package: amstext 2000/06/29 v2.01 AMS text
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks16
-\ex@=\dimen113
+\ex@=\dimen114
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen114
+\pmbraise@=\dimen115
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count94
+\inf@bad=\count95
 LaTeX Info: Redefining \frac on input line 213.
-\uproot@=\count95
-\leftroot@=\count96
+\uproot@=\count96
+\leftroot@=\count97
 LaTeX Info: Redefining \overline on input line 375.
-\classnum@=\count97
-\DOTSCASE@=\count98
+\classnum@=\count98
+\DOTSCASE@=\count99
 LaTeX Info: Redefining \ldots on input line 472.
 LaTeX Info: Redefining \dots on input line 475.
 LaTeX Info: Redefining \cdots on input line 596.
 \Mathstrutbox@=\box26
 \strutbox@=\box27
-\big@size=\dimen115
+\big@size=\dimen116
 LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
-\macc@depth=\count99
-\c@MaxMatrixCols=\count100
+\macc@depth=\count100
+\c@MaxMatrixCols=\count101
 \dotsspace@=\muskip10
-\c@parentequation=\count101
-\dspbrk@lvl=\count102
+\c@parentequation=\count102
+\dspbrk@lvl=\count103
 \tag@help=\toks17
-\row@=\count103
-\column@=\count104
-\maxfields@=\count105
+\row@=\count104
+\column@=\count105
+\maxfields@=\count106
 \andhelp@=\toks18
-\eqnshift@=\dimen116
-\alignsep@=\dimen117
-\tagshift@=\dimen118
-\tagwidth@=\dimen119
-\totwidth@=\dimen120
-\lineht@=\dimen121
+\eqnshift@=\dimen117
+\alignsep@=\dimen118
+\tagshift@=\dimen119
+\tagwidth@=\dimen120
+\totwidth@=\dimen121
+\lineht@=\dimen122
 \@envbody=\toks19
-\multlinegap=\skip47
-\multlinetaggap=\skip48
+\multlinegap=\skip49
+\multlinetaggap=\skip50
 \mathdisplay@stack=\toks20
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
@@ -135,27 +142,27 @@ LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
-\g_MT_multlinerow_int=\count106
-\l_MT_multwidth_dim=\dimen122
-\origjot=\skip49
-\l_MT_shortvdotswithinadjustabove_dim=\dimen123
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen124
-\l_MT_above_intertext_sep=\dimen125
-\l_MT_below_intertext_sep=\dimen126
-\l_MT_above_shortintertext_sep=\dimen127
-\l_MT_below_shortintertext_sep=\dimen128
+\g_MT_multlinerow_int=\count107
+\l_MT_multwidth_dim=\dimen123
+\origjot=\skip51
+\l_MT_shortvdotswithinadjustabove_dim=\dimen124
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen125
+\l_MT_above_intertext_sep=\dimen126
+\l_MT_below_intertext_sep=\dimen127
+\l_MT_above_shortintertext_sep=\dimen128
+\l_MT_below_shortintertext_sep=\dimen129
 )
 (/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
 \ttl@box=\box28
-\beforetitleunit=\skip50
-\aftertitleunit=\skip51
-\ttl@plus=\dimen129
-\ttl@minus=\dimen130
+\beforetitleunit=\skip52
+\aftertitleunit=\skip53
+\ttl@plus=\dimen130
+\ttl@minus=\dimen131
 \ttl@toksa=\toks21
-\titlewidth=\dimen131
-\titlewidthlast=\dimen132
-\titlewidthfirst=\dimen133
+\titlewidth=\dimen132
+\titlewidthlast=\dimen133
+\titlewidthfirst=\dimen134
 )
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2016/04/23 3.9r The Babel package
@@ -165,8 +172,8 @@ Language: english 2012/08/20 v3.3p English support from the babel system
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2016/04/23 3.9r Babel common definitions
-\babel@savecnt=\count107
-\U@D=\dimen134
+\babel@savecnt=\count108
+\U@D=\dimen135
 )
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
@@ -238,10 +245,10 @@ Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count108
+\Gread@gobject=\count109
 ))
-\Gin@req@height=\dimen135
-\Gin@req@width=\dimen136
+\Gin@req@height=\dimen136
+\Gin@req@width=\dimen137
 )
 (/usr/share/texlive/texmf-dist/tex/latex/todonotes/todonotes.sty
 Package: todonotes 2015/07/09 .dtx Todonotes source and documentation.
@@ -258,7 +265,7 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 \XKV@toks=\toks22
 \XKV@tempa@toks=\toks23
 )
-\XKV@depth=\count109
+\XKV@depth=\count110
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
@@ -283,8 +290,8 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks24
-\pgfutil@tempdima=\dimen137
-\pgfutil@tempdimb=\dimen138
+\pgfutil@tempdima=\dimen138
+\pgfutil@tempdimb=\dimen139
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.t
 ex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
@@ -310,20 +317,20 @@ Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
 ex
 \pgfkeys@tmptoks=\toks27
 ))
-\pgf@x=\dimen139
-\pgf@y=\dimen140
-\pgf@xa=\dimen141
-\pgf@ya=\dimen142
-\pgf@xb=\dimen143
-\pgf@yb=\dimen144
-\pgf@xc=\dimen145
-\pgf@yc=\dimen146
+\pgf@x=\dimen140
+\pgf@y=\dimen141
+\pgf@xa=\dimen142
+\pgf@ya=\dimen143
+\pgf@xb=\dimen144
+\pgf@yb=\dimen145
+\pgf@xc=\dimen146
+\pgf@yc=\dimen147
 \w@pgf@writea=\write3
 \r@pgf@reada=\read1
-\c@pgf@counta=\count110
-\c@pgf@countb=\count111
-\c@pgf@countc=\count112
-\c@pgf@countd=\count113
+\c@pgf@counta=\count111
+\c@pgf@countb=\count112
+\c@pgf@countc=\count113
+\c@pgf@countd=\count114
 \t@pgf@toka=\toks28
 \t@pgf@tokb=\toks29
 \t@pgf@tokc=\toks30
@@ -342,8 +349,8 @@ File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
 tex
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count114
-\pgfsyssoftpath@bigbuffer@items=\count115
+\pgfsyssoftpath@smallbuffer@items=\count115
+\pgfsyssoftpath@bigbuffer@items=\count116
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
 tex
@@ -356,8 +363,8 @@ Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen147
-\pgfmath@count=\count116
+\pgfmath@dimen=\dimen148
+\pgfmath@count=\count117
 \pgfmath@box=\box30
 \pgfmath@toks=\toks31
 \pgfmath@stack@operand=\toks32
@@ -381,37 +388,37 @@ tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
 thmetics.code.tex)))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count117
+\c@pgfmathroundto@lastzeros=\count118
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
 x
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
-\pgf@picminx=\dimen148
-\pgf@picmaxx=\dimen149
-\pgf@picminy=\dimen150
-\pgf@picmaxy=\dimen151
-\pgf@pathminx=\dimen152
-\pgf@pathmaxx=\dimen153
-\pgf@pathminy=\dimen154
-\pgf@pathmaxy=\dimen155
-\pgf@xx=\dimen156
-\pgf@xy=\dimen157
-\pgf@yx=\dimen158
-\pgf@yy=\dimen159
-\pgf@zx=\dimen160
-\pgf@zy=\dimen161
+\pgf@picminx=\dimen149
+\pgf@picmaxx=\dimen150
+\pgf@picminy=\dimen151
+\pgf@picmaxy=\dimen152
+\pgf@pathminx=\dimen153
+\pgf@pathmaxx=\dimen154
+\pgf@pathminy=\dimen155
+\pgf@pathmaxy=\dimen156
+\pgf@xx=\dimen157
+\pgf@xy=\dimen158
+\pgf@yx=\dimen159
+\pgf@yy=\dimen160
+\pgf@zx=\dimen161
+\pgf@zy=\dimen162
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
 code.tex
 File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
-\pgf@path@lastx=\dimen162
-\pgf@path@lasty=\dimen163
+\pgf@path@lastx=\dimen163
+\pgf@path@lasty=\dimen164
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
 .tex
 File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
-\pgf@shorten@end@additional=\dimen164
-\pgf@shorten@start@additional=\dimen165
+\pgf@shorten@end@additional=\dimen165
+\pgf@shorten@start@additional=\dimen166
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
 x
@@ -419,19 +426,19 @@ File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
 \pgfpic=\box31
 \pgf@hbox=\box32
 \pgf@layerbox@main=\box33
-\pgf@picture@serial@count=\count118
+\pgf@picture@serial@count=\count119
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
 ode.tex
 File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
-\pgflinewidth=\dimen166
+\pgflinewidth=\dimen167
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
 s.code.tex
 File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
-\pgf@pt@x=\dimen167
-\pgf@pt@y=\dimen168
-\pgf@pt@temp=\dimen169
+\pgf@pt@x=\dimen168
+\pgf@pt@y=\dimen169
+\pgf@pt@temp=\dimen170
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
@@ -447,12 +454,12 @@ File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
 x
 File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
-\pgfarrowsep=\dimen170
+\pgfarrowsep=\dimen171
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
-\pgf@max=\dimen171
-\pgf@sys@shading@range@num=\count119
+\pgf@max=\dimen172
+\pgf@sys@shading@range@num=\count120
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
@@ -483,8 +490,8 @@ File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
 .sty
 Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen172
-\pgf@nodesepend=\dimen173
+\pgf@nodesepstart=\dimen173
+\pgf@nodesepend=\dimen174
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
 .sty
@@ -498,8 +505,8 @@ Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
 Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen174
-\pgffor@skip=\dimen175
+\pgffor@iter=\dimen175
+\pgffor@skip=\dimen176
 \pgffor@stack=\toks34
 \pgffor@toks=\toks35
 ))
@@ -509,31 +516,31 @@ Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
 .code.tex
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count120
-\pgfplotmarksize=\dimen176
+\pgf@plot@mark@count=\count121
+\pgfplotmarksize=\dimen177
 )
-\tikz@lastx=\dimen177
-\tikz@lasty=\dimen178
-\tikz@lastxsaved=\dimen179
-\tikz@lastysaved=\dimen180
-\tikzleveldistance=\dimen181
-\tikzsiblingdistance=\dimen182
+\tikz@lastx=\dimen178
+\tikz@lasty=\dimen179
+\tikz@lastxsaved=\dimen180
+\tikz@lastysaved=\dimen181
+\tikzleveldistance=\dimen182
+\tikzsiblingdistance=\dimen183
 \tikz@figbox=\box36
 \tikz@figbox@bg=\box37
 \tikz@tempbox=\box38
 \tikz@tempbox@bg=\box39
-\tikztreelevel=\count121
-\tikznumberofchildren=\count122
-\tikznumberofcurrentchild=\count123
-\tikz@fig@count=\count124
+\tikztreelevel=\count122
+\tikznumberofchildren=\count123
+\tikznumberofcurrentchild=\count124
+\tikz@fig@count=\count125
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count125
-\pgfmatrixcurrentcolumn=\count126
-\pgf@matrix@numberofcolumns=\count127
+\pgfmatrixcurrentrow=\count126
+\pgfmatrixcurrentcolumn=\count127
+\pgf@matrix@numberofcolumns=\count128
 )
-\tikz@expandcount=\count128
+\tikz@expandcount=\count129
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarytopaths.code.tex
@@ -543,14 +550,14 @@ File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
 zlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.1a (rcs-revision 1.7)
 )
-\c@@todonotes@numberoftodonotes=\count129
+\c@@todonotes@numberoftodonotes=\count130
 )
 (/usr/share/texlive/texmf-dist/tex/latex/datetime/datetime.sty
 Package: datetime 2015/03/20 v2.60 Date Time Package
 
 (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2017/01/02 v2.4 e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count130
+\etb@tempcnta=\count131
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fmtcount/fmtcount.sty
 Package: fmtcount 2015/05/05 v3.01
@@ -560,42 +567,42 @@ Package: fcprefix 2012/09/28
 
 (/usr/share/texlive/texmf-dist/tex/latex/fmtcount/fcnumparser.sty
 Package: fcnumparser 2012/09/28
-\fc@digit@counter=\count131
+\fc@digit@counter=\count132
 ))
-\c@padzeroesN=\count132
-\fc@tmpcatcode=\count133
+\c@padzeroesN=\count133
+\fc@tmpcatcode=\count134
 
 (/usr/share/texlive/texmf-dist/tex/latex/fmtcount/fc-english.def
 File: fc-english.def 2013/08/17
 )
-\@DT@modctr=\count134
-\@ordinalctr=\count135
-\@orgargctr=\count136
-\@strctr=\count137
-\@tmpstrctr=\count138
-\@DT@loopN=\count139
-\@DT@X=\count140
+\@DT@modctr=\count135
+\@ordinalctr=\count136
+\@orgargctr=\count137
+\@strctr=\count138
+\@tmpstrctr=\count139
+\@DT@loopN=\count140
+\@DT@X=\count141
 )
 (/usr/share/texlive/texmf-dist/tex/latex/datetime/datetime-defaults.sty
 Package: datetime-defaults 2013/09/10
 )
-\@day=\count141
-\@month=\count142
-\@year=\count143
-\c@HOUR=\count144
-\c@HOURXII=\count145
-\c@MINUTE=\count146
-\c@TOHOUR=\count147
-\c@TOMINUTE=\count148
-\c@SECOND=\count149
-\currenthour=\count150
-\currentminute=\count151
-\currentsecond=\count152
+\@day=\count142
+\@month=\count143
+\@year=\count144
+\c@HOUR=\count145
+\c@HOURXII=\count146
+\c@MINUTE=\count147
+\c@TOHOUR=\count148
+\c@TOMINUTE=\count149
+\c@SECOND=\count150
+\currenthour=\count151
+\currentminute=\count152
+\currentsecond=\count153
 Package datetime Info: No datetime.cfg file found, using default settings on in
 put line 308.
-\@dtctr=\count153
-\dayofyear=\count154
-\dayofweek=\count155
+\@dtctr=\count154
+\dayofyear=\count155
+\dayofweek=\count156
 LaTeX Info: Redefining \today on input line 736.
 \dt@a=\toks36
 \dt@b=\toks37
@@ -610,7 +617,7 @@ les
 )
 (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count156
+\c@float@type=\count157
 \float@exts=\toks38
 \float@box=\box40
 \@float@everytoks=\toks39
@@ -619,42 +626,42 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 (/usr/share/texlive/texmf-dist/tex/latex/tocloft/tocloft.sty
 Package: tocloft 2013/05/02 v2.3f parameterised ToC, etc., typesetting
 Package tocloft Info: The document has chapter divisions on input line 44.
-\cftparskip=\skip52
-\cftbeforetoctitleskip=\skip53
-\cftaftertoctitleskip=\skip54
-\cftbeforepartskip=\skip55
-\cftpartnumwidth=\skip56
-\cftpartindent=\skip57
-\cftbeforechapskip=\skip58
-\cftchapindent=\skip59
-\cftchapnumwidth=\skip60
-\cftbeforesecskip=\skip61
-\cftsecindent=\skip62
-\cftsecnumwidth=\skip63
-\cftbeforesubsecskip=\skip64
-\cftsubsecindent=\skip65
-\cftsubsecnumwidth=\skip66
-\cftbeforesubsubsecskip=\skip67
-\cftsubsubsecindent=\skip68
-\cftsubsubsecnumwidth=\skip69
-\cftbeforeparaskip=\skip70
-\cftparaindent=\skip71
-\cftparanumwidth=\skip72
-\cftbeforesubparaskip=\skip73
-\cftsubparaindent=\skip74
-\cftsubparanumwidth=\skip75
-\cftbeforeloftitleskip=\skip76
-\cftafterloftitleskip=\skip77
-\cftbeforefigskip=\skip78
-\cftfigindent=\skip79
-\cftfignumwidth=\skip80
-\c@lofdepth=\count157
-\c@lotdepth=\count158
-\cftbeforelottitleskip=\skip81
-\cftafterlottitleskip=\skip82
-\cftbeforetabskip=\skip83
-\cfttabindent=\skip84
-\cfttabnumwidth=\skip85
+\cftparskip=\skip54
+\cftbeforetoctitleskip=\skip55
+\cftaftertoctitleskip=\skip56
+\cftbeforepartskip=\skip57
+\cftpartnumwidth=\skip58
+\cftpartindent=\skip59
+\cftbeforechapskip=\skip60
+\cftchapindent=\skip61
+\cftchapnumwidth=\skip62
+\cftbeforesecskip=\skip63
+\cftsecindent=\skip64
+\cftsecnumwidth=\skip65
+\cftbeforesubsecskip=\skip66
+\cftsubsecindent=\skip67
+\cftsubsecnumwidth=\skip68
+\cftbeforesubsubsecskip=\skip69
+\cftsubsubsecindent=\skip70
+\cftsubsubsecnumwidth=\skip71
+\cftbeforeparaskip=\skip72
+\cftparaindent=\skip73
+\cftparanumwidth=\skip74
+\cftbeforesubparaskip=\skip75
+\cftsubparaindent=\skip76
+\cftsubparanumwidth=\skip77
+\cftbeforeloftitleskip=\skip78
+\cftafterloftitleskip=\skip79
+\cftbeforefigskip=\skip80
+\cftfigindent=\skip81
+\cftfignumwidth=\skip82
+\c@lofdepth=\count158
+\c@lotdepth=\count159
+\cftbeforelottitleskip=\skip83
+\cftafterlottitleskip=\skip84
+\cftbeforetabskip=\skip85
+\cfttabindent=\skip86
+\cfttabnumwidth=\skip87
 )
 (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2016/05/22 v1.1-161 Sub-captions (AR)
@@ -665,25 +672,22 @@ Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 67.
-\captionmargin=\dimen183
-\captionmargin@=\dimen184
-\captionwidth=\dimen185
-\caption@tempdima=\dimen186
-\caption@indent=\dimen187
-\caption@parindent=\dimen188
-\caption@hangindent=\dimen189
+\captionmargin=\dimen184
+\captionmargin@=\dimen185
+\captionwidth=\dimen186
+\caption@tempdima=\dimen187
+\caption@indent=\dimen188
+\caption@parindent=\dimen189
+\caption@hangindent=\dimen190
 )
-\c@ContinuedFloat=\count159
+\c@ContinuedFloat=\count160
 Package caption Info: float package is loaded.
 )
-\c@subfigure=\count160
-\c@subtable=\count161
+\c@subfigure=\count161
+\c@subtable=\count162
 ) (./content.aux
 
 LaTeX Warning: Label `pca3' multiply defined.
-
-
-LaTeX Warning: Label `flask' multiply defined.
 
 
 LaTeX Warning: Label `flask' multiply defined.
@@ -694,19 +698,19 @@ LaTeX Warning: Label `qt_graph1' multiply defined.
 )
 \openout1 = `content.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 60.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 61.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
@@ -746,16 +750,16 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count162
-\scratchdimen=\dimen190
+\scratchcounter=\count163
+\scratchdimen=\dimen191
 \scratchbox=\box42
-\nofMPsegments=\count163
-\nofMParguments=\count164
+\nofMPsegments=\count164
+\nofMParguments=\count165
 \everyMPshowfont=\toks40
-\MPscratchCnt=\count165
-\MPscratchDim=\dimen191
-\MPnumerator=\count166
-\makeMPintoPDFobject=\count167
+\MPscratchCnt=\count166
+\MPscratchDim=\dimen192
+\MPnumerator=\count167
+\makeMPintoPDFobject=\count168
 \everyMPtoPDFconversion=\toks41
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
@@ -807,46 +811,46 @@ ABD: EveryShipout initializing macros
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
-Underfull \hbox (badness 10000) in paragraph at lines 65--66
+Underfull \hbox (badness 10000) in paragraph at lines 66--67
 
  []
 
-LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 68
+LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 69
 .
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 68
+LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 69
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 68
+LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 69
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 68
+LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 69
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 68.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 69.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 68.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 69.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 68.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 69.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 68.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 69.
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--83
+Underfull \hbox (badness 10000) in paragraph at lines 75--84
 
  []
 
@@ -854,45 +858,45 @@ Underfull \hbox (badness 10000) in paragraph at lines 74--83
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <18> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 88.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 89.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 92.
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 95.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 93.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 96.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 95.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 96.
 
-Overfull \hbox (16.11353pt too wide) in paragraph at lines 103--113
+Overfull \hbox (16.11353pt too wide) in paragraph at lines 104--114
 [][] 
  []
 
 [2] [3]
-Overfull \hbox (1.18985pt too wide) in paragraph at lines 136--144
+Overfull \hbox (1.18985pt too wide) in paragraph at lines 137--145
 \T1/ptm/m/n/12 track-ing by us-ing par-ti-cle fil-ters and the Hun-gar-ian al-g
 o-rithm for data as-so-ci-a-tion. Multi-
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 152--153
+Underfull \hbox (badness 10000) in paragraph at lines 153--154
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 153--157
+Underfull \hbox (badness 10000) in paragraph at lines 154--158
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 157--158
+Underfull \hbox (badness 10000) in paragraph at lines 158--159
 
  []
 
 [5]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 161.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 162.
  (./content.toc [6])
 \tf@toc=\write4
 \openout4 = `content.toc'.
@@ -914,39 +918,39 @@ ps://www.xilinx.com] []
  [10] [11]
 Chapter 1.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 204.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 205.
 
-Underfull \hbox (badness 10000) in paragraph at lines 206--215
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 206--215
+Underfull \hbox (badness 10000) in paragraph at lines 207--216
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 206--215
+Underfull \hbox (badness 10000) in paragraph at lines 207--216
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 206--215
+Underfull \hbox (badness 10000) in paragraph at lines 207--216
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 206--215
+Underfull \hbox (badness 10000) in paragraph at lines 207--216
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 206--215
+Underfull \hbox (badness 10000) in paragraph at lines 207--216
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 206--215
+Underfull \hbox (badness 10000) in paragraph at lines 207--216
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--216
 
  []
 
@@ -962,20 +966,20 @@ Chapter 3.
 File: images/overall_block.png Graphic file (type png)
 
 <use images/overall_block.png>
-Package pdftex.def Info: images/overall_block.png used on input line 275.
+Package pdftex.def Info: images/overall_block.png used on input line 276.
 (pdftex.def)             Requested size: 284.52756pt x 240.87994pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 289--296
+Underfull \hbox (badness 10000) in paragraph at lines 290--297
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 289--296
+Underfull \hbox (badness 10000) in paragraph at lines 290--297
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 289--296
+Underfull \hbox (badness 10000) in paragraph at lines 290--297
 
  []
 
@@ -983,16 +987,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 289--296
 
  <./images/overall_block.png>]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 297.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 298.
 
 <images/zc702.jpg, id=66, 334.24875pt x 250.68657pt>
 File: images/zc702.jpg Graphic file (type jpg)
  <use images/zc702.jpg>
-Package pdftex.def Info: images/zc702.jpg used on input line 315.
+Package pdftex.def Info: images/zc702.jpg used on input line 316.
 (pdftex.def)             Requested size: 284.52756pt x 213.41354pt.
 
 [7]
-Overfull \hbox (6.50552pt too wide) in paragraph at lines 325--326
+Overfull \hbox (6.50552pt too wide) in paragraph at lines 326--327
 \T1/ptm/m/n/12 ZYNQ-7000 SoC con-sists of a Xil-inx XC7Z020-CLG484-1 FPGA and t
 wo ARM Cortex-
  []
@@ -1000,14 +1004,14 @@ wo ARM Cortex-
 <images/zynq.jpg, id=70, 1053.9375pt x 870.25125pt>
 File: images/zynq.jpg Graphic file (type jpg)
  <use images/zynq.jpg>
-Package pdftex.def Info: images/zynq.jpg used on input line 328.
+Package pdftex.def Info: images/zynq.jpg used on input line 329.
 (pdftex.def)             Requested size: 284.52756pt x 234.94441pt.
 
 [8 <./images/zc702.jpg> <./images/zynq.jpg>]
 <images/design.jpg, id=75, 793.96625pt x 71.26625pt>
 File: images/design.jpg Graphic file (type jpg)
  <use images/design.jpg>
-Package pdftex.def Info: images/design.jpg used on input line 341.
+Package pdftex.def Info: images/design.jpg used on input line 342.
 (pdftex.def)             Requested size: 369.88582pt x 33.20152pt.
 
 [9 <./images/design.jpg>] [10]
@@ -1015,20 +1019,20 @@ Package pdftex.def Info: images/design.jpg used on input line 341.
 File: images/hardware.png Graphic file (type png)
 
 <use images/hardware.png>
-Package pdftex.def Info: images/hardware.png used on input line 391.
-(pdftex.def)             Requested size: 418.25368pt x 299.83456pt.
+Package pdftex.def Info: images/hardware.png used on input line 392.
+(pdftex.def)             Requested size: 284.52756pt x 203.9693pt.
  [11 <./images/hardware.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 434--438
+Underfull \hbox (badness 10000) in paragraph at lines 435--439
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 434--438
+Underfull \hbox (badness 10000) in paragraph at lines 435--439
 
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 463--465
+Underfull \hbox (badness 10000) in paragraph at lines 464--466
 
  []
 
@@ -1039,446 +1043,460 @@ Missing character: There is no ™ in font zptmcm7t!
  <images/gmmip.PNG, id=96, 661.87276pt x 349.305pt>
 File: images/gmmip.PNG Graphic file (type png)
  <use images/gmmip.PNG>
-Package pdftex.def Info: images/gmmip.PNG used on input line 488.
-(pdftex.def)             Requested size: 334.60422pt x 176.59216pt.
+Package pdftex.def Info: images/gmmip.PNG used on input line 489.
+(pdftex.def)             Requested size: 209.12683pt x 110.36743pt.
 
-[14 <./images/gmmip.PNG>] <images/test.png, id=103, 359.3425pt x 297.11pt>
+[14 <./images/gmmip.PNG>] <images/test.png, id=103, 382.42876pt x 259.97125pt>
 File: images/test.png Graphic file (type png)
 
 <use images/test.png>
-Package pdftex.def Info: images/test.png used on input line 512.
-(pdftex.def)             Requested size: 418.25368pt x 345.84468pt.
- [15]
-<images/featureip.PNG, id=107, 693.18974pt x 295.1025pt>
+Package pdftex.def Info: images/test.png used on input line 513.
+(pdftex.def)             Requested size: 292.77629pt x 199.03603pt.
+ <images/featureip.PNG, id=104, 693.18974pt x 295.1025pt>
 File: images/featureip.PNG Graphic file (type png)
 
 <use images/featureip.PNG>
-Package pdftex.def Info: images/featureip.PNG used on input line 520.
+Package pdftex.def Info: images/featureip.PNG used on input line 521.
 (pdftex.def)             Requested size: 334.60422pt x 142.4446pt.
- [16 <./images/test.png> <./images/featureip.PNG>]
+ [15 <./images/test.png>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 534.
+               Default added (so using `tbp') on input line 535.
 
 
-Overfull \hbox (19.13017pt too wide) in paragraph at lines 538--546
+Overfull \hbox (19.13017pt too wide) in paragraph at lines 539--547
  [][] 
  []
 
-[17]
-Underfull \hbox (badness 10000) in paragraph at lines 559--562
+[16 <./images/featureip.PNG>]
+Underfull \hbox (badness 10000) in paragraph at lines 560--563
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 559--562
+Underfull \hbox (badness 10000) in paragraph at lines 560--563
 
  []
 
-<images/morphology.png, id=116, 569.12625pt x 217.81375pt>
+<images/morphology.png, id=113, 569.12625pt x 217.81375pt>
 File: images/morphology.png Graphic file (type png)
 
 <use images/morphology.png>
-Package pdftex.def Info: images/morphology.png used on input line 565.
+Package pdftex.def Info: images/morphology.png used on input line 566.
 (pdftex.def)             Requested size: 369.88582pt x 141.56728pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 571--573
+ [17]
+Underfull \hbox (badness 10000) in paragraph at lines 572--574
 
  []
 
-[18 <./images/morphology.png>]
-<images/morphology/original.jpeg, id=121, 321.2pt x 240.9pt>
+<images/morphology/original.jpeg, id=117, 321.2pt x 240.9pt>
 File: images/morphology/original.jpeg Graphic file (type jpg)
 
 <use images/morphology/original.jpeg>
-Package pdftex.def Info: images/morphology/original.jpeg used on input line 577
+Package pdftex.def Info: images/morphology/original.jpeg used on input line 578
 .
 (pdftex.def)             Requested size: 167.3021pt x 125.47823pt.
 
-<images/morphology/bgsub.jpeg, id=122, 321.2pt x 240.9pt>
+<images/morphology/bgsub.jpeg, id=118, 321.2pt x 240.9pt>
 File: images/morphology/bgsub.jpeg Graphic file (type jpg)
 
 <use images/morphology/bgsub.jpeg>
-Package pdftex.def Info: images/morphology/bgsub.jpeg used on input line 583.
+Package pdftex.def Info: images/morphology/bgsub.jpeg used on input line 584.
 (pdftex.def)             Requested size: 167.3021pt x 125.47823pt.
 
-<images/morphology/dilate1.jpeg, id=123, 321.2pt x 240.9pt>
+<images/morphology/dilate1.jpeg, id=119, 321.2pt x 240.9pt>
 File: images/morphology/dilate1.jpeg Graphic file (type jpg)
 
 <use images/morphology/dilate1.jpeg>
-Package pdftex.def Info: images/morphology/dilate1.jpeg used on input line 589.
+Package pdftex.def Info: images/morphology/dilate1.jpeg used on input line 590.
 
 (pdftex.def)             Requested size: 167.3021pt x 125.47823pt.
 
-<images/morphology/dilate2.jpeg, id=124, 321.2pt x 240.9pt>
+<images/morphology/dilate2.jpeg, id=120, 321.2pt x 240.9pt>
 File: images/morphology/dilate2.jpeg Graphic file (type jpg)
 
 <use images/morphology/dilate2.jpeg>
-Package pdftex.def Info: images/morphology/dilate2.jpeg used on input line 595.
+Package pdftex.def Info: images/morphology/dilate2.jpeg used on input line 596.
 
 (pdftex.def)             Requested size: 167.3021pt x 125.47823pt.
 
-<images/morphology/errode.jpeg, id=125, 321.2pt x 240.9pt>
+<images/morphology/errode.jpeg, id=121, 321.2pt x 240.9pt>
 File: images/morphology/errode.jpeg Graphic file (type jpg)
 
 <use images/morphology/errode.jpeg>
-Package pdftex.def Info: images/morphology/errode.jpeg used on input line 601.
+Package pdftex.def Info: images/morphology/errode.jpeg used on input line 602.
 (pdftex.def)             Requested size: 167.3021pt x 125.47823pt.
 
-<images/morphology/shape.jpeg, id=126, 321.2pt x 240.9pt>
+<images/morphology/shape.jpeg, id=122, 321.2pt x 240.9pt>
 File: images/morphology/shape.jpeg Graphic file (type jpg)
 
 <use images/morphology/shape.jpeg>
-Package pdftex.def Info: images/morphology/shape.jpeg used on input line 607.
+Package pdftex.def Info: images/morphology/shape.jpeg used on input line 608.
 (pdftex.def)             Requested size: 167.3021pt x 125.47823pt.
 
-<images/morphology/detections.jpeg, id=127, 321.2pt x 240.9pt>
+<images/morphology/detections.jpeg, id=123, 321.2pt x 240.9pt>
 File: images/morphology/detections.jpeg Graphic file (type jpg)
 
 <use images/morphology/detections.jpeg>
 Package pdftex.def Info: images/morphology/detections.jpeg used on input line 6
-14.
+15.
 (pdftex.def)             Requested size: 167.30211pt x 125.47823pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 622--625
+Underfull \hbox (badness 10000) in paragraph at lines 623--626
 
  []
 
-[19] [20 <./images/morphology/original.jpeg> <./images/morphology/bgsub.jpeg> <
-./images/morphology/dilate1.jpeg> <./images/morphology/dilate2.jpeg> <./images/
-morphology/errode.jpeg> <./images/morphology/shape.jpeg> <./images/morphology/d
-etections.jpeg>]
-<images/pca/scatter_plots_pca.png, id=135, 1028.34187pt x 490.83376pt>
+[18 <./images/morphology.png>] [19 <./images/morphology/original.jpeg> <./image
+s/morphology/bgsub.jpeg> <./images/morphology/dilate1.jpeg> <./images/morpholog
+y/dilate2.jpeg> <./images/morphology/errode.jpeg> <./images/morphology/shape.jp
+eg> <./images/morphology/detections.jpeg>]
+<images/pca/scatter_plots_pca.png, id=131, 1028.34187pt x 490.83376pt>
 File: images/pca/scatter_plots_pca.png Graphic file (type png)
 
 <use images/pca/scatter_plots_pca.png>
 Package pdftex.def Info: images/pca/scatter_plots_pca.png used on input line 64
-7.
+8.
 (pdftex.def)             Requested size: 418.25368pt x 199.63289pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 654--655
+ [20]
+Underfull \hbox (badness 10000) in paragraph at lines 655--656
 
  []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 656.
+               Default added (so using `tbp') on input line 657.
 
 <images/pca/1_2_pca.png, id=136, 1028.34187pt x 490.83376pt>
 File: images/pca/1_2_pca.png Graphic file (type png)
 
 <use images/pca/1_2_pca.png>
-Package pdftex.def Info: images/pca/1_2_pca.png used on input line 675.
+Package pdftex.def Info: images/pca/1_2_pca.png used on input line 676.
 (pdftex.def)             Requested size: 418.25368pt x 199.63289pt.
  [21 <./images/pca/scatter_plots_pca.png (PNG copy)>] <images/pca/density.png, 
 id=140, 421.575pt x 316.18124pt>
 File: images/pca/density.png Graphic file (type png)
 
 <use images/pca/density.png>
-Package pdftex.def Info: images/pca/density.png used on input line 685.
+Package pdftex.def Info: images/pca/density.png used on input line 686.
 (pdftex.def)             Requested size: 418.25368pt x 313.69583pt.
- [22 <./images/pca/1_2_pca.png (PNG copy)>]
-<images/pca_flow.png, id=144, 694.595pt x 704.6325pt>
+
+<images/pca_flow.png, id=141, 694.595pt x 704.6325pt>
 File: images/pca_flow.png Graphic file (type png)
 
 <use images/pca_flow.png>
-Package pdftex.def Info: images/pca_flow.png used on input line 695.
+Package pdftex.def Info: images/pca_flow.png used on input line 696.
 (pdftex.def)             Requested size: 376.42575pt x 381.87213pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 691--699
+Underfull \hbox (badness 10000) in paragraph at lines 692--700
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 691--699
+Underfull \hbox (badness 10000) in paragraph at lines 692--700
 
  []
 
-[23 <./images/pca/density.png (PNG copy)>]
-<images/pca/fals_positives.jpg, id=148, 321.2pt x 240.9pt>
+[22 <./images/pca/1_2_pca.png (PNG copy)> <./images/pca/density.png (PNG copy)>
+] <images/pca/fals_positives.jpg, id=145, 321.2pt x 240.9pt>
 File: images/pca/fals_positives.jpg Graphic file (type jpg)
 
 <use images/pca/fals_positives.jpg>
-Package pdftex.def Info: images/pca/fals_positives.jpg used on input line 704.
+Package pdftex.def Info: images/pca/fals_positives.jpg used on input line 705.
 (pdftex.def)             Requested size: 167.3021pt x 125.47823pt.
 
-<images/pca/false_positives_eliminated.jpg, id=149, 321.2pt x 240.9pt>
+<images/pca/false_positives_eliminated.jpg, id=146, 321.2pt x 240.9pt>
 File: images/pca/false_positives_eliminated.jpg Graphic file (type jpg)
 
 <use images/pca/false_positives_eliminated.jpg>
 Package pdftex.def Info: images/pca/false_positives_eliminated.jpg used on inpu
-t line 710.
+t line 711.
 (pdftex.def)             Requested size: 167.3021pt x 125.47823pt.
- [24 <./images/pca/fals_positives.jpg> <./images/pca/false_positives_eliminated
-.jpg> <./images/pca_flow.png>]
-Overfull \hbox (16.74242pt too wide) in paragraph at lines 735--744
+ [23 <./images/pca_flow.png>]
+Overfull \hbox (16.74242pt too wide) in paragraph at lines 736--745
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 730--744
+Underfull \hbox (badness 10000) in paragraph at lines 731--745
 
  []
 
-[25] <images/overallhardware.PNG, id=157, 767.2665pt x 286.671pt>
+[24 <./images/pca/fals_positives.jpg> <./images/pca/false_positives_eliminated.
+jpg>] <images/overallhardware.PNG, id=154, 767.2665pt x 286.671pt>
 File: images/overallhardware.PNG Graphic file (type png)
 
 <use images/overallhardware.PNG>
-Package pdftex.def Info: images/overallhardware.PNG used on input line 752.
+Package pdftex.def Info: images/overallhardware.PNG used on input line 753.
 (pdftex.def)             Requested size: 418.25368pt x 156.26978pt.
- [26 <./images/overallhardware.PNG>]
-Underfull \hbox (badness 10000) in paragraph at lines 792--794
+ [25 <./images/overallhardware.PNG>] [26]
+Underfull \hbox (badness 10000) in paragraph at lines 793--795
 
  []
 
-[27] <images/kalman_hungary_tracker.png, id=166, 923.45pt x 413.545pt>
+<images/kalman_hungary_tracker.png, id=163, 923.45pt x 413.545pt>
 File: images/kalman_hungary_tracker.png Graphic file (type png)
 
 <use images/kalman_hungary_tracker.png>
 Package pdftex.def Info: images/kalman_hungary_tracker.png used on input line 7
-98.
+99.
 (pdftex.def)             Requested size: 418.25368pt x 187.30507pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 811--817
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 811--817
+ [27 <./images/kalman_hungary_tracker.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 812--818
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 811--817
+Underfull \hbox (badness 10000) in paragraph at lines 812--818
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 811--817
+Underfull \hbox (badness 10000) in paragraph at lines 812--818
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 811--817
+Underfull \hbox (badness 10000) in paragraph at lines 812--818
 
  []
 
-[28 <./images/kalman_hungary_tracker.png>] [29]
-<images/particle_filter.png, id=174, 923.45pt x 413.545pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 812--818
+
+ []
+
+[28] <images/particle_filter.png, id=171, 923.45pt x 413.545pt>
 File: images/particle_filter.png Graphic file (type png)
 
 <use images/particle_filter.png>
-Package pdftex.def Info: images/particle_filter.png used on input line 845.
+Package pdftex.def Info: images/particle_filter.png used on input line 846.
 (pdftex.def)             Requested size: 418.25368pt x 187.30507pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 851--853
+Underfull \hbox (badness 10000) in paragraph at lines 852--854
 
  []
 
-[30 <./images/particle_filter.png (PNG copy)>] [31]
-Underfull \hbox (badness 10000) in paragraph at lines 918--920
+[29 <./images/particle_filter.png (PNG copy)>] [30]
+Underfull \hbox (badness 10000) in paragraph at lines 919--921
 
  []
 
-<images/multi_cam.png, id=182, 469.00218pt x 170.13562pt>
+[31] <images/multi_cam.png, id=182, 469.00218pt x 170.13562pt>
 File: images/multi_cam.png Graphic file (type png)
 
 <use images/multi_cam.png>
-Package pdftex.def Info: images/multi_cam.png used on input line 922.
+Package pdftex.def Info: images/multi_cam.png used on input line 923.
 (pdftex.def)             Requested size: 418.25368pt x 151.72395pt.
- [32]
-<images/multi_cam_map.png, id=187, 1166.3575pt x 413.545pt>
+
+<images/multi_cam_map.png, id=183, 1166.3575pt x 413.545pt>
 File: images/multi_cam_map.png Graphic file (type png)
 
 <use images/multi_cam_map.png>
-Package pdftex.def Info: images/multi_cam_map.png used on input line 933.
+Package pdftex.def Info: images/multi_cam_map.png used on input line 934.
 (pdftex.def)             Requested size: 418.25368pt x 148.29553pt.
- [33 <./images/multi_cam.png> <./images/multi_cam_map.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 953--956
+ [32 <./images/multi_cam.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 954--957
 
  []
 
+[33 <./images/multi_cam_map.png>]
 <images/comm.png, id=193, 824.07875pt x 191.71625pt>
 File: images/comm.png Graphic file (type png)
  <use images/comm.png>
-Package pdftex.def Info: images/comm.png used on input line 970.
+Package pdftex.def Info: images/comm.png used on input line 971.
 (pdftex.def)             Requested size: 418.25368pt x 97.30301pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 975--978
+Underfull \hbox (badness 10000) in paragraph at lines 976--979
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 975--978
+Underfull \hbox (badness 10000) in paragraph at lines 976--979
 
  []
 
-[34 <./images/comm.png>] [35]
-Underfull \hbox (badness 10000) in paragraph at lines 992--997
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 992--997
+[34 <./images/comm.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 993--998
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 992--997
+Underfull \hbox (badness 10000) in paragraph at lines 993--998
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 992--997
+Underfull \hbox (badness 10000) in paragraph at lines 993--998
 
  []
 
-[36] [37]
+
+Underfull \hbox (badness 10000) in paragraph at lines 993--998
+
+ []
+
+[35] [36]
 Chapter 4.
-[38
+[37
 
-] <images/utilization.png, id=211, 494.44725pt x 202.356pt>
+] <images/utilization.png, id=207, 494.44725pt x 202.356pt>
 File: images/utilization.png Graphic file (type png)
 
 <use images/utilization.png>
-Package pdftex.def Info: images/utilization.png used on input line 1053.
+Package pdftex.def Info: images/utilization.png used on input line 1054.
 (pdftex.def)             Requested size: 284.52756pt x 116.44641pt.
 
-<images/power.png, id=212, 495.0495pt x 198.7425pt>
-File: images/power.png Graphic file (type png)
- <use images/power.png>
-Package pdftex.def Info: images/power.png used on input line 1065.
-(pdftex.def)             Requested size: 284.52756pt x 114.22752pt.
+Overfull \hbox (22.80298pt too wide) in paragraph at lines 1071--1082
+ [][] 
+ []
 
-[39 <./images/utilization.png>] [40 <./images/power.png>]
-<images/web1.png, id=222, 471.56175pt x 584.78474pt>
+[38 <./images/utilization.png>] [39]
+<images/web1.png, id=217, 471.56175pt x 584.78474pt>
 File: images/web1.png Graphic file (type png)
  <use images/web1.png>
-Package pdftex.def Info: images/web1.png used on input line 1101.
+Package pdftex.def Info: images/web1.png used on input line 1114.
 (pdftex.def)             Requested size: 334.60422pt x 414.96806pt.
 
-<images/web2.png, id=223, 1383.66937pt x 778.40813pt>
+<images/web2.png, id=218, 1383.66937pt x 778.40813pt>
 File: images/web2.png Graphic file (type png)
  <use images/web2.png>
-Package pdftex.def Info: images/web2.png used on input line 1107.
+Package pdftex.def Info: images/web2.png used on input line 1120.
 (pdftex.def)             Requested size: 334.60422pt x 188.2352pt.
 
-<images/login.png, id=224, 1380.65813pt x 776.9025pt>
+<images/login.png, id=219, 1380.65813pt x 776.9025pt>
 File: images/login.png Graphic file (type png)
  <use images/login.png>
-Package pdftex.def Info: images/login.png used on input line 1113.
+Package pdftex.def Info: images/login.png used on input line 1126.
 (pdftex.def)             Requested size: 334.60422pt x 188.28601pt.
 
-[41 <./images/web1.png>]
-<images/Capture.PNG, id=229, 1142.46825pt x 546.24075pt>
+[40 <./images/web1.png>]
+<images/Capture.PNG, id=224, 1142.46825pt x 546.24075pt>
 File: images/Capture.PNG Graphic file (type png)
 
 <use images/Capture.PNG>
-Package pdftex.def Info: images/Capture.PNG used on input line 1119.
+Package pdftex.def Info: images/Capture.PNG used on input line 1132.
 (pdftex.def)             Requested size: 334.60422pt x 159.98106pt.
 
-<images/heatmap.png, id=230, 540.8205pt x 525.76425pt>
+<images/heatmap.png, id=225, 540.8205pt x 525.76425pt>
 File: images/heatmap.png Graphic file (type png)
 
 <use images/heatmap.png>
-Package pdftex.def Info: images/heatmap.png used on input line 1126.
+Package pdftex.def Info: images/heatmap.png used on input line 1139.
 (pdftex.def)             Requested size: 250.95476pt x 243.9644pt.
- <images/density.png, id=231, 542.025pt x 504.08325pt>
+ <images/density.png, id=226, 542.025pt x 504.08325pt>
 File: images/density.png Graphic file (type png)
 
 <use images/density.png>
-Package pdftex.def Info: images/density.png used on input line 1132.
+Package pdftex.def Info: images/density.png used on input line 1145.
 (pdftex.def)             Requested size: 250.95476pt x 233.38867pt.
- [42 <./images/web2.png> <./images/login.png> <./images/Capture.PNG>] [43 <./im
+ [41 <./images/web2.png> <./images/login.png> <./images/Capture.PNG>] [42 <./im
 ages/heatmap.png> <./images/density.png>]
-<images/qt_cam.png, id=241, 261.97874pt x 146.5475pt>
+<images/qt_cam.png, id=236, 261.97874pt x 146.5475pt>
 File: images/qt_cam.png Graphic file (type png)
  <use images/qt_cam.png>
-Package pdftex.def Info: images/qt_cam.png used on input line 1141.
+Package pdftex.def Info: images/qt_cam.png used on input line 1154.
 (pdftex.def)             Requested size: 418.25368pt x 233.97314pt.
 
-<images/qt_tracking.png, id=242, 261.97874pt x 146.5475pt>
+<images/qt_tracking.png, id=237, 261.97874pt x 146.5475pt>
 File: images/qt_tracking.png Graphic file (type png)
 
 <use images/qt_tracking.png>
-Package pdftex.def Info: images/qt_tracking.png used on input line 1148.
+Package pdftex.def Info: images/qt_tracking.png used on input line 1161.
 (pdftex.def)             Requested size: 418.25368pt x 233.97314pt.
 
-<images/qt_heatmap.png, id=243, 1541.76pt x 867.24pt>
+<images/qt_heatmap.png, id=238, 1541.76pt x 867.24pt>
 File: images/qt_heatmap.png Graphic file (type png)
 
 <use images/qt_heatmap.png>
-Package pdftex.def Info: images/qt_heatmap.png used on input line 1155.
+Package pdftex.def Info: images/qt_heatmap.png used on input line 1168.
 (pdftex.def)             Requested size: 418.25368pt x 235.25627pt.
- [44 <./images/qt_cam.png> <./images/qt_tracking.png>] <images/qt_count.png, id
-=250, 261.97874pt x 146.5475pt>
+ [43 <./images/qt_cam.png> <./images/qt_tracking.png>] <images/qt_count.png, id
+=244, 261.97874pt x 146.5475pt>
 File: images/qt_count.png Graphic file (type png)
 
 <use images/qt_count.png>
-Package pdftex.def Info: images/qt_count.png used on input line 1162.
+Package pdftex.def Info: images/qt_count.png used on input line 1175.
 (pdftex.def)             Requested size: 418.25368pt x 233.97314pt.
- [45 <./images/qt_heatmap.png> <./images/qt_count.png>]
+ [44 <./images/qt_heatmap.png> <./images/qt_count.png>]
 Chapter 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1168--1169
+Underfull \hbox (badness 10000) in paragraph at lines 1181--1182
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1169--1170
+Underfull \hbox (badness 10000) in paragraph at lines 1182--1183
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1170--1171
+Underfull \hbox (badness 10000) in paragraph at lines 1183--1184
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1171--1172
+Underfull \hbox (badness 10000) in paragraph at lines 1184--1185
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1172--1173
+Underfull \hbox (badness 10000) in paragraph at lines 1185--1186
 
  []
 
-[46
+[45
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1173--1174
+Underfull \hbox (badness 10000) in paragraph at lines 1186--1187
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1174--1175
+Underfull \hbox (badness 10000) in paragraph at lines 1187--1188
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1175--1176
+Underfull \hbox (badness 10000) in paragraph at lines 1188--1189
 
  []
 
-[47] [48
+[46]
+Underfull \hbox (badness 10000) in paragraph at lines 1234--1235
+[]\T1/ptm/m/n/12 "Flask-RESTful â€” Flask-RESTful 0.3.6 doc-u-men-ta-tion", Fla
+sk-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1234--1235
+\T1/ptm/m/n/12 restful.readthedocs.io, 2018. [On-line]. Avail-able: https://fla
+sk-
+ []
+
+[47
 
 ]
-Overfull \hbox (3.30908pt too wide) in paragraph at lines 1259--1260
-[]\T1/ptm/m/n/12 Xilinx.com, 2018. [On-line]. Avail-able: https://www.xilinx.co
-m/support/documenta 
+Underfull \hbox (badness 10000) in paragraph at lines 1276--1277
+[]\T1/ptm/m/n/12 zynq-7000-product-selection-guide", www.xilinx.com. [On-line].
+ Avail-able:
  []
 
-[49] (./content.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 1276--1277
+\T1/ptm/m/n/12 https://www.xilinx.com/support/documenta tion/selection-guides/z
+ynq-7000-
+ []
+
+[48] (./content.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 17390 strings out of 493013
- 324576 string characters out of 6135682
- 398064 words of memory out of 5000000
- 20500 multiletter control sequences out of 15000+600000
+ 17437 strings out of 493013
+ 325289 string characters out of 6135682
+ 398617 words of memory out of 5000000
+ 20544 multiletter control sequences out of 15000+600000
  53855 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,15n,94p,1370b,553s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1491,10 +1509,10 @@ urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on content.pdf (60 pages, 3516186 bytes).
+Output written on content.pdf (59 pages, 3461423 bytes).
 PDF statistics:
- 301 PDF objects out of 1000 (max. 8388607)
- 166 compressed objects within 2 object streams
+ 296 PDF objects out of 1000 (max. 8388607)
+ 164 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 213 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 208 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -26,39 +26,39 @@
 \contentsline {subsubsection}{\numberline {3.3.5.1}IP Core Implementation on ZYNQ PL}{12}
 \contentsline {subsubsection}{\numberline {3.3.5.2}Gaussian Mixture Model Background Subtraction IP Core}{13}
 \contentsline {subsubsection}{\numberline {3.3.5.3}Feature Calculation IP Core}{15}
-\contentsline {subsubsection}{\numberline {3.3.5.4}Optimizing Vivado HLS IP Core Designs}{17}
-\contentsline {subsection}{\numberline {3.3.6}IP Core Drivers and Morphological Operations Implementation on ZYNQ PS}{17}
-\contentsline {subsubsection}{\numberline {3.3.6.1}Linux Drivers for controlling IP cores}{17}
+\contentsline {subsubsection}{\numberline {3.3.5.4}Optimizing Vivado HLS IP Core Designs}{16}
+\contentsline {subsection}{\numberline {3.3.6}IP Core Drivers and Morphological Operations Implementation on ZYNQ PS}{16}
+\contentsline {subsubsection}{\numberline {3.3.6.1}Linux Drivers for controlling IP cores}{16}
 \contentsline {subsubsection}{\numberline {3.3.6.2}People Detection from Background Subtracted Binary Mask}{18}
-\contentsline {subsubsection}{\numberline {3.3.6.3}False Positive Reduction}{19}
-\contentsline {subsubsection}{\numberline {3.3.6.4}Communication Protocol among leaf nodes central server}{25}
-\contentsline {subsection}{\numberline {3.3.7}Overall Hardware Architecture on Leaf Node (ZYNQ SoC)}{26}
+\contentsline {subsubsection}{\numberline {3.3.6.3}False Positive Reduction}{20}
+\contentsline {subsubsection}{\numberline {3.3.6.4}Communication Protocol among leaf nodes central server}{24}
+\contentsline {subsection}{\numberline {3.3.7}Overall Hardware Architecture on Leaf Node (ZYNQ SoC)}{25}
 \contentsline {subsubsection}{\numberline {3.3.7.1}Cache Coherency}{26}
-\contentsline {section}{\numberline {3.4}Central Server}{27}
+\contentsline {section}{\numberline {3.4}Central Server}{26}
 \contentsline {subsection}{\numberline {3.4.1}Receiving and Unloading Data Packets from Camera Nodes}{27}
 \contentsline {subsection}{\numberline {3.4.2}Single Camera Tracking}{27}
-\contentsline {subsubsection}{\numberline {3.4.2.1}Kalman Filter based Tracking}{28}
-\contentsline {subsubsection}{\numberline {3.4.2.2}Improvements for Kalman Filter Based Tracking}{29}
-\contentsline {subsubsection}{\numberline {3.4.2.3}Gray Level Intensity Histogram as a Parameter in Cost Estimation}{29}
+\contentsline {subsubsection}{\numberline {3.4.2.1}Kalman Filter Based Tracking}{27}
+\contentsline {subsubsection}{\numberline {3.4.2.2}Improvements for Kalman Filter Based Tracking}{28}
+\contentsline {subsubsection}{\numberline {3.4.2.3}Gray Level Intensity Histogram as a Parameter in Cost Estimation}{28}
 \contentsline {subsubsection}{\numberline {3.4.2.4}Adding a Penalty for the Cost for High Velocities in Kalman Filter State}{29}
 \contentsline {subsubsection}{\numberline {3.4.2.5}Tuning Model Parameters}{29}
-\contentsline {subsection}{\numberline {3.4.3}Particle Filter Based Tracking}{30}
-\contentsline {subsubsection}{\numberline {3.4.3.1}Particle Initialization}{31}
-\contentsline {subsubsection}{\numberline {3.4.3.2}Particle Propagation}{31}
-\contentsline {subsubsection}{\numberline {3.4.3.3}Updating Weights with a Measurement}{31}
+\contentsline {subsection}{\numberline {3.4.3}Particle Filter Based Tracking}{29}
+\contentsline {subsubsection}{\numberline {3.4.3.1}Particle Initialization}{30}
+\contentsline {subsubsection}{\numberline {3.4.3.2}Particle Propagation}{30}
+\contentsline {subsubsection}{\numberline {3.4.3.3}Updating Weights with a Measurement}{30}
 \contentsline {subsection}{\numberline {3.4.4}Choosing Particle Filtering over Kalman Filtering}{31}
-\contentsline {subsection}{\numberline {3.4.5}Data Association}{32}
-\contentsline {subsection}{\numberline {3.4.6}Sensor Fusion}{32}
-\contentsline {subsection}{\numberline {3.4.7}Multi Camera Tracking}{32}
+\contentsline {subsection}{\numberline {3.4.5}Data Association}{31}
+\contentsline {subsection}{\numberline {3.4.6}Sensor Fusion}{31}
+\contentsline {subsection}{\numberline {3.4.7}Multi-Camera Tracking}{32}
 \contentsline {subsection}{\numberline {3.4.8}Communication with Web Server}{34}
 \contentsline {subsection}{\numberline {3.4.9}QT GUI Application}{35}
 \contentsline {subsection}{\numberline {3.4.10}Business Intelligence Software}{35}
-\contentsline {chapter}{\numberline {4}Results}{38}
-\contentsline {section}{\numberline {4.1}Acceleration Using ZYNQ PL}{38}
-\contentsline {section}{\numberline {4.2}Bandwidth Reduction}{38}
-\contentsline {section}{\numberline {4.3}Overall Hardware Utilization}{39}
-\contentsline {section}{\numberline {4.4}Total on Chip Power}{39}
-\contentsline {section}{\numberline {4.5}Detection Accuracy}{40}
-\contentsline {section}{\numberline {4.6}Business Intelligence Software}{41}
-\contentsline {chapter}{\numberline {5}Conclusion}{46}
-\contentsline {section}{\textbf {Bibliographical References}}{48}
+\contentsline {chapter}{\numberline {4}Results}{37}
+\contentsline {section}{\numberline {4.1}Acceleration Using ZYNQ PL}{37}
+\contentsline {section}{\numberline {4.2}Bandwidth Reduction}{37}
+\contentsline {section}{\numberline {4.3}Overall Hardware Utilization}{38}
+\contentsline {section}{\numberline {4.4}Total on Chip Power}{38}
+\contentsline {section}{\numberline {4.5}Detection Accuracy}{39}
+\contentsline {section}{\numberline {4.6}Business Intelligence Software}{40}
+\contentsline {chapter}{\numberline {5}Conclusion}{45}
+\contentsline {section}{\textbf {Bibliographical References}}{47}
